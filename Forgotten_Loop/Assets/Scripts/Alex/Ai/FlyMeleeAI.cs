@@ -6,6 +6,7 @@ public class FlyMeleeAI : MonoBehaviour
 {
     private GameObject player;
     private GameObject refSpawner;
+    public Rigidbody2D myrb;
     private bool jugadorEncontrado;
     public float RangoVisionCircular = 5f;
     public float RangoParaAtaque = 2f;
@@ -63,8 +64,9 @@ public class FlyMeleeAI : MonoBehaviour
                     }
                     else
                     {
-
-                        transform.Translate(dir * velocidadAtaqueCarga * Time.deltaTime);
+                        // rb.velocity = new Vector3(0, 10, 0);
+                        myrb.velocity = dir * velocidadAtaqueCarga;
+                        //transform.Translate(dir * velocidadAtaqueCarga * Time.deltaTime);
                         tiempoCargando = tiempoCargando + Time.deltaTime;
                     }
 
@@ -86,7 +88,8 @@ public class FlyMeleeAI : MonoBehaviour
                 }
                 else
                 {
-                    this.transform.position = Vector3.MoveTowards(this.transform.position, player.transform.position, Time.deltaTime * velocidadMovimiento);
+                   // myrb.velocity = Vector3.MoveTowards(this.transform.position, player.transform.position, Time.deltaTime * velocidadMovimiento);
+                     this.transform.position = Vector3.MoveTowards(this.transform.position, player.transform.position, Time.deltaTime * velocidadMovimiento);
                 }
             }
         }
