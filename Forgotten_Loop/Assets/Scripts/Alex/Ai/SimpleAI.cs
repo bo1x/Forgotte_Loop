@@ -5,6 +5,8 @@ using UnityEngine;
 public class SimpleAI : MonoBehaviour
 {
     private GameObject player;
+    private GameObject refSpawner;
+    private bool jugadorEncontrado;
     public float RangoVisionCircular = 5f;
     public bool DibujarEsfera = true;
     public bool perseguir = true;
@@ -14,42 +16,56 @@ public class SimpleAI : MonoBehaviour
 
     void Awake()
     {
-        player = GameObject.Find("Player");
+       
     }
     void Start()
     {
-        
+        jugadorEncontrado = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (GameObject.Find("SpawnerPlayer"))
+        {
+            refSpawner = GameObject.Find("SpawnerPlayer");
+            if (refSpawner.GetComponent<SpawnJugador>().jugadoExiste)
+            {
+                player = GameObject.Find("testplayer(Clone)");
+                jugadorEncontrado = true;
+            }
+             
+        }
         //Obtienes distancia entre 2 puntos
         //Debug.Log(Vector3.Distance(this.gameObject.transform.position, player.transform.position));
-        if (Vector3.Distance(this.gameObject.transform.position, player.transform.position) < RangoVisionCircular && perseguir)
-        {
-            this.transform.position = Vector3.MoveTowards(this.transform.position, player.transform.position, Time.deltaTime * velocidadMovimiento);
+        if (jugadorEncontrado) {
+            if (Vector3.Distance(this.gameObject.transform.position, player.transform.position) < RangoVisionCircular && perseguir)
+            {
+                this.transform.position = Vector3.MoveTowards(this.transform.position, player.transform.position, Time.deltaTime * velocidadMovimiento);
+            }
         }
+       
       
 
     }
 
     void OnDrawGizmos()
     {
-      /*  player = GameObject.Find("Player");
 
-        if (Vector3.Distance(this.gameObject.transform.position, player.transform.position) < RangoVisionCircular && perseguir)
+        if (jugadorEncontrado)
         {
-            Gizmos.color = Color.red;
-        }
-        else { Gizmos.color = Color.green; }
-        // Draw a yellow sphere at the transform's position
-        if (DibujarEsfera)
-        {
-        Gizmos.DrawWireSphere(this.gameObject.transform.position, RangoVisionCircular);
+            if (Vector3.Distance(this.gameObject.transform.position, player.transform.position) < RangoVisionCircular && perseguir)
+            {
+                Gizmos.color = Color.red;
+            }
+            else { Gizmos.color = Color.green; }
+            // Draw a yellow sphere at the transform's position
+            if (DibujarEsfera)
+            {
+                Gizmos.DrawWireSphere(this.gameObject.transform.position, RangoVisionCircular);
+            }
         }
         Gizmos.color = Color.green;
-      */
+      
     }
 }
