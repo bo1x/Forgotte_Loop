@@ -30,6 +30,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: {fileID: 6366150712675412383}
   To: {fileID: -8479190968020051415}
+--- !u!114 &-5284567053012212695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f692f83df7c1b5468af64edd22287dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  From: {fileID: -3590541048753289365}
+  To: {fileID: 6366150712675412383}
+--- !u!114 &-3590541048753289365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8074dc491ddc34f4e83332d9eae76980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Position: {x: 512, y: 272}
+  Name: Spawn
+  IndividualRoomTemplates:
+  - {fileID: 3726825580190767676, guid: 56723f9f9ab65c44c9ec01f2e7161cc2, type: 3}
+  RoomTemplateSets: []
 --- !u!114 &-3450953198871998024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,12 +109,15 @@ MonoBehaviour:
   - {fileID: 2917632510564852810}
   - {fileID: 8666833065777127508}
   - {fileID: 1925705702269314136}
+  - {fileID: -5284567053012212695}
   CorridorIndividualRoomTemplates:
   - {fileID: 2939234484284412454, guid: a8b495a90ba1d234c94e2cb3e953eb4a, type: 3}
   - {fileID: 5028311459132284351, guid: cab2adce1997f744bbbcc35a6a97526a, type: 3}
   CorridorRoomTemplateSets: []
   DefaultIndividualRoomTemplates:
   - {fileID: 8890799926396716690, guid: fa5d6f8a0dc64964db4d881d6bdec9e2, type: 3}
+  - {fileID: 2606321922462462657, guid: 6bef55ce41d3ee1469126d51bc390b12, type: 3}
+  - {fileID: 9211746197011051505, guid: d5fed37c0f5261244852eedc0e00b282, type: 3}
   DefaultRoomTemplateSets: []
   Rooms:
   - {fileID: 6366150712675412383}
@@ -93,9 +127,10 @@ MonoBehaviour:
   - {fileID: 4391173715685598579}
   - {fileID: 1304332885066455081}
   - {fileID: 6289855954548780262}
+  - {fileID: -3590541048753289365}
   EditorData:
-    PanOffset: {x: -72.93711, y: 137.70284}
-    Zoom: 1.0773855
+    PanOffset: {x: -144.40012, y: 141.75781}
+    Zoom: 0.82161295
   RoomType: Edgar.Unity.Room
   ConnectionType: Edgar.Unity.Connection
 --- !u!114 &1304332885066455081

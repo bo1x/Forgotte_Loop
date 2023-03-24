@@ -37,7 +37,7 @@ public class SimpleAI : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        player = GameObject.Find("Player");
+      /*  player = GameObject.Find("Player");
 
         if (Vector3.Distance(this.gameObject.transform.position, player.transform.position) < RangoVisionCircular && perseguir)
         {
@@ -50,6 +50,6 @@ public class SimpleAI : MonoBehaviour
         Gizmos.DrawWireSphere(this.gameObject.transform.position, RangoVisionCircular);
         }
         Gizmos.color = Color.green;
-
+      */
     }
 }
