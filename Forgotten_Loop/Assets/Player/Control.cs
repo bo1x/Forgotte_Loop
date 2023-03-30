@@ -26,6 +26,15 @@ public class Control : MonoBehaviour
 
     private WeaponParent weaponParent;
 
+    //Cambia entre armas
+    public bool ModoDisparo = false;
+
+    //Cosas de Arma
+    public Transform shootingPoint;
+    public GameObject bulletPrefab;
+    public float tiempoD = 0;
+    public float cadencia = 0.5f;
+
     //El start añade a las variables previamente mencionadas lo que necesita
     void Start()
     {
@@ -85,7 +94,7 @@ public class Control : MonoBehaviour
     }
 
     //Detecta la posicion del raton en pantalla y lo guarda en un vector3
-    private Vector3 PositionMouse()
+    public Vector3 PositionMouse()
     {
        Vector3 MouseP = new Vector3(Camera.main.ScreenToWorldPoint(new Vector3(PointX, PointY)).x, Camera.main.ScreenToWorldPoint(new Vector3(PointX, PointY)).y, 0);
        return MouseP;
@@ -164,7 +173,19 @@ public class Control : MonoBehaviour
     {
         if (context.performed)
         {
-            print("Piu Piu");
+            if (ModoDisparo)
+            {
+                tiempoD = Time.time + cadencia;
+                GameObject myBullet = Instantiate(bulletPrefab, shootingPoint.transform);
+                Destroy(myBullet, 2f);
+            }
+
+            if (!ModoDisparo)
+            {
+                tiempoD = Time.time + cadencia;
+                GameObject myBullet = Instantiate(bulletPrefab, shootingPoint.position, transform.rotation);
+                Destroy(myBullet, 2f);
+            }
         }
     }
 
