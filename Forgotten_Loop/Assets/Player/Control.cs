@@ -29,11 +29,14 @@ public class Control : MonoBehaviour
     //Cambia entre armas
     public bool ModoDisparo = false;
 
-    //Cosas de Arma
+    //Variables de Arma
     public Transform shootingPoint;
     public GameObject bulletPrefab;
     public float tiempoD = 0;
     public float cadencia = 0.5f;
+
+    //Variable HP
+    public float vida = 3f;
 
     //El start añade a las variables previamente mencionadas lo que necesita
     void Start()
@@ -183,7 +186,7 @@ public class Control : MonoBehaviour
             if (!ModoDisparo)
             {
                 tiempoD = Time.time + cadencia;
-                GameObject myBullet = Instantiate(bulletPrefab, shootingPoint.position, transform.rotation);
+                GameObject myBullet = Instantiate(bulletPrefab, shootingPoint.transform);
                 Destroy(myBullet, 2f);
             }
         }
@@ -197,5 +200,11 @@ public class Control : MonoBehaviour
         }
     }
 
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            vida--;
+        }
+    }
 }
