@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8400baee4cafd34091c865089a167b2, type: 3}
-  m_Name: LevelGraph
+  m_Name: dungeon1
   m_EditorClassIdentifier: 
   Connections:
   - {fileID: -5284567053012212695}
@@ -208,8 +208,8 @@ MonoBehaviour:
   - {fileID: 4147573857973925867}
   - {fileID: -7880276008284645237}
   EditorData:
-    PanOffset: {x: -276.54605, y: 161.65942}
-    Zoom: 0.9078696
+    PanOffset: {x: -94.651886, y: 198.96008}
+    Zoom: 0.7353744
   RoomType: Edgar.Unity.Room
   ConnectionType: Edgar.Unity.Connection
 --- !u!114 &18145938938935757
