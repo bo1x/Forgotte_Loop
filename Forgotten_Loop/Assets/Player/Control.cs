@@ -116,8 +116,9 @@ public class Control : MonoBehaviour
     //Detecta la posicion del raton en pantalla y lo guarda en un vector3
     public Vector3 PositionMouse()
     {
+
        Vector3 MouseP = new Vector3(Camera.main.ScreenToWorldPoint(new Vector3(PointX, PointY)).x, Camera.main.ScreenToWorldPoint(new Vector3(PointX, PointY)).y, 0);
-       return MouseP;
+        return MouseP;
     }
 
     //Inicia la corrutina de dash si puede realizarlos
