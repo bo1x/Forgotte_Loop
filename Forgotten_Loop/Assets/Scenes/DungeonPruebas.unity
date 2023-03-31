@@ -218,6 +218,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4958404036360997114, guid: 6e2f5f61480608946bc23f8082cb315d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e2f5f61480608946bc23f8082cb315d, type: 3}
 --- !u!1001 &1319329004
@@ -230,6 +234,10 @@ PrefabInstance:
     - target: {fileID: 5313890958253700317, guid: 9990a284c2a82954a84ef553338f781e, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313890958253700317, guid: 9990a284c2a82954a84ef553338f781e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5313890958253700318, guid: 9990a284c2a82954a84ef553338f781e, type: 3}
       propertyPath: m_RootOrder
@@ -274,6 +282,18 @@ PrefabInstance:
     - target: {fileID: 5313890958253700318, guid: 9990a284c2a82954a84ef553338f781e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313890958253700319, guid: 9990a284c2a82954a84ef553338f781e, type: 3}
+      propertyPath: orthographic size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313890959334132133, guid: 9990a284c2a82954a84ef553338f781e, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313890959334132138, guid: 9990a284c2a82954a84ef553338f781e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9990a284c2a82954a84ef553338f781e, type: 3}

@@ -5,7 +5,9 @@ using UnityEngine;
 public class targetCamera : MonoBehaviour
 {
     [SerializeField] Camera camInfo;
+    private bool camEncontrada = false;
     [SerializeField] Transform player;
+    private bool playerEncontrado = false   ;
     [SerializeField] float threshold;
 
 
@@ -16,15 +18,36 @@ public class targetCamera : MonoBehaviour
 
     void Update()
     {
-        Vector3 mousePos = camInfo.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 targetPos = (player.position + mousePos) / 2f;
+        if (camEncontrada && playerEncontrado)
+        {
+            Vector3 mousePos = camInfo.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 targetPos = (player.position + mousePos) / 2f;
 
-        targetPos.x = Mathf.Clamp(targetPos.x, -threshold + player.position.x, threshold + player.position.x);
-        targetPos.y = Mathf.Clamp(targetPos.y, -threshold + player.position.y, threshold + player.position.y);
+            targetPos.x = Mathf.Clamp(targetPos.x, -threshold + player.position.x, threshold + player.position.x);
+            targetPos.y = Mathf.Clamp(targetPos.y, -threshold + player.position.y, threshold + player.position.y);
 
-        this.transform.position = targetPos;
-        Debug.Log(targetPos.ToString());
-        Debug.Log("Mouse pos "+mousePos.ToString());
+            this.transform.position = targetPos;
+          //  Debug.Log(targetPos.ToString());
+          //  Debug.Log("Mouse pos " + mousePos.ToString());
+        }
+        
+        if(camEncontrada == false)
+        {
+            if(Camera.main != null)
+            {
+                camInfo = Camera.main;
+                camEncontrada = true;
+            }
+        }
+
+        if(playerEncontrado == false)
+        {
+            if(GameObject.Find("Player") != null)
+            {
+                player = GameObject.Find("Player").transform;
+                playerEncontrado = true;
+            }
+        }
 
     }
 }

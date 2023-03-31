@@ -26,6 +26,26 @@ public class Bullet : MonoBehaviour
         rb.velocity = transform.right * speed;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.gameObject.name);
 
+        if(collision.gameObject.name == "Walls")
+        {
+            ImpactoBala();
+        }
+
+        if(collision.gameObject.tag == "Enemy")
+        {
+            // collision.gameObject.GetComponent<Scriptquetengasuvida>().SuVidaVariable-1
+            ImpactoBala();
+        }
+    }
+
+    void ImpactoBala()
+    {
+        //Instanciar Humo o particulas
+        Destroy(this.gameObject);
+    }
 
 }
