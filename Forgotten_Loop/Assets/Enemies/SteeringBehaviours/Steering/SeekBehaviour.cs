@@ -20,6 +20,7 @@ public class SeekBehaviour : SteeringBehaviour
     private Vector2 targetPositionCached;
     private float[] interestsTemp;
 
+    
     public override (float[] danger, float[] interest) GetSteering(float[] danger, float[] interest, AIData aiData)
     {
         //Si no hay un objetivo para de buscar, sino continua siguiendolo
@@ -38,6 +39,7 @@ public class SeekBehaviour : SteeringBehaviour
             }
 
         }
+
 
         //La ultima posicion conocidad del objetivo
         if (aiData.currentTarget != null && aiData.targets != null && aiData.targets.Contains(aiData.currentTarget))

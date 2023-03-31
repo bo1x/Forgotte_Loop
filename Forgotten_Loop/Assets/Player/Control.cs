@@ -45,7 +45,6 @@ public class Control : MonoBehaviour
     //El start añade a las variables previamente mencionadas lo que necesita
     void Start()
     {
-        Brazo = GameObject.Find("WeaponParent");
         myanim = GetComponent<Animator>();
         myrigi = GetComponent<Rigidbody2D>();
         mirilla = GameObject.Find("Pointer");
@@ -62,12 +61,10 @@ public class Control : MonoBehaviour
 
         if (myrigi.velocity == Vector2.zero)
         {
-            Brazo.SetActive(false);
             myanim.Play("Idle");
         }
         else
         {
-            Brazo.SetActive(true);
             myanim.Play("RunSideToSide");
         }
 
@@ -192,7 +189,7 @@ public class Control : MonoBehaviour
 
     public void RangeAttack(InputAction.CallbackContext context)
     {
-        if (context.performed || myrigi.velocity != Vector2.zero)
+        if (context.performed)
         {
             if (ModoDisparo)
             {

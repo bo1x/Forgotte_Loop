@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 06dd5f5e3bb27984894d34e54b72a084
+guid: 6456e0af23f33af4686a69b4dda3955c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Juagdor_Idle_Diagonal-Sheet_0
+      name: Juagdor_Idle_Diagonal_SinBrazo_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 0
-        width: 19
-        height: 44
+        width: 24
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 826bf10a19824cc4cb7acfcc55806d88
-      internalID: -2039994256
+      spriteID: e7e3f330eb7ec1e4eb9cad539ef75814
+      internalID: -482661785
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Juagdor_Idle_Diagonal-Sheet_1
+      name: Juagdor_Idle_Diagonal_SinBrazo_1
       rect:
         serializedVersion: 2
-        x: 27
+        x: 24
         y: 0
-        width: 19
-        height: 44
+        width: 24
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c11ba73059ca9254d98101944fe02fec
-      internalID: -805503572
+      spriteID: 480270d043acb83429266cfbccb4eeac
+      internalID: 2085433894
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Juagdor_Idle_Diagonal-Sheet_2
+      name: Juagdor_Idle_Diagonal_SinBrazo_2
       rect:
         serializedVersion: 2
-        x: 51
+        x: 48
         y: 0
-        width: 19
-        height: 44
+        width: 24
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58c26af39163bc34d873439cd511dcbb
-      internalID: -1173990484
+      spriteID: 36b968bdafde879489f256e1fc44f148
+      internalID: -1566869246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Juagdor_Idle_Diagonal-Sheet_3
+      name: Juagdor_Idle_Diagonal_SinBrazo_3
       rect:
         serializedVersion: 2
-        x: 75
+        x: 72
         y: 0
-        width: 19
-        height: 44
+        width: 24
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0ed6d00d4f2fef4b86faf076fe17008
-      internalID: -1984908078
+      spriteID: 8ccf4c25b553eaf448c2acb1c454bc49
+      internalID: -373481093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Juagdor_Idle_Diagonal-Sheet_4
+      name: Juagdor_Idle_Diagonal_SinBrazo_4
       rect:
         serializedVersion: 2
-        x: 99
+        x: 96
         y: 0
-        width: 19
-        height: 43
+        width: 24
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08d87fa23cf0ce8449c4a4c4a463b654
-      internalID: 1612838685
+      spriteID: 2d6474251ca552945b83de73eaca278b
+      internalID: -897652420
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Juagdor_Idle_Diagonal-Sheet_5
+      name: Juagdor_Idle_Diagonal_SinBrazo_5
       rect:
         serializedVersion: 2
-        x: 123
+        x: 120
         y: 0
-        width: 19
-        height: 43
+        width: 24
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7e78e94112bd22419ed4578af59c5e6
-      internalID: -1843050328
+      spriteID: 59f04270e252f5048aa192ec409901b3
+      internalID: -1265543461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Juagdor_Idle_Diagonal-Sheet_6
+      name: Juagdor_Idle_Diagonal_SinBrazo_6
       rect:
         serializedVersion: 2
-        x: 147
+        x: 144
         y: 0
-        width: 19
-        height: 43
+        width: 24
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6abe6f5dffb62c4a8fef313f91a58a7
-      internalID: 272224639
+      spriteID: 1a5d326666e38f341865b35b67e180a1
+      internalID: 681852544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Juagdor_Idle_Diagonal-Sheet_7
+      name: Juagdor_Idle_Diagonal_SinBrazo_7
       rect:
         serializedVersion: 2
-        x: 171
+        x: 168
         y: 0
-        width: 19
-        height: 43
+        width: 24
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,8 +313,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea91b52295d2ced4fbe71dff978fbe24
-      internalID: 760278581
+      spriteID: 61d8db338c11071488e19a854729bf11
+      internalID: -1318781398
       vertices: []
       indices: 
       edges: []
@@ -330,14 +330,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Juagdor_Idle_Diagonal-Sheet_6: 272224639
-      Juagdor_Idle_Diagonal-Sheet_3: -1984908078
-      Juagdor_Idle_Diagonal-Sheet_2: -1173990484
-      Juagdor_Idle_Diagonal-Sheet_1: -805503572
-      Juagdor_Idle_Diagonal-Sheet_0: -2039994256
-      Juagdor_Idle_Diagonal-Sheet_7: 760278581
-      Juagdor_Idle_Diagonal-Sheet_4: 1612838685
-      Juagdor_Idle_Diagonal-Sheet_5: -1843050328
+      Juagdor_Idle_Diagonal_SinBrazo_1: 2085433894
+      Juagdor_Idle_Diagonal_SinBrazo_7: -1318781398
+      Juagdor_Idle_Diagonal_SinBrazo_2: -1566869246
+      Juagdor_Idle_Diagonal_SinBrazo_3: -373481093
+      Juagdor_Idle_Diagonal_SinBrazo_6: 681852544
+      Juagdor_Idle_Diagonal_SinBrazo_0: -482661785
+      Juagdor_Idle_Diagonal_SinBrazo_5: -1265543461
+      Juagdor_Idle_Diagonal_SinBrazo_4: -897652420
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

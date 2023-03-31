@@ -11,6 +11,21 @@ public class AIData : MonoBehaviour
     //Objetivo actual
     public Transform currentTarget;
 
+    private void Update()
+    {
+        if (currentTarget != null)
+        {
+            if (currentTarget.transform.position.x > transform.position.x)
+            {
+                transform.eulerAngles = new Vector3(0, 180, 0);
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            }
+        }
+    }
+
     //Cuenta los objetivos actuales, dando la posibilidad de que haya
     public int GetTargetsCount()
     {
