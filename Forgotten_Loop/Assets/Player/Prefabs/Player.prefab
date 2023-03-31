@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fb7f625c2918d6344b14d7d33ba21244, type: 3}
+  m_Sprite: {fileID: 1414046305, guid: ef9d819489560d249a9c9f2d740f07e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,9 +126,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.027457833, y: 0.53082347}
   m_SpriteTilingProperty:
-    border: {x: 1.6666667, y: 0.9583334, z: 4.625, w: 3.5416667}
-    pivot: {x: 0.3118934, y: 0.2609289}
-    oldSize: {x: 7.875, y: 6.9583335}
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.9583333, y: 1.7916666}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -158,6 +158,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 397623732986465443, guid: c7bbdf726ac70d043b678d3e5c074301, type: 3}
   tiempoD: 0
   cadencia: 0.5
+  vida: 3
 --- !u!114 &2535315531663628690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,7 +568,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 1543848730, guid: c140a3def95e40141b9c3dcb6a39b8f5, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
