@@ -1555,18 +1555,18 @@ MonoBehaviour:
   ManualDoorModeData:
     DoorsList: []
   SimpleDoorModeData:
-    DistanceFromCorners: 1
-    DoorLength: 1
-    Mode: 0
+    DistanceFromCorners: 2
+    DoorLength: 3
+    Mode: 1
     VerticalDoors:
-      Length: 1
-      Margin1: 1
-      Margin2: 1
+      Length: 3
+      Margin1: 2
+      Margin2: 3
       Enabled: 1
     HorizontalDoors:
-      Length: 1
-      Margin1: 1
-      Margin2: 1
+      Length: 3
+      Margin1: 3
+      Margin2: 3
       Enabled: 1
 --- !u!1 &8714550996729372444
 GameObject:

@@ -7,17 +7,24 @@ public class Bullet : MonoBehaviour
     public float speed;
     private Rigidbody2D rb;
 
+    public GameObject Player;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public Vector2 position;
+
+    void Start()
     {
-        Destroy(this.gameObject);
+        Player = GameObject.Find("Player");
+        rb = GetComponent<Rigidbody2D>();
+        position = Player.GetComponent<Control>().PositionMouse();
+        transform.right = (position - (Vector2)transform.position).normalized;
+        Destroy(gameObject, 5);
     }
 
-     void Start()
-
+    private void Update()
     {
-        rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * speed;
     }
-   
+
+
+
 }
