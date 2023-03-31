@@ -13,6 +13,7 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
+        transform.parent = null;
         Player = GameObject.Find("Player");
         rb = GetComponent<Rigidbody2D>();
         position = Player.GetComponent<Control>().PositionMouse();
