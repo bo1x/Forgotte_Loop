@@ -26,6 +26,10 @@ public class Control : MonoBehaviour
 
     private WeaponParent weaponParent;
 
+    private Animator myanim;
+
+    private GameObject Brazo;
+
     //Cambia entre armas
     public bool ModoDisparo = false;
 
@@ -41,6 +45,8 @@ public class Control : MonoBehaviour
     //El start añade a las variables previamente mencionadas lo que necesita
     void Start()
     {
+        Brazo = GameObject.Find("WeaponParent");
+        myanim = GetComponent<Animator>();
         myrigi = GetComponent<Rigidbody2D>();
         mirilla = GameObject.Find("Pointer");
         weaponParent = GetComponentInChildren<WeaponParent>();
@@ -52,6 +58,17 @@ public class Control : MonoBehaviour
         if (!IsDashing)
         {
             myrigi.velocity = new Vector2(InputX * movespeed, InputY * movespeed);
+        }
+
+        if (myrigi.velocity == Vector2.zero)
+        {
+            Brazo.SetActive(false);
+            myanim.Play("Idle");
+        }
+        else
+        {
+            Brazo.SetActive(true);
+            myanim.Play("RunSideToSide");
         }
 
         //Usa un metodo para mover la mirilla en tiempo real  dandole la posicion
@@ -174,7 +191,7 @@ public class Control : MonoBehaviour
 
     public void RangeAttack(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed || myrigi.velocity != Vector2.zero)
         {
             if (ModoDisparo)
             {

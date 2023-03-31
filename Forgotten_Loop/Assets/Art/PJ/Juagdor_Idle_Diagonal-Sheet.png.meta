@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ef9d819489560d249a9c9f2d740f07e4
+guid: 06dd5f5e3bb27984894d34e54b72a084
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -100,17 +100,65 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_Run_sin1brazo_0
+      name: Juagdor_Idle_Diagonal-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 3
         y: 0
-        width: 24
-        height: 50
+        width: 19
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f52ac137773c1c45b68b7952f5d4190
-      internalID: 1414046305
+      spriteID: 826bf10a19824cc4cb7acfcc55806d88
+      internalID: -2039994256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_sin1brazo_1
+      name: Juagdor_Idle_Diagonal-Sheet_1
       rect:
         serializedVersion: 2
-        x: 24
+        x: 27
         y: 0
-        width: 24
-        height: 50
+        width: 19
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cbd1bbc5a95efa42a5c6eb1d5c399a7
-      internalID: -251652283
+      spriteID: c11ba73059ca9254d98101944fe02fec
+      internalID: -805503572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_sin1brazo_2
+      name: Juagdor_Idle_Diagonal-Sheet_2
       rect:
         serializedVersion: 2
-        x: 48
+        x: 51
         y: 0
-        width: 24
-        height: 50
+        width: 19
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4955ad5a0e75d4743bee38536c767d23
-      internalID: -599435459
+      spriteID: 58c26af39163bc34d873439cd511dcbb
+      internalID: -1173990484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_sin1brazo_3
+      name: Juagdor_Idle_Diagonal-Sheet_3
       rect:
         serializedVersion: 2
-        x: 72
+        x: 75
         y: 0
-        width: 24
-        height: 50
+        width: 19
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14344302801e3ff429c30420f2d18f2c
-      internalID: 235527512
+      spriteID: e0ed6d00d4f2fef4b86faf076fe17008
+      internalID: -1984908078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_sin1brazo_4
+      name: Juagdor_Idle_Diagonal-Sheet_4
       rect:
         serializedVersion: 2
-        x: 96
+        x: 99
         y: 0
-        width: 24
-        height: 50
+        width: 19
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91e28680d41cfaf45a35f26aaaaaa540
-      internalID: -1650104893
+      spriteID: 08d87fa23cf0ce8449c4a4c4a463b654
+      internalID: 1612838685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_sin1brazo_5
+      name: Juagdor_Idle_Diagonal-Sheet_5
       rect:
         serializedVersion: 2
-        x: 120
+        x: 123
         y: 0
-        width: 24
-        height: 50
+        width: 19
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54ca27abe8946b94baa44ec7a9f61b38
-      internalID: 1334208978
+      spriteID: e7e78e94112bd22419ed4578af59c5e6
+      internalID: -1843050328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_sin1brazo_6
+      name: Juagdor_Idle_Diagonal-Sheet_6
       rect:
         serializedVersion: 2
-        x: 144
+        x: 147
         y: 0
-        width: 24
-        height: 50
+        width: 19
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3400005102d480547a6cea5ada3aebcf
-      internalID: -2069033311
+      spriteID: b6abe6f5dffb62c4a8fef313f91a58a7
+      internalID: 272224639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_sin1brazo_7
+      name: Juagdor_Idle_Diagonal-Sheet_7
       rect:
         serializedVersion: 2
-        x: 168
+        x: 171
         y: 0
-        width: 24
-        height: 50
+        width: 19
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,8 +313,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58d1e8a8691272f478d94ed52d1beb7e
-      internalID: 1451633198
+      spriteID: ea91b52295d2ced4fbe71dff978fbe24
+      internalID: 760278581
       vertices: []
       indices: 
       edges: []
@@ -282,14 +330,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player_Run_sin1brazo_0: 1414046305
-      Player_Run_sin1brazo_1: -251652283
-      Player_Run_sin1brazo_4: -1650104893
-      Player_Run_sin1brazo_7: 1451633198
-      Player_Run_sin1brazo_6: -2069033311
-      Player_Run_sin1brazo_5: 1334208978
-      Player_Run_sin1brazo_3: 235527512
-      Player_Run_sin1brazo_2: -599435459
+      Juagdor_Idle_Diagonal-Sheet_6: 272224639
+      Juagdor_Idle_Diagonal-Sheet_3: -1984908078
+      Juagdor_Idle_Diagonal-Sheet_2: -1173990484
+      Juagdor_Idle_Diagonal-Sheet_1: -805503572
+      Juagdor_Idle_Diagonal-Sheet_0: -2039994256
+      Juagdor_Idle_Diagonal-Sheet_7: 760278581
+      Juagdor_Idle_Diagonal-Sheet_4: 1612838685
+      Juagdor_Idle_Diagonal-Sheet_5: -1843050328
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
