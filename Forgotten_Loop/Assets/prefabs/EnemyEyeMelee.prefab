@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 4153206278867747996}
   m_Layer: 3
   m_Name: EnemyEyeMelee
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,7 +127,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04501459, y: 0.021674335}
+  m_Offset: {x: -0.010842562, y: -0.07549065}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -138,7 +138,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.43581206, y: 0.42591882}
+  m_Size: {x: 1.0205302, y: 0.83789825}
   m_EdgeRadius: 0
 --- !u!114 &1114046712189166443
 MonoBehaviour:
@@ -527,7 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af2fda68438dc84c85efda202b349fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetDetectionRange: 5
+  targetDetectionRange: 10
   obstaclesLayerMask:
     serializedVersion: 2
     m_Bits: 192

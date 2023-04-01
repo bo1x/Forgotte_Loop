@@ -26,6 +26,7 @@ public class Agent : MonoBehaviour
 
         if (vida <= 0 )
         {
+            GameObject.Find("Canvas").GetComponent<Puntos>().Almas = GameObject.Find("Canvas").GetComponent<Puntos>().Almas + 1;
             Destroy(this.gameObject);
         }
     }

@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 1587879498966347380}
   m_Layer: 3
   m_Name: EnemyTacones
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,7 +127,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04501459, y: 0.021674335}
+  m_Offset: {x: -0.0139096975, y: -0.0061852336}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -138,7 +138,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.43581206, y: 0.42591882}
+  m_Size: {x: 0.5913348, y: 2.3442621}
   m_EdgeRadius: 0
 --- !u!114 &2368756462855653763
 MonoBehaviour:
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c95db96f5d10e948a79538ef6a5b03a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 2
+  maxSpeed: 3
   acceleration: 50
   deacceleration: 100
   currentSpeed: 0
