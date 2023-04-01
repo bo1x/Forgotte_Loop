@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 6300363039684160427}
   - component: {fileID: 2400557654882502500}
   m_Layer: 0
-  m_Name: Room template
+  m_Name: Sala con cajas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

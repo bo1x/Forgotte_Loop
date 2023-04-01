@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7cc3adf0aaa5f24a850fa9d51eb8d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escenaCargar: 2
+  escenaCargar: 3
 --- !u!50 &7650494916678186823
 Rigidbody2D:
   serializedVersion: 4

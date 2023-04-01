@@ -6994,7 +6994,7 @@ GameObject:
   - component: {fileID: 9218796644898083747}
   - component: {fileID: 6198525201572257119}
   m_Layer: 0
-  m_Name: Room template 1
+  m_Name: Templo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7054,14 +7054,14 @@ MonoBehaviour:
   SimpleDoorModeData:
     DistanceFromCorners: 1
     DoorLength: 1
-    Mode: 0
+    Mode: 1
     VerticalDoors:
       Length: 1
       Margin1: 1
       Margin2: 1
-      Enabled: 1
+      Enabled: 0
     HorizontalDoors:
-      Length: 1
-      Margin1: 1
-      Margin2: 1
+      Length: 3
+      Margin1: 5
+      Margin2: 5
       Enabled: 1
