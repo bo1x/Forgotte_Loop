@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class CierreVideo : MonoBehaviour
 {
@@ -15,8 +16,8 @@ public class CierreVideo : MonoBehaviour
         Video.loopPointReached += CheckOver;
     }
 
-    void CheckOver(VideoPlayer vp)
+    public void CheckOver(VideoPlayer vp)
     {
-        gameObject.SetActive(false);
+        SceneManager.LoadScene("MenuInicio");
     }
 }
