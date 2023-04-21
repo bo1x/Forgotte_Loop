@@ -150,7 +150,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 397623732986465443, guid: c7bbdf726ac70d043b678d3e5c074301, type: 3}
   tiempoD: 0
   cadencia: 0.5
-  vida: 3
 --- !u!114 &2535315531663628690
 MonoBehaviour:
   m_ObjectHideFlags: 0

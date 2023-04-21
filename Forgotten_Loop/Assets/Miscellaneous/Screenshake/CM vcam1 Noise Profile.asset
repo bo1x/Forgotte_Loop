@@ -35,6 +35,6 @@ MonoBehaviour:
       Amplitude: 0
       Constant: 0
     Z:
-      Frequency: 6
+      Frequency: 40
       Amplitude: 5
       Constant: 0
