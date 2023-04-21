@@ -4,6 +4,10 @@ using System.Collections;
 
 public class Control : MonoBehaviour
 {
+
+    //camera Shake
+    private GameObject Vcam;
+
     //Variables para movimiento de jugador y raton
     private float InputX, InputY;
     
@@ -39,8 +43,7 @@ public class Control : MonoBehaviour
     public float tiempoD = 0;
     public float cadencia = 0.5f;
 
-    //Variable HP
-    public float vida = 3f;
+  
 
     //El start añade a las variables previamente mencionadas lo que necesita
     void Start()
@@ -215,11 +218,5 @@ public class Control : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            vida--;
-        }
-    }
+   
 }

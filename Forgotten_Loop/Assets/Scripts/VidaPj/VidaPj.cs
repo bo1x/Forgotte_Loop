@@ -11,6 +11,7 @@ public class VidaPj : MonoBehaviour
     public float tiempoImnunidad;
     private float tiempoPasado;
     private GameObject canvasitofachero;
+    private GameObject Vcam;
     
 
     // Start is called before the first frame update
@@ -41,10 +42,12 @@ public class VidaPj : MonoBehaviour
             {
                 VidaActual = VidaActual - 1;
                 tiempoPasado = 0;
-
-                
+                Vcam = GameObject.Find("CM vcam1");
+                Vcam.GetComponent<cameraShake>().Shake(0.3f, 0.5f, 0.3f);                      
             }
-
         }
+
     }
-}
+
+ }
+
