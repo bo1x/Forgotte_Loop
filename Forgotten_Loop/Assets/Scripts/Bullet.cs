@@ -44,7 +44,6 @@ public class Bullet : MonoBehaviour
 
     void ImpactoBala()
     {
-        //Instanciar Humo o particulas
         Destroy(this.gameObject);
     }
 
