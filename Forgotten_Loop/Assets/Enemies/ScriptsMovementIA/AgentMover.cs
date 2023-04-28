@@ -10,9 +10,11 @@ public class AgentMover : MonoBehaviour
 
     //Variables para velocidad en general
     [SerializeField]
-    private float maxSpeed = 2, acceleration = 50, deacceleration = 100;
+    public float maxSpeed = 2;
     [SerializeField]
-    private float currentSpeed = 0;
+    private float acceleration = 50, deacceleration = 100;
+    [SerializeField]
+    public float currentSpeed = 0;
 
     //Movement Inputs en Vectores que usan ademas properties
     private Vector2 oldMovementInput;
@@ -24,7 +26,7 @@ public class AgentMover : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
     }
 
-    //En el Update en vase a la velocidad y los datos dados calcula la velocidad, aceleracion y decerelacion correspondiente
+    //En el Update en base a la velocidad y los datos dados calcula la velocidad, aceleracion y decerelacion correspondiente
     private void FixedUpdate()
     {
         if (MovementInput.magnitude > 0 && currentSpeed >= 0)

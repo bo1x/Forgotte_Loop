@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2387389670173621469}
   - component: {fileID: 2387389670173621459}
   - component: {fileID: 3244498677251883301}
-  - component: {fileID: 1114046712189166443}
+  - component: {fileID: 1181537082871890178}
   - component: {fileID: 1022146224243453478}
   - component: {fileID: 4153206279960777234}
   - component: {fileID: 4153206279960777235}
@@ -140,7 +140,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0205302, y: 0.83789825}
   m_EdgeRadius: 0
---- !u!114 &1114046712189166443
+--- !u!114 &1181537082871890178
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2387389670173621457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7431d9e1208fdbb419965319df6dd15e, type: 3}
+  m_Script: {fileID: 11500000, guid: 8db8141f496fc9f4abe3216a99ba42fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 3
@@ -191,12 +191,12 @@ MonoBehaviour:
   detectionDelay: 0.05
   aiUpdateDelay: 0.06
   attackDelay: 1
-  attackDistance: 0.5
+  attackDistance: 5
   OnAttackPressed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1114046712189166443}
-        m_TargetAssemblyTypeName: Agent, Assembly-CSharp
+      - m_Target: {fileID: 1181537082871890178}
+        m_TargetAssemblyTypeName: AgentMeleeEye, Assembly-CSharp
         m_MethodName: attack
         m_Mode: 1
         m_Arguments:
@@ -210,8 +210,8 @@ MonoBehaviour:
   OnMovementInput:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1114046712189166443}
-        m_TargetAssemblyTypeName: Agent, Assembly-CSharp
+      - m_Target: {fileID: 1181537082871890178}
+        m_TargetAssemblyTypeName: AgentMeleeEye, Assembly-CSharp
         m_MethodName: set_MovementInput
         m_Mode: 0
         m_Arguments:
@@ -225,8 +225,8 @@ MonoBehaviour:
   OnPointerInput:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1114046712189166443}
-        m_TargetAssemblyTypeName: Agent, Assembly-CSharp
+      - m_Target: {fileID: 1181537082871890178}
+        m_TargetAssemblyTypeName: AgentMeleeEye, Assembly-CSharp
         m_MethodName: set_PointerInput
         m_Mode: 0
         m_Arguments:
