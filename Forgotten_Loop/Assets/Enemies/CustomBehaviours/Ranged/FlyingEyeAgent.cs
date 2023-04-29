@@ -6,8 +6,6 @@ using UnityEngine.InputSystem;
 
 public class FlyingEyeAgent : MonoBehaviour
 {
-    //Variable Vida
-    public float vida;
 
     //El script que mueve al personaje
     private AgentMover agentMover;
@@ -27,11 +25,6 @@ public class FlyingEyeAgent : MonoBehaviour
         //El update actualiza el movimiento del enemigo
         agentMover.MovementInput = MovementInput;
 
-        if (vida <= 0 )
-        {
-            GameObject.Find("Canvas").GetComponent<Puntos>().Almas = GameObject.Find("Canvas").GetComponent<Puntos>().Almas + 1;
-            Destroy(this.gameObject);
-        }
     }
 
     //Metodo de ataque
@@ -48,12 +41,5 @@ public class FlyingEyeAgent : MonoBehaviour
         agentMover = GetComponent<AgentMover>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Bullet")
-        {
-            Destroy(collision.gameObject);
-            vida -= 1;
-        }
-    }
+   
 }

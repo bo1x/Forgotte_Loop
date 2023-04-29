@@ -3,7 +3,8 @@ guid: 2cde994d6a7fa3342bbc15babc24d3a4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - MaterFlash: {fileID: 2100000, guid: 9aa7f6dd4963a724ab7c22672e11abf4, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -32,18 +32,21 @@ public class Bullet : MonoBehaviour
 
         if(collision.gameObject.name == "Walls")
         {
-            ImpactoBala();
+           //Intantiate Smoke
         }
 
         if(collision.gameObject.tag == "Enemy")
         {
-            // collision.gameObject.GetComponent<Scriptquetengasuvida>().SuVidaVariable-1
-            ImpactoBala();
+           
+            ImpactoBala(collision);
         }
     }
 
-    void ImpactoBala()
+    void ImpactoBala(Collision2D collider)
     {
+        collider.gameObject.GetComponent<EnemyHPAndFeedback>().VidaActual -= 1;
+        Vector2 dir = (transform.position - collider.transform.position).normalized;
+        collider.gameObject.GetComponent<Rigidbody2D>().AddForce(-dir*10, ForceMode2D.Impulse);
         Destroy(this.gameObject);
     }
 
