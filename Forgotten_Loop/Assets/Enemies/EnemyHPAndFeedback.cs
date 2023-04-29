@@ -25,8 +25,12 @@ public class EnemyHPAndFeedback : MonoBehaviour
         }
         if (VidaActual <= 0)
         {
-            //GameObject.Find("Canvas").GetComponent<Puntos>().Almas = GameObject.Find("Canvas").GetComponent<Puntos>().Almas + 1;
-            Destroy(this.gameObject);
+            GameObject.Find("Canvas").GetComponent<Puntos>().Almas++;
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            GetComponent<AgentMover>().enabled = false;
+            GetComponent<EnemyAI>().enabled = false;
+
+            GetComponent<Animator>().Play("Death");
         }
     }
 
@@ -55,5 +59,10 @@ public class EnemyHPAndFeedback : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public void Destroy()
+    {
+        Destroy(this.gameObject);
     }
 }
