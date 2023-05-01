@@ -134,10 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2535315531663628701, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 2535315531663628700, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
+      propertyPath: Armas
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2535315531663628702, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -181,6 +181,14 @@ PrefabInstance:
     - target: {fileID: 2535315531663628702, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3518295006714763813, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3518295006714763813, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
+      propertyPath: m_TagString
+      value: Bullet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}

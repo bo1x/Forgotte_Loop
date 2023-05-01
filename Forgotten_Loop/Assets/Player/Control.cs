@@ -12,9 +12,12 @@ public class Control : MonoBehaviour
     //Variables para cambiar el timing del dash
     [SerializeField]
     public float DashCooldown, DashTime;
-   
+
     //Variables para permitir Dash o no
     private bool IsDashing = false, CanDash = true;
+
+    //Variables para permitir el ataque
+    public bool IsAttacking = false, MeleeCooldown = false;
 
     //Variables para alternar velocidad de movimiento y dash
     public float movespeed, dashspeed;
@@ -28,12 +31,18 @@ public class Control : MonoBehaviour
 
     private Animator myanim;
 
+    public GameObject Colisiones;
+
     //Cambia entre armas
     public bool ModoDisparo = false;
 
     //Variables de Arma
     public Transform shootingPoint;
+
     public GameObject bulletPrefab;
+    public GameObject BlueBullet;
+    public GameObject Beam;
+
     public float nextShoot;
     public float fireRate = 0.5f;
 
@@ -58,16 +67,33 @@ public class Control : MonoBehaviour
     void Update()
     {
         //Comprueba si esta o no en dash, sino lo esta es movimiento normal
-        if (!IsDashing)
+        if (!IsDashing && !IsAttacking)
         {
             myrigi.velocity = new Vector2(InputX * movespeed, InputY * movespeed);
         }
 
-        if (myrigi.velocity == Vector2.zero)
+        if (myrigi.velocity == Vector2.zero && !IsAttacking)
         {
-            myanim.Play("Idle");
+            switch (Armas)
+            {
+                default:
+                    Debug.Log("No Anim");
+                    break;
+                case 0:
+                    myanim.Play("Idle");
+                    break;
+                case 1:
+                    myanim.Play("Idle2");
+                    break;
+                case 2:
+                    myanim.Play("Idle2");
+                    break;
+                case 3:
+                    myanim.Play("Idle1");
+                    break;
+            }
         }
-        if (myrigi.velocity != Vector2.zero)
+        if (myrigi.velocity != Vector2.zero && !IsAttacking)
         {
             switch (Armas)
             {
@@ -173,16 +199,16 @@ public class Control : MonoBehaviour
     {
         CanDash = false;
         IsDashing = true;
-        myrigi.AddForce(new Vector2 (myrigi.velocity.x * dashspeed, myrigi.velocity.y * dashspeed));
-        GetComponentInChildren<Collider>().enabled = false;
+        myrigi.AddForce(new Vector2(myrigi.velocity.x * dashspeed, myrigi.velocity.y * dashspeed));
+        Colisiones.SetActive(false);
         yield return new WaitForSeconds(DashTime);
-        GetComponentInChildren<Collider>().enabled = true;
+        Colisiones.SetActive(true);
         IsDashing = false;
-        StartCoroutine(("Delay"));
+        StartCoroutine(("DelayDash"));
     }
 
     //Pone un Delay/Cooldown entre dashes para que no se spameen
-    public IEnumerator Delay()
+    public IEnumerator DelayDash()
     {
         yield return new WaitForSeconds(DashCooldown);
         CanDash = true;
@@ -193,7 +219,14 @@ public class Control : MonoBehaviour
     {
         if (context.performed)
         {
-            print("GetInteractedFool");
+            if (Armas > 3)
+            {
+                Armas = 1;
+            }
+            else
+            {
+                Armas++;
+            }
         }
     }
 
@@ -239,17 +272,30 @@ public class Control : MonoBehaviour
                     print("No Weapon");
                     break;
                 case 1:
+                    fireRate = 0.15f;
+                    if (Time.time > nextShoot)
+                    {
+                        nextShoot = Time.time + fireRate;
+                        Instantiate(BlueBullet, shootingPoint.transform);
+                    }
                     break;
                 case 2:
+                    fireRate = 2f;
+                    if (Time.time > nextShoot)
+                    {
+                        nextShoot = Time.time + fireRate;
+                        Instantiate(Beam, shootingPoint.transform);
+                    }
                     break;
                 case 3:
+                    fireRate = 0.5f;
+                    if (Time.time > nextShoot)
+                    {
+                        nextShoot = Time.time + fireRate;
+                        Instantiate(bulletPrefab, shootingPoint.transform);
+                    }
                     break;
 
-            }
-            if (Time.time > nextShoot)
-            {
-                nextShoot = Time.time + fireRate;
-                Instantiate(bulletPrefab, shootingPoint.transform);
             }
         }
     }
@@ -258,9 +304,27 @@ public class Control : MonoBehaviour
     {
         if (context.performed)
         {
-            print("HYAAAAAAA");
+            if (!MeleeCooldown)
+            {
+                Renderer.GetComponent<SpriteRenderer>().enabled = false;
+                IsAttacking = true;
+                myanim.Play("MeleeAttack");
+                MeleeCooldown = true;
+                StartCoroutine("MeleeCooldown");
+            }
         }
     }
 
-   
+    public IEnumerator DelayMelee()
+    {
+        yield return new WaitForSeconds(10f);
+        MeleeCooldown = false;
+    }
+
+    public void NoAttack()
+    {
+        Renderer.GetComponent<SpriteRenderer>().enabled = true;
+        IsAttacking = false;
+    }
+
 }
