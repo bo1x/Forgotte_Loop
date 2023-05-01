@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ef9d819489560d249a9c9f2d740f07e4
+guid: 24a03790d9401194ab32985d4f519d01
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_Run_sin1brazo_0
+      name: Sin1brazo_Player_Run-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f52ac137773c1c45b68b7952f5d4190
-      internalID: 1414046305
+      spriteID: c9c04bea73873d647aa3bf2dbf1883af
+      internalID: 1369259299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_sin1brazo_1
+      name: Sin1brazo_Player_Run-Sheet_1
       rect:
         serializedVersion: 2
         x: 24
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cbd1bbc5a95efa42a5c6eb1d5c399a7
-      internalID: -251652283
+      spriteID: 308698cffe7b2c14391f180d6af8275e
+      internalID: -1916198439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_sin1brazo_2
+      name: Sin1brazo_Player_Run-Sheet_2
       rect:
         serializedVersion: 2
         x: 48
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4955ad5a0e75d4743bee38536c767d23
-      internalID: -599435459
+      spriteID: fd0f13424a6395844ada76c8c1afb76a
+      internalID: 858205439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_sin1brazo_3
+      name: Sin1brazo_Player_Run-Sheet_3
       rect:
         serializedVersion: 2
         x: 72
@@ -181,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14344302801e3ff429c30420f2d18f2c
-      internalID: 235527512
+      spriteID: 0b52f1cf864a82e4db3c77027d798516
+      internalID: 766700822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_sin1brazo_4
+      name: Sin1brazo_Player_Run-Sheet_4
       rect:
         serializedVersion: 2
         x: 96
@@ -202,14 +202,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91e28680d41cfaf45a35f26aaaaaa540
-      internalID: -1650104893
+      spriteID: 4fa7129132bc5c84585dba42a19449ee
+      internalID: -430667748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_sin1brazo_5
+      name: Sin1brazo_Player_Run-Sheet_5
       rect:
         serializedVersion: 2
         x: 120
@@ -223,14 +223,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54ca27abe8946b94baa44ec7a9f61b38
-      internalID: 1334208978
+      spriteID: 53116a18cc4ec4d409a8c4d429728b77
+      internalID: -1135978713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_sin1brazo_6
+      name: Sin1brazo_Player_Run-Sheet_6
       rect:
         serializedVersion: 2
         x: 144
@@ -244,14 +244,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3400005102d480547a6cea5ada3aebcf
-      internalID: -2069033311
+      spriteID: 5e591e0d3718ccd40a1c175d5e92520a
+      internalID: 1688632039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Run_sin1brazo_7
+      name: Sin1brazo_Player_Run-Sheet_7
       rect:
         serializedVersion: 2
         x: 168
@@ -265,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58d1e8a8691272f478d94ed52d1beb7e
-      internalID: 1451633198
+      spriteID: 98b1fada7d312444babebb9118ac6d6d
+      internalID: 1162271324
       vertices: []
       indices: 
       edges: []
@@ -282,14 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player_Run_sin1brazo_0: 1414046305
-      Player_Run_sin1brazo_1: -251652283
-      Player_Run_sin1brazo_4: -1650104893
-      Player_Run_sin1brazo_7: 1451633198
-      Player_Run_sin1brazo_6: -2069033311
-      Player_Run_sin1brazo_5: 1334208978
-      Player_Run_sin1brazo_3: 235527512
-      Player_Run_sin1brazo_2: -599435459
+      Sin1brazo_Player_Run-Sheet_7: 1162271324
+      Sin1brazo_Player_Run-Sheet_3: 766700822
+      Sin1brazo_Player_Run-Sheet_0: 1369259299
+      Sin1brazo_Player_Run-Sheet_4: -430667748
+      Sin1brazo_Player_Run-Sheet_6: 1688632039
+      Sin1brazo_Player_Run-Sheet_5: -1135978713
+      Sin1brazo_Player_Run-Sheet_2: 858205439
+      Sin1brazo_Player_Run-Sheet_1: -1916198439
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

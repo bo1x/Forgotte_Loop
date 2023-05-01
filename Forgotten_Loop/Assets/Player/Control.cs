@@ -4,10 +4,6 @@ using System.Collections;
 
 public class Control : MonoBehaviour
 {
-
-    //camera Shake
-    private GameObject Vcam;
-
     //Variables para movimiento de jugador y raton
     private float InputX, InputY;
     
@@ -32,18 +28,23 @@ public class Control : MonoBehaviour
 
     private Animator myanim;
 
-    private GameObject Brazo;
-
     //Cambia entre armas
     public bool ModoDisparo = false;
 
     //Variables de Arma
     public Transform shootingPoint;
     public GameObject bulletPrefab;
-    public float tiempoD = 0;
-    public float cadencia = 0.5f;
+    public float nextShoot;
+    public float fireRate = 0.5f;
 
-  
+    //Variables Arma Anim
+    public int Armas;
+
+    public GameObject Renderer;
+
+    public Sprite Arma1;
+    public Sprite Arma2;
+    public Sprite Arma3;
 
     //El start añade a las variables previamente mencionadas lo que necesita
     void Start()
@@ -66,9 +67,44 @@ public class Control : MonoBehaviour
         {
             myanim.Play("Idle");
         }
-        else
+        if (myrigi.velocity != Vector2.zero)
         {
-            myanim.Play("RunSideToSide");
+            switch (Armas)
+            {
+                default:
+                    Debug.Log("No Anim");
+                    break;
+                case 0:
+                    myanim.Play("RunSideToSide");
+                    break;
+                case 1:
+                    myanim.Play("RunSideToSide2");
+                    break;
+                case 2:
+                    myanim.Play("RunSideToSide2");
+                    break;
+                case 3:
+                    myanim.Play("RunSideToSide1");
+                    break;
+            }
+        }
+        switch (Armas)
+        {
+            default:
+                Debug.Log("No Weapon");
+                break;
+            case 0:
+                Renderer.GetComponent<SpriteRenderer>().sprite = null;               
+                break;
+            case 1:
+                Renderer.GetComponent<SpriteRenderer>().sprite = Arma1;
+                break;
+            case 2:
+                Renderer.GetComponent<SpriteRenderer>().sprite = Arma2;
+                break;
+            case 3:
+                Renderer.GetComponent<SpriteRenderer>().sprite = Arma3;
+                break;
         }
 
         //Usa un metodo para mover la mirilla en tiempo real  dandole la posicion
@@ -79,7 +115,8 @@ public class Control : MonoBehaviour
 
         //Este metodo cambia la posicion en la que mira jugador de acuerdo a donde esta el raton
         RotateViewOnMouse();
-        
+
+
     }
 
     //Recibe por Inputs el movimiento del jugador en X y Y
@@ -136,8 +173,10 @@ public class Control : MonoBehaviour
     {
         CanDash = false;
         IsDashing = true;
-        myrigi.velocity = new Vector2(myrigi.velocity.x * dashspeed, myrigi.velocity.y * dashspeed);
+        myrigi.AddForce(new Vector2 (myrigi.velocity.x * dashspeed, myrigi.velocity.y * dashspeed));
+        GetComponentInChildren<Collider>().enabled = false;
         yield return new WaitForSeconds(DashTime);
+        GetComponentInChildren<Collider>().enabled = true;
         IsDashing = false;
         StartCoroutine(("Delay"));
     }
@@ -194,18 +233,23 @@ public class Control : MonoBehaviour
     {
         if (context.performed)
         {
-            if (ModoDisparo)
+            switch (Armas)
             {
-                tiempoD = Time.time + cadencia;
-                GameObject myBullet = Instantiate(bulletPrefab, shootingPoint.transform);
-                Destroy(myBullet, 2f);
-            }
+                default:
+                    print("No Weapon");
+                    break;
+                case 1:
+                    break;
+                case 1:
+                    break;
+                case 1:
+                    break;
 
-            if (!ModoDisparo)
+            }
+            if (Time.time > nextShoot)
             {
-                tiempoD = Time.time + cadencia;
-                GameObject myBullet = Instantiate(bulletPrefab, shootingPoint.transform);
-                Destroy(myBullet, 2f);
+                nextShoot = Time.time + fireRate;
+                Instantiate(bulletPrefab, shootingPoint.transform);
             }
         }
     }
