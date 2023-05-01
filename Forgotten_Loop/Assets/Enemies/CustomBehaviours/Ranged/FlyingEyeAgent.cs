@@ -18,7 +18,9 @@ public class FlyingEyeAgent : MonoBehaviour
     public Vector2 MovementInput { get => movementInput; set => movementInput = value; }
 
     //Prefab Rayo Ojo
-    public GameObject Rayo;
+    public GameObject BeamCue;
+
+    public bool Attacked = false;
 
     private void Update()
     {
@@ -32,7 +34,10 @@ public class FlyingEyeAgent : MonoBehaviour
     {
         //Cambiar Attack Distance en EnemyAI del enemigo para alternar la distancia a la que comienza a disparar
         //Lo mismo para el delay de ataque
-        Instantiate(Rayo, this.transform);
+        if (!Attacked)
+        {
+            StartCoroutine("Cue");
+        }
     }
 
     //En el start recibe los componentes necesarios
@@ -41,5 +46,14 @@ public class FlyingEyeAgent : MonoBehaviour
         agentMover = GetComponent<AgentMover>();
     }
 
+    public IEnumerator Cue()
+    {
+        Attacked = true;
+        GameObject Player = GameObject.Find("Player");
+        Quaternion RotatePlayer = Quaternion.RotateTowards(transform.rotation, Player.transform.rotation, 360);
+        Instantiate(BeamCue, transform.position, transform.rotation);
+        yield return new WaitForSeconds(8f);
+        Attacked = false;
+    }
    
 }

@@ -11,6 +11,7 @@ public class Bullet : MonoBehaviour
 
     public Vector2 position;
 
+    public GameObject VFX;
     void Start()
     {
         transform.parent = null;
@@ -32,7 +33,8 @@ public class Bullet : MonoBehaviour
 
         if(collision.gameObject.name == "Walls")
         {
-           //Intantiate Smoke
+            Instantiate(VFX, transform.position, transform.rotation);
+            Destroy(this.gameObject);
         }
 
         if(collision.gameObject.tag == "Enemy")
@@ -47,6 +49,7 @@ public class Bullet : MonoBehaviour
         collider.gameObject.GetComponent<EnemyHPAndFeedback>().VidaActual -= 1;
         Vector2 dir = (transform.position - collider.transform.position).normalized;
         collider.gameObject.GetComponent<Rigidbody2D>().AddForce(-dir*10, ForceMode2D.Impulse);
+        Instantiate(VFX, transform.position, transform.rotation);
         Destroy(this.gameObject);
     }
 

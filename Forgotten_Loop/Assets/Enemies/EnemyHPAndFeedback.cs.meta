@@ -5,6 +5,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - MaterFlash: {fileID: 2100000, guid: 9aa7f6dd4963a724ab7c22672e11abf4, type: 2}
+  - HitEffect: {fileID: 5819671851927235648, guid: 8b8de68be17043449b305b7615c76eac, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

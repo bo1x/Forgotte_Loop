@@ -10,6 +10,8 @@ public class EnemyHPAndFeedback : MonoBehaviour
     public Material MaterFlash;
     private Material Mater;
     private SpriteRenderer Render;
+
+    
     private void Start()
     {
         VidaActual = VidaMax;
