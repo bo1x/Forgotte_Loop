@@ -17,6 +17,7 @@ public class VidaPj : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //VidaMaxima = VidaMaxima * (int)PlayerPrefs.GetFloat("vidaMax");
         VidaActual = VidaMaxima;
         canvasitofachero = GameObject.Find("Canvas");
     }
@@ -24,6 +25,7 @@ public class VidaPj : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("Vida" + VidaMaxima);
         tiempoPasado = tiempoPasado + Time.deltaTime;
 
         canvasitofachero.GetComponent<Vida>().vida = VidaActual;

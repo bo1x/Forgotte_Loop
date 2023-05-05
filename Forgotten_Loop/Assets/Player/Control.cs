@@ -310,7 +310,7 @@ public class Control : MonoBehaviour
                 IsAttacking = true;
                 myanim.Play("MeleeAttack");
                 MeleeCooldown = true;
-                StartCoroutine("MeleeCooldown");
+                StartCoroutine("DelayMelee");
             }
         }
     }

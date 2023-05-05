@@ -12,8 +12,11 @@ public class Bullet : MonoBehaviour
     public Vector2 position;
 
     public GameObject VFX;
+
+    public int daño = 1;
     void Start()
     {
+        daño = daño * (int)PlayerPrefs.GetFloat("daño");
         transform.parent = null;
         Player = GameObject.Find("Player");
         rb = GetComponent<Rigidbody2D>();
@@ -25,6 +28,7 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         rb.velocity = transform.right * speed;
+        Debug.Log("Daño = " + daño);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -46,7 +50,7 @@ public class Bullet : MonoBehaviour
 
     void ImpactoBala(Collision2D collider)
     {
-        collider.gameObject.GetComponent<EnemyHPAndFeedback>().VidaActual -= 1;
+        collider.gameObject.GetComponent<EnemyHPAndFeedback>().VidaActual -= daño;
         Vector2 dir = (transform.position - collider.transform.position).normalized;
         collider.gameObject.GetComponent<Rigidbody2D>().AddForce(-dir*10, ForceMode2D.Impulse);
         Instantiate(VFX, transform.position, transform.rotation);
