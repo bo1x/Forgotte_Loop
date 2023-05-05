@@ -19,6 +19,9 @@ public class FlyingEyeAgent : MonoBehaviour
 
     //Prefab Rayo Ojo
     public GameObject BeamCue;
+    public GameObject Beam;
+
+    public Transform BeamPoint;
 
     public bool Attacked = false;
 
@@ -48,12 +51,19 @@ public class FlyingEyeAgent : MonoBehaviour
 
     public IEnumerator Cue()
     {
+        GetComponent<EnemyAI>().enabled = false;
+        GetComponent<AgentMover>().enabled = false;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         Attacked = true;
         GameObject Player = GameObject.Find("Player");
         Quaternion RotatePlayer = Quaternion.RotateTowards(transform.rotation, Player.transform.rotation, 360);
         Instantiate(BeamCue, transform.position, transform.rotation);
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(3f);
+        Instantiate(Beam, BeamPoint);
         Attacked = false;
+        yield return new WaitForSeconds(3f);
+        GetComponent<EnemyAI>().enabled = true;
+        GetComponent<AgentMover>().enabled = true;
     }
    
 }

@@ -345,6 +345,7 @@ Transform:
   m_Children:
   - {fileID: 156407459738969158}
   - {fileID: 156407460415090609}
+  - {fileID: 4251813065248604147}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -476,6 +477,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BeamCue: {fileID: 2544161868944622849, guid: 04058e8582c04ff4bbe88bff025d093f, type: 3}
   Beam: {fileID: 2307831465911848639, guid: 40b2177e0a76da545a5626e8af528624, type: 3}
+  BeamPoint: {fileID: 4251813065248604147}
+  Attacked: 0
 --- !u!114 &3866314209041482974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513,7 +516,7 @@ MonoBehaviour:
   aiData: {fileID: 156407461593807083}
   detectionDelay: 0.05
   aiUpdateDelay: 0.06
-  attackDelay: 1
+  attackDelay: 3
   attackDistance: 5
   OnAttackPressed:
     m_PersistentCalls:
@@ -597,3 +600,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &7138625525654439651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4251813065248604147}
+  m_Layer: 3
+  m_Name: BeamPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4251813065248604147
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7138625525654439651}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.146, y: 0.022, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1921131153853355558}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
