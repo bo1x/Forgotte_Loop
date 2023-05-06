@@ -25,7 +25,7 @@ public class VidaPj : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Vida" + VidaMaxima);
+       // check para saber si el sistema de vidas funsiona jeje Debug.Log("Vida" + VidaMaxima);
         tiempoPasado = tiempoPasado + Time.deltaTime;
 
         canvasitofachero.GetComponent<Vida>().vida = VidaActual;
