@@ -14,10 +14,39 @@ public class MostrarMejorasCanvas : MonoBehaviour
     void Start()
     {
         panelmejoras = GameObject.Find("Stats").GetComponent<TextMeshProUGUI>();
+        MostrarMejoras();
+    }
+
+
+
+    void MostrarMejoras()
+    {
         daño = PlayerPrefs.GetFloat("daño", 1f);
         vidaMax = PlayerPrefs.GetFloat("vidaMax", 1f);
         cadencia = PlayerPrefs.GetFloat("cadencia", 1f);
+        panelmejoras.SetText("Daño: {0}  VidaMaxima: {1}  Cadencia: {2}", daño, vidaMax, cadencia);
+    }
 
-        panelmejoras.SetText("Daño: {0}  VidaMaxima: {1}  Cadencia: {2}", daño,vidaMax,cadencia);
+    public void UpgradeDaño()
+    {
+        PlayerPrefs.SetFloat("daño", 2f);
+        PlayerPrefs.Save();
+        MostrarMejoras();
+    }
+
+    public void UpgradeCadencia()
+    {
+        PlayerPrefs.SetFloat("cadencia", 2f);
+        PlayerPrefs.Save();
+        MostrarMejoras();
+
+    }
+
+    public void UpgradeVida()
+    {
+        PlayerPrefs.SetFloat("vidaMax", 2f);
+        PlayerPrefs.Save();
+        MostrarMejoras();
+
     }
 }
