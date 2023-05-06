@@ -1,49 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Vida : MonoBehaviour
 {
-    public GameObject corazon1;
-    public GameObject corazon2;
-    public GameObject corazon3;
 
-    public int vida = 3;
+    private TextMeshProUGUI texto;
+    private GameObject pj;
+    private int VidaActual, VidaMax;
+    
     void Start()
     {
-        
+        texto = GameObject.Find("TextoVida").GetComponent<TextMeshProUGUI>();
+        pj = GameObject.Find("Player");
     }
 
    
     void Update()
     {
-        /*
-        if (vida == 3)
-        {
-            corazon1.SetActive(true);
-            corazon2.SetActive(true);
-            corazon3.SetActive(true);
-        }
+        VidaActual =  pj.GetComponent<VidaPj>().VidaActual;
+        VidaMax = pj.GetComponent<VidaPj>().VidaMaxima;
 
-        if (vida == 2)
-        {
-            corazon1.SetActive(true);
-            corazon2.SetActive(true);
-            corazon3.SetActive(false);
-        }
-
-        if (vida == 1)
-        {
-            corazon1.SetActive(true);
-            corazon2.SetActive(false);
-            corazon3.SetActive(false);
-        }
-        if (vida == 0)
-        {
-            corazon1.SetActive(false);
-            corazon2.SetActive(false);
-            corazon3.SetActive(false);
-        }
-        */
+        texto.SetText(VidaActual + "/" + VidaMax);
     }
 }
