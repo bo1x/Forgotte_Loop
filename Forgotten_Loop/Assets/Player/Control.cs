@@ -288,7 +288,7 @@ public class Control : MonoBehaviour
                     }
                     break;
                 case 3:
-                    fireRate = 0.5f;
+                    fireRate = 0.2f;
                     if (Time.time > nextShoot)
                     {
                         nextShoot = Time.time + fireRate;
