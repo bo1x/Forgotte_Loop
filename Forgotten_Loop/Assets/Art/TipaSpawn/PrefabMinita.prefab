@@ -772,6 +772,7 @@ GameObject:
   - component: {fileID: 8507594583936559909}
   - component: {fileID: 326531262374297885}
   - component: {fileID: 247612283982854916}
+  - component: {fileID: 8756467558045959945}
   m_Layer: 5
   m_Name: canvasHijo
   m_TagString: Untagged
@@ -865,6 +866,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8756467558045959945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7738775669359071652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77ed5834b9132dc4783bd222282d8711, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8211229993781722047
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,8 +913,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -478, y: -187}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 4.8629, y: -241.03467}
+  m_SizeDelta: {x: 1165.7258, y: 158.0694}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2165809584532404650
 CanvasRenderer:
@@ -931,7 +944,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mejoras Actuales
+  m_text: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

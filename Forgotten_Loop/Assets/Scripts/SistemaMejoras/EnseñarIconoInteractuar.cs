@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnseñarIconoInteractuar : MonoBehaviour
 {
-    float rangoDetecion = 15f;
+    float rangoDetecion = 2.5f;
     GameObject player;
     GameObject icono;
     GameObject canvasMejoras;
@@ -14,6 +14,7 @@ public class EnseñarIconoInteractuar : MonoBehaviour
         player = GameObject.Find("Player");
         icono = this.transform.Find("Icono").gameObject;
         canvasMejoras = this.transform.Find("canvasHijo").gameObject;
+        canvasMejoras.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,12 +27,15 @@ public class EnseñarIconoInteractuar : MonoBehaviour
             icono.SetActive(true);
             if (Input.GetKeyDown(KeyCode.T) && !canvasMejoras.activeInHierarchy)
             {
+                Debug.Log("ACTIVO");
                 canvasMejoras.SetActive(true);
             }
-            if (Input.GetKeyDown(KeyCode.T) && canvasMejoras.activeInHierarchy)
+            else if (Input.GetKeyDown(KeyCode.T) && canvasMejoras.activeInHierarchy)
             {
+                Debug.Log("DESACTIVO");
                 canvasMejoras.SetActive(false);
             }
+
         }
         else
         {

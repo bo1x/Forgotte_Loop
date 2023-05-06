@@ -17,6 +17,7 @@ public class Vida : MonoBehaviour
    
     void Update()
     {
+        /*
         if (vida == 3)
         {
             corazon1.SetActive(true);
@@ -43,5 +44,6 @@ public class Vida : MonoBehaviour
             corazon2.SetActive(false);
             corazon3.SetActive(false);
         }
+        */
     }
 }
