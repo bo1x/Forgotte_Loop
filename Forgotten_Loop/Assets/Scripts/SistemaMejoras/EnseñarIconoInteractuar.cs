@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnseñarIconoInteractuar : MonoBehaviour
 {
-    float rangoDetecion = 2.5f;
+    float rangoDetecion = 15f;
     GameObject player;
     GameObject icono;
     GameObject canvasMejoras;
@@ -43,7 +43,7 @@ public class EnseñarIconoInteractuar : MonoBehaviour
 
     bool detectarPlayer(float rangoD)
     {
-        if (Vector3.Distance(player.transform.position, transform.position) < 2.5f)
+        if (Vector3.Distance(player.transform.position, transform.position) < rangoD)
         {
             return true; 
         }
