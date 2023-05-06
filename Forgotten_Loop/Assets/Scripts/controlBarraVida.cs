@@ -18,6 +18,6 @@ public class controlBarraVida : MonoBehaviour
     {
         vidaActual = GameObject.Find("Player").GetComponent<VidaPj>().VidaActual;
 
-        barraHP.fillAmount = vidaMax / vidaActual;
+        barraHP.fillAmount = vidaActual / vidaMax;
     }
 }
