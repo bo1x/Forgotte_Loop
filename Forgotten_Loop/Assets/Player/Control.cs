@@ -227,6 +227,11 @@ public class Control : MonoBehaviour
             {
                 Armas++;
             }
+
+            if (Armas == 0)
+            {
+                Armas = 1;
+            }
         }
     }
 

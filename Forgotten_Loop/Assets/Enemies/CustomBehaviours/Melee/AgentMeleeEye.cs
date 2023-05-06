@@ -29,15 +29,7 @@ public class AgentMeleeEye : MonoBehaviour
     //Metodo de ataque
     public void attack()
     {
-        GetComponent<EnemyAIThrow>().movementInput = Vector2.zero;
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        StartCoroutine("Delay");
-        if (a)
-        {
-            GetComponent<Rigidbody2D>().velocity = Vector2.right;
-            GetComponent<Rigidbody2D>().AddForce(Vector2.right * 5, ForceMode2D.Impulse);
-            StartCoroutine("Delay2");
-        }
+        
 
     }
 
@@ -45,19 +37,6 @@ public class AgentMeleeEye : MonoBehaviour
     private void Start()
     {
         agentMover = GetComponent<AgentMover>();
-    }
-
-
-    public IEnumerator Delay()
-    {
-        yield return new WaitForSeconds(2f);
-        a = true;
-    }
-
-    public IEnumerator Delay2()
-    {
-        yield return new WaitForSeconds(1f);
-        a = false;
     }
 
 }

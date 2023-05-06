@@ -51,7 +51,7 @@ public class FlyingEyeAgent : MonoBehaviour
         GetComponent<AgentMover>().enabled = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         Instantiate(Beam, BeamPoint);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.2f);
         GetComponent<EnemyAI>().enabled = true;
         GetComponent<AgentMover>().enabled = true;
     }

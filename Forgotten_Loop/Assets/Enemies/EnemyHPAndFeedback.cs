@@ -48,8 +48,12 @@ public class EnemyHPAndFeedback : MonoBehaviour
         Render.material = MaterFlash;
         yield return new WaitForSeconds(0.2f);
         Render.material = Mater;
-        GetComponent<AgentMover>().enabled = true;
-        GetComponent<EnemyAI>().enabled = true;
+        if (VidaActual > 0)
+        {
+            GetComponent<AgentMover>().enabled = true;
+            GetComponent<EnemyAI>().enabled = true;
+        }
+        
         
     }
 
