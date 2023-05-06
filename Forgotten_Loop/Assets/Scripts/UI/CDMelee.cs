@@ -22,8 +22,7 @@ public class CDMelee : MonoBehaviour
     {
       heGolpeado = GameObject.Find("Player").GetComponent<Control>().MeleeCooldown;
 
-        Debug.Log(contador);
-        Debug.Log(contando);
+       
         if (heGolpeado == true)
         {
             contando = true;            
@@ -36,7 +35,7 @@ public class CDMelee : MonoBehaviour
         }
         if (contador >= 10.2f)
         {
-            Debug.Log("fin");
+            
            // contador = 0.0f;
             contando = false;
             

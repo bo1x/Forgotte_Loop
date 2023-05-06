@@ -22,8 +22,7 @@ public class CDDash : MonoBehaviour
     {
       heDasheado = GameObject.Find("Player").GetComponent<Control>().IsDashing;
 
-        Debug.Log(contador);
-        Debug.Log(contando);
+
         if (heDasheado == true)
         {
             contando = true;            
@@ -36,7 +35,7 @@ public class CDDash : MonoBehaviour
         }
         if (contador >= 4.0f)
         {
-            Debug.Log("fin");
+           
            // contador = 0.0f;
             contando = false;
             

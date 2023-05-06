@@ -33,7 +33,7 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject.name);
+        Debug.Log(collision.gameObject.tag);
 
         if(collision.gameObject.name == "Walls")
         {
@@ -41,7 +41,7 @@ public class Bullet : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if (collision.gameObject.tag == "Obstacles")
+        if (collision.gameObject.name == "Collideable")
         {
             Instantiate(VFX, transform.position, transform.rotation);
             Destroy(this.gameObject);
