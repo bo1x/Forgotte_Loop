@@ -10,6 +10,7 @@ public class EnemyHPAndFeedback : MonoBehaviour
     public Material MaterFlash;
     private Material Mater;
     private SpriteRenderer Render;
+    public bool estoymuerto = false;
 
     
     private void Start()
@@ -25,9 +26,11 @@ public class EnemyHPAndFeedback : MonoBehaviour
         {
             StartCoroutine("Feedback");
         }
-        if (VidaActual <= 0)
+        if (VidaActual <= 0 && estoymuerto == false)
         {
+            estoymuerto = true;
             GameObject.Find("Canvas").GetComponent<Puntos>().Almas++;
+
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             GetComponent<AgentMover>().enabled = false;
             GetComponent<EnemyAI>().enabled = false;
