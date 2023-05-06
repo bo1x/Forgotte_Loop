@@ -18,7 +18,6 @@ public class FlyingEyeAgent : MonoBehaviour
     public Vector2 MovementInput { get => movementInput; set => movementInput = value; }
 
     //Prefab Rayo Ojo
-    public GameObject BeamCue;
     public GameObject Beam;
 
     public Transform BeamPoint;

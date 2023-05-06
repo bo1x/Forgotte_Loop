@@ -463,6 +463,7 @@ MonoBehaviour:
   VidaActual: 0
   VidaMax: 3
   MaterFlash: {fileID: 2100000, guid: 9aa7f6dd4963a724ab7c22672e11abf4, type: 2}
+  estoymuerto: 0
 --- !u!114 &5504879833488466899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475,10 +476,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d10e01ecc4c751c48994d5d72682bb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BeamCue: {fileID: 2544161868944622849, guid: 04058e8582c04ff4bbe88bff025d093f, type: 3}
   Beam: {fileID: 2307831465911848639, guid: 40b2177e0a76da545a5626e8af528624, type: 3}
   BeamPoint: {fileID: 4251813065248604147}
-  Attacked: 0
 --- !u!114 &3866314209041482974
 MonoBehaviour:
   m_ObjectHideFlags: 0
