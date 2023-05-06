@@ -206,12 +206,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5d0721ab111c524bac92a7b26036213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DashCooldown: 1
+  DashCooldown: 4
   DashTime: 0.25
+  IsDashing: 0
+  CanDash: 1
   IsAttacking: 0
   MeleeCooldown: 0
   movespeed: 10
-  dashspeed: 100
+  dashspeed: 50
   Colisiones: {fileID: 4516525967769469154}
   ModoDisparo: 0
   shootingPoint: {fileID: 5080326113728491774}
