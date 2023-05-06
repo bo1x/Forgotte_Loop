@@ -277,6 +277,7 @@ GameObject:
   - component: {fileID: 188006686567668627}
   - component: {fileID: 272758139922031925}
   - component: {fileID: 1880404112609318464}
+  - component: {fileID: 1555450371369656662}
   m_Layer: 5
   m_Name: armaMelee
   m_TagString: Untagged
@@ -343,6 +344,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1555450371369656662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2657090619442065103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef128dbf8cfeac4d9645b00618c7d41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cdArmaMelee: {fileID: 3489145876826676127}
+  heGolpeado: 0
+  contando: 0
 --- !u!1 &3489145876826676127
 GameObject:
   m_ObjectHideFlags: 0

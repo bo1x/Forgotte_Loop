@@ -14,7 +14,7 @@ public class Control : MonoBehaviour
     public float DashCooldown, DashTime;
 
     //Variables para permitir Dash o no
-    private bool IsDashing = false, CanDash = true;
+    public bool IsDashing = false, CanDash = true;
 
     //Variables para permitir el ataque
     public bool IsAttacking = false, MeleeCooldown = false;
