@@ -5,12 +5,14 @@ using UnityEngine;
 public class EnseñarIconoInteractuar : MonoBehaviour
 {
     float rangoDetecion = 2.5f;
+    GameObject canvasUI;
     GameObject player;
     GameObject icono;
     GameObject canvasMejoras;
     // Start is called before the first frame update
     void Start()
     {
+        canvasUI = GameObject.Find("Canvas");
         player = GameObject.Find("Player");
         icono = this.transform.Find("Icono").gameObject;
         canvasMejoras = this.transform.Find("canvasHijo").gameObject;
@@ -28,12 +30,15 @@ public class EnseñarIconoInteractuar : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.T) && !canvasMejoras.activeInHierarchy)
             {
                 Debug.Log("ACTIVO");
+                canvasUI.SetActive(false);
                 canvasMejoras.SetActive(true);
             }
             else if (Input.GetKeyDown(KeyCode.T) && canvasMejoras.activeInHierarchy)
             {
                 Debug.Log("DESACTIVO");
                 canvasMejoras.SetActive(false);
+                canvasUI.SetActive(true);
+
             }
 
         }
@@ -41,8 +46,10 @@ public class EnseñarIconoInteractuar : MonoBehaviour
         {
             icono.SetActive(false);
             canvasMejoras.SetActive(false);
+            canvasUI.SetActive(true);
+
         }
-        
+
     }
 
     bool detectarPlayer(float rangoD)
