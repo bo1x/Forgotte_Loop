@@ -41,9 +41,14 @@ public class Bullet : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if(collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Obstacles")
         {
-           
+            Instantiate(VFX, transform.position, transform.rotation);
+            Destroy(this.gameObject);
+        }
+
+        if (collision.gameObject.tag == "Enemy")
+        {
             ImpactoBala(collision);
         }
     }
@@ -52,7 +57,7 @@ public class Bullet : MonoBehaviour
     {
         collider.gameObject.GetComponent<EnemyHPAndFeedback>().VidaActual -= daño;
         Vector2 dir = (transform.position - collider.transform.position).normalized;
-        collider.gameObject.GetComponent<Rigidbody2D>().AddForce(-dir*10, ForceMode2D.Impulse);
+        collider.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(dir.x * -1, dir.y * -1)*10, ForceMode2D.Impulse);
         Instantiate(VFX, transform.position, transform.rotation);
         Destroy(this.gameObject);
     }

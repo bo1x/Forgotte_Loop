@@ -212,7 +212,7 @@ MonoBehaviour:
   MeleeCooldown: 0
   movespeed: 10
   dashspeed: 100
-  Colisiones: {fileID: 676927751}
+  Colisiones: {fileID: 4516525967769469154}
   ModoDisparo: 0
   shootingPoint: {fileID: 5080326113728491774}
   bulletPrefab: {fileID: 397623732986465443, guid: c7bbdf726ac70d043b678d3e5c074301, type: 3}
@@ -394,22 +394,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: e489152b-4fd6-4eb0-8d33-f401af6e0aeb
     m_ActionName: Player/AttackRange[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 80ad26f1-87bb-4c67-a4ed-645a2c6f77d9
-    m_ActionName: Player/WeaponChange[/Keyboard/1,/Keyboard/2,/Keyboard/3]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

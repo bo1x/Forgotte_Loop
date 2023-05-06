@@ -31,7 +31,7 @@ public class Control : MonoBehaviour
 
     private Animator myanim;
 
-    public GameObject Colisiones;
+    public CapsuleCollider2D Colisiones;
 
     //Cambia entre armas
     public bool ModoDisparo = false;
@@ -200,9 +200,9 @@ public class Control : MonoBehaviour
         CanDash = false;
         IsDashing = true;
         myrigi.AddForce(new Vector2(myrigi.velocity.x * dashspeed, myrigi.velocity.y * dashspeed));
-        Colisiones.SetActive(false);
+        Colisiones.enabled = false;
         yield return new WaitForSeconds(DashTime);
-        Colisiones.SetActive(true);
+        Colisiones.enabled = true;
         IsDashing = false;
         StartCoroutine(("DelayDash"));
     }

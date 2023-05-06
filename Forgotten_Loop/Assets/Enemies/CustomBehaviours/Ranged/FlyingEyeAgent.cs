@@ -23,8 +23,6 @@ public class FlyingEyeAgent : MonoBehaviour
 
     public Transform BeamPoint;
 
-    public bool Attacked = false;
-
     private void Update()
     {
         //El update actualiza el movimiento del enemigo
@@ -37,10 +35,9 @@ public class FlyingEyeAgent : MonoBehaviour
     {
         //Cambiar Attack Distance en EnemyAI del enemigo para alternar la distancia a la que comienza a disparar
         //Lo mismo para el delay de ataque
-        if (!Attacked)
-        {
+       
             StartCoroutine("Cue");
-        }
+        
     }
 
     //En el start recibe los componentes necesarios
@@ -54,13 +51,7 @@ public class FlyingEyeAgent : MonoBehaviour
         GetComponent<EnemyAI>().enabled = false;
         GetComponent<AgentMover>().enabled = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        Attacked = true;
-        GameObject Player = GameObject.Find("Player");
-        Quaternion RotatePlayer = Quaternion.RotateTowards(transform.rotation, Player.transform.rotation, 360);
-        Instantiate(BeamCue, transform.position, transform.rotation);
-        yield return new WaitForSeconds(3f);
         Instantiate(Beam, BeamPoint);
-        Attacked = false;
         yield return new WaitForSeconds(3f);
         GetComponent<EnemyAI>().enabled = true;
         GetComponent<AgentMover>().enabled = true;
