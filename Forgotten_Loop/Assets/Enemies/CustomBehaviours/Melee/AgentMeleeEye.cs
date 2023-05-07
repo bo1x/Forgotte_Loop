@@ -36,9 +36,10 @@ public class AgentMeleeEye : MonoBehaviour
     //Metodo de ataque
     public void attack()
     {
-        Debug.Log("Attack " + Time.deltaTime);
-        myanim.Play("AttackStart");
-        
+        if (HasAttackFinished)
+        {
+            myanim.Play("AttackStart");
+        }
     }
 
     //En el start recibe los componentes necesarios
@@ -52,10 +53,57 @@ public class AgentMeleeEye : MonoBehaviour
 
     public IEnumerator Throw()
     {
+        HasAttackFinished = false;
         GetComponent<AgentMover>().enabled = false;
         GetComponent<AIData>().enabled = false;
-        
-        //GetComponent<Rigidbody2D>().AddForce(dir * 1000);
+        transform.up = -dir;
+        GetComponent<Rigidbody2D>().AddForce(dir * 1000);
         yield return new WaitForSeconds(3f);
+        GetComponent<Rigidbody2D>().AddForce(new Vector2(dir.x * -1, dir.y * -1) * 1000);
+        GetComponent<AgentMover>().enabled = true;
+        GetComponent<AIData>().enabled = true;
+        myanim.Play("AttackFinish");
+        HasAttackFinished = true;
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Walls")
+        {
+            StopAllCoroutines();
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(dir.x * -1, dir.y * -1) * 1000);
+            GetComponent<AgentMover>().enabled = true;
+            GetComponent<AIData>().enabled = true;
+            HasAttackFinished = true;
+            GetComponent<EnemyHPAndFeedback>().StartCoroutine("Feedback");
+            myanim.Play("AttackFinish");
+        }
+
+        if (collision.gameObject.name == "Collideable")
+        {
+            StopAllCoroutines();
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(dir.x * -1, dir.y * -1) * 1000);
+            GetComponent<AgentMover>().enabled = true;
+            GetComponent<AIData>().enabled = true;
+            HasAttackFinished = true;
+            GetComponent<EnemyHPAndFeedback>().StartCoroutine("Feedback");
+            myanim.Play("AttackFinish");
+        }
+
+        if (collision.gameObject.tag == "Player")
+        {
+            StopAllCoroutines();
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(dir.x * -1, dir.y * -1) * 1000);
+            GetComponent<AgentMover>().enabled = true;
+            GetComponent<AIData>().enabled = true;
+            HasAttackFinished = true;
+            GetComponent<EnemyHPAndFeedback>().StartCoroutine("Feedback");
+            myanim.Play("AttackFinish");
+        }
+    }
+
+    public void BackIdle()
+    {
+        myanim.Play("IdleMove");
     }
 }

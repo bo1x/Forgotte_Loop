@@ -8,18 +8,27 @@ public class VidaPj : MonoBehaviour
 
     public int VidaActual;
     public int VidaMaxima;
+    public int VidaAnterior;
+
     public float tiempoImnunidad;
     private float tiempoPasado;
+    
     private GameObject canvasitofachero;
-    
-    
+
+    public Material MaterFlash;
+    private Material Mater;
+    private SpriteRenderer Render;
 
     // Start is called before the first frame update
     void Start()
     {
         VidaMaxima = VidaMaxima * (int)PlayerPrefs.GetFloat("vidaMax");
         VidaActual = VidaMaxima;
+        VidaAnterior = VidaMaxima;
         canvasitofachero = GameObject.Find("Canvas");
+
+        Render = GetComponent<SpriteRenderer>();
+        Mater = Render.material;
     }
 
     // Update is called once per frame
@@ -29,6 +38,10 @@ public class VidaPj : MonoBehaviour
         tiempoPasado = tiempoPasado + Time.deltaTime;
 
         //canvasitofachero.GetComponent<Vida>().vida = VidaActual;
+        if (HPChecker())
+        {
+            StartCoroutine("Feedback");
+        }
 
         if (VidaActual <= 0)
         {
@@ -51,5 +64,27 @@ public class VidaPj : MonoBehaviour
 
     }
 
- }
+    public bool HPChecker()
+    {
+        if (VidaActual != VidaAnterior)
+        {
+            VidaAnterior = VidaActual;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public IEnumerator Feedback()
+    {
+        //Todos los efectos generales de feedback a jugador
+        Render.color = Color.red;
+        GameObject.Find("Weapon").GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        Render.color = Color.white;
+        GameObject.Find("Weapon").GetComponent<SpriteRenderer>().color = Color.white;
+    }
+}
 

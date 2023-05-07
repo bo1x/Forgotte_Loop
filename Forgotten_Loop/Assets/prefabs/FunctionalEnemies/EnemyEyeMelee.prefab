@@ -170,7 +170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8db8141f496fc9f4abe3216a99ba42fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  A: {x: 0, y: 0}
+  myanim: {fileID: 0}
+  dir: {x: 0, y: 0}
+  HasAttackFinished: 1
 --- !u!114 &1022146224243453478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,8 +210,8 @@ MonoBehaviour:
   aiData: {fileID: 4153206279960777235}
   detectionDelay: 0.05
   aiUpdateDelay: 0.06
-  attackDelay: 1
-  attackDistance: 0.5
+  attackDelay: 2
+  attackDistance: 4
   OnAttackPressed:
     m_PersistentCalls:
       m_Calls:
@@ -548,7 +550,7 @@ MonoBehaviour:
   targetDetectionRange: 10
   obstaclesLayerMask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 128
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 128
