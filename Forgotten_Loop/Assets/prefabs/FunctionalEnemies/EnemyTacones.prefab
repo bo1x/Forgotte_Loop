@@ -147,6 +147,7 @@ MonoBehaviour:
   VidaActual: 0
   VidaMax: 2
   MaterFlash: {fileID: 2100000, guid: 9aa7f6dd4963a724ab7c22672e11abf4, type: 2}
+  estoymuerto: 0
 --- !u!114 &2368756462855653763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,7 +505,7 @@ MonoBehaviour:
   detectionRadius: 2
   layerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 200
   showGizmos: 1
 --- !u!1 &1587879499705619022
 GameObject:
@@ -551,7 +552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 2
-  agentColliderSize: 0.4
+  agentColliderSize: 1.5
   showGizmo: 1
 --- !u!1 &1587879499777664081
 GameObject:
@@ -596,7 +597,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6317665912113432740}
   - component: {fileID: 3054833695363713767}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: AttackCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

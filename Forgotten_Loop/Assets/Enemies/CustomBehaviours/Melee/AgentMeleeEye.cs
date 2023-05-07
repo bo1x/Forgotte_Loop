@@ -5,12 +5,18 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class AgentMeleeEye : MonoBehaviour
-{
-
-    public bool a = false;
-
+{ 
     //El script que mueve al personaje
     private AgentMover agentMover;
+
+    //El animator
+    public Animator myanim;
+
+    public Vector2 dir;
+
+    public bool HasAttackFinished = true;
+
+    
 
     //Inputs para movimiento y raton
     private Vector2 pointerInput, movementInput;
@@ -23,20 +29,33 @@ public class AgentMeleeEye : MonoBehaviour
     {
         //El update actualiza el movimiento del enemigo
         agentMover.MovementInput = MovementInput;
-
+        dir = (GameObject.Find("Player").transform.position - this.transform.position).normalized;
+        
     }
 
     //Metodo de ataque
     public void attack()
     {
+        Debug.Log("Attack " + Time.deltaTime);
+        myanim.Play("AttackStart");
         
-
     }
 
     //En el start recibe los componentes necesarios
     private void Start()
     {
         agentMover = GetComponent<AgentMover>();
+        myanim = GetComponent<Animator>();
     }
 
+    
+
+    public IEnumerator Throw()
+    {
+        GetComponent<AgentMover>().enabled = false;
+        GetComponent<AIData>().enabled = false;
+        
+        //GetComponent<Rigidbody2D>().AddForce(dir * 1000);
+        yield return new WaitForSeconds(3f);
+    }
 }

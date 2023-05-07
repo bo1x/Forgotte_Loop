@@ -157,6 +157,7 @@ MonoBehaviour:
   VidaActual: 0
   VidaMax: 2
   MaterFlash: {fileID: 2100000, guid: 9aa7f6dd4963a724ab7c22672e11abf4, type: 2}
+  estoymuerto: 0
 --- !u!114 &1181537082871890178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8db8141f496fc9f4abe3216a99ba42fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  a: 0
+  A: {x: 0, y: 0}
 --- !u!114 &1022146224243453478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,7 +372,7 @@ MonoBehaviour:
   detectionRadius: 2
   layerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 200
   showGizmos: 1
 --- !u!1 &4153206278799374502
 GameObject:
@@ -418,7 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 2
-  agentColliderSize: 0.4
+  agentColliderSize: 1
   showGizmo: 1
 --- !u!1 &4153206279243564360
 GameObject:
