@@ -192,8 +192,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VidaActual: 0
-  VidaMaxima: 3
+  VidaMaxima: 5
+  VidaAnterior: 0
   tiempoImnunidad: 1
+  MaterFlash: {fileID: 0}
 --- !u!114 &2535315531663628700
 MonoBehaviour:
   m_ObjectHideFlags: 0

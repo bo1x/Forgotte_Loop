@@ -24,7 +24,7 @@ public class MostrarMejorasCanvas : MonoBehaviour
         daño = PlayerPrefs.GetFloat("daño", 1f);
         vidaMax = PlayerPrefs.GetFloat("vidaMax", 1f);
         cadencia = PlayerPrefs.GetFloat("cadencia", 1f);
-        panelmejoras.SetText("Daño: {0}  VidaMaxima: {1}  Cadencia: {2}", daño, vidaMax, cadencia);
+        panelmejoras.SetText("Attack Lvl : {0} \nMaxHP Lvl: {1} \nFire Rate Lvl: {2}", daño, vidaMax, cadencia);
     }
 
     public void UpgradeDaño()
