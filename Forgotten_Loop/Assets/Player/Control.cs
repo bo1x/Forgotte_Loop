@@ -225,7 +225,15 @@ public class Control : MonoBehaviour
             }
             else
             {
-                Armas++;
+                if (Armas ==3)
+                {
+                    Armas = 1;
+                }
+                else
+                {
+                    Armas++;
+                }
+                
             }
 
             if (Armas == 0)
@@ -285,7 +293,7 @@ public class Control : MonoBehaviour
                     }
                     break;
                 case 2:
-                    fireRate = 2f;
+                    fireRate = 1f;
                     if (Time.time > nextShoot)
                     {
                         nextShoot = Time.time + fireRate;
