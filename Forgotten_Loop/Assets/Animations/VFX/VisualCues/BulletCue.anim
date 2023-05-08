@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BeamCue
+  m_Name: BulletCue
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -2018003249, guid: 96fb97b48aa20ae4dba15780d9f8f276, type: 3}
+      value: {fileID: -63947882, guid: d83ce63cb494e504a9e677a656c07f2d, type: 3}
     - time: 0.083333336
-      value: {fileID: 200531172, guid: 96fb97b48aa20ae4dba15780d9f8f276, type: 3}
+      value: {fileID: 916443944, guid: d83ce63cb494e504a9e677a656c07f2d, type: 3}
     - time: 0.16666667
-      value: {fileID: 770208085, guid: 96fb97b48aa20ae4dba15780d9f8f276, type: 3}
+      value: {fileID: -486986739, guid: d83ce63cb494e504a9e677a656c07f2d, type: 3}
     - time: 0.25
-      value: {fileID: 1563657021, guid: 96fb97b48aa20ae4dba15780d9f8f276, type: 3}
+      value: {fileID: -1045350393, guid: d83ce63cb494e504a9e677a656c07f2d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,10 +46,10 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -2018003249, guid: 96fb97b48aa20ae4dba15780d9f8f276, type: 3}
-    - {fileID: 200531172, guid: 96fb97b48aa20ae4dba15780d9f8f276, type: 3}
-    - {fileID: 770208085, guid: 96fb97b48aa20ae4dba15780d9f8f276, type: 3}
-    - {fileID: 1563657021, guid: 96fb97b48aa20ae4dba15780d9f8f276, type: 3}
+    - {fileID: -63947882, guid: d83ce63cb494e504a9e677a656c07f2d, type: 3}
+    - {fileID: 916443944, guid: d83ce63cb494e504a9e677a656c07f2d, type: 3}
+    - {fileID: -486986739, guid: d83ce63cb494e504a9e677a656c07f2d, type: 3}
+    - {fileID: -1045350393, guid: d83ce63cb494e504a9e677a656c07f2d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -75,8 +75,15 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.26666668
+  - time: 0.25
     functionName: DestroyThis
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.25
+    functionName: Bullet
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

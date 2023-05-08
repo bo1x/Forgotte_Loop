@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -103,12 +104,26 @@ public class AgentMeleeEye : MonoBehaviour
                 GetComponent<AIData>().enabled = true;
                 HasAttackFinished = true;
                 GetComponent<EnemyHPAndFeedback>().StartCoroutine("Feedback");
+                Impacto(collision);
                 myanim.Play("AttackFinish");
             }
         }
     }
 
-    public void BackIdle()
+    public void Impacto(Collision2D collision)
+    {
+        Vector2 Knockdir = (transform.position - GameObject.Find("Player").transform.position).normalized;
+        collision.gameObject.GetComponent<Control>().enabled = false;
+        collision.gameObject.GetComponent<Rigidbody2D>().AddForce(-Knockdir * 5, ForceMode2D.Impulse);
+       
+        
+
+    }
+    public void ActiveMove()
+    {
+        GameObject.Find("Player").GetComponent<Control>().enabled = true;
+    }
+        public void BackIdle()
     {
         myanim.Play("IdleMove");
     }

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1731221678887371244}
   - component: {fileID: 6099399969503171767}
   - component: {fileID: 3348018831358067975}
-  - component: {fileID: 9127728503681082005}
+  - component: {fileID: 768894987661136330}
   m_Layer: 9
-  m_Name: Rayo
+  m_Name: EnemyBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 397623732986465443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1951975288, guid: eba842d9f2fa15547b17e433ea674666, type: 3}
-  m_Color: {r: 0, g: 0.13378668, b: 1, a: 1}
+  m_Sprite: {fileID: 1548008236, guid: da75ab89977f7b84ba39e374afa27e28, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -119,7 +119,7 @@ Animator:
   m_GameObject: {fileID: 397623732986465443}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cfcdc13adc9f11c4e98814c2d880e7fe, type: 2}
+  m_Controller: {fileID: 9100000, guid: e365c7e9fe84ffa498b9c3c0aeffe2ab, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -146,7 +146,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.33333334, y: 0.16666667}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 4, y: 4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -155,7 +155,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5416667, y: 0.16666667}
   m_EdgeRadius: 0
---- !u!114 &9127728503681082005
+--- !u!114 &768894987661136330
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,8 +164,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 397623732986465443}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c053879b13580941b5e667a906d6db9, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c6c19cb03c17b8438dadf7a0f4a7218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speedBullet: 10
   Player: {fileID: 0}
+  VFX: {fileID: 6790080824839827081, guid: 8505c0bcab808cb46a26013b685a183f, type: 3}

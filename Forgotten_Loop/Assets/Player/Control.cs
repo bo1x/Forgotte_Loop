@@ -367,6 +367,7 @@ public class Control : MonoBehaviour
         {
             if (!MeleeCooldown)
             {
+                myrigi.velocity = Vector2.zero;
                 Renderer.GetComponent<SpriteRenderer>().enabled = false;
                 IsAttacking = true;
                 myanim.Play("MeleeAttack");

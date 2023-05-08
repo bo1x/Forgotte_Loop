@@ -4,10 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class TaconesAgent : MonoBehaviour
+public class GunAgent : MonoBehaviour
 {
-
-    private Animator myanim;
 
     //El script que mueve al personaje
     private AgentMover agentMover;
@@ -19,6 +17,33 @@ public class TaconesAgent : MonoBehaviour
     public Vector2 PointerInput { get => pointerInput; set => pointerInput = value; }
     public Vector2 MovementInput { get => movementInput; set => movementInput = value; }
 
+    //Prefab Rayo Ojo
+    
+    public GameObject Cue;
+
+    public Transform BeamPoint;
+
+    private void Update()
+    {
+        //El update actualiza el movimiento del enemigo
+        agentMover.MovementInput = MovementInput;
+
+        if (GetComponent<EnemyHPAndFeedback>().VidaActual <= 0)
+        {
+            StopAllCoroutines();
+        }
+
+    }
+
+    //Metodo de ataque
+    public void attack()
+    {
+        //Cambiar Attack Distance en EnemyAI del enemigo para alternar la distancia a la que comienza a disparar
+        //Lo mismo para el delay de ataque
+
+        Instantiate(Cue, transform.position, transform.rotation);
+
+    }
 
     //En el start recibe los componentes necesarios
     private void Start()
@@ -26,25 +51,4 @@ public class TaconesAgent : MonoBehaviour
         agentMover = GetComponent<AgentMover>();
     }
 
-    private void Update()
-    {
-        //El update actualiza el movimiento del enemigo
-        agentMover.MovementInput = MovementInput;
-        myanim = GetComponent<Animator>();
-    }
-
-    //Metodo de ataque
-    public void attack()
-    {
-        myanim.Play("Attack");
-    }
-
-    public void ActiveMove()
-    {
-        GameObject.Find("Player").GetComponent<Control>().enabled = true;
-    }
-    public void BackIdle()
-    {
-        myanim.Play("IdleMove");
-    }
 }

@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BeamCue
+  m_Name: Death
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,21 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -2018003249, guid: 96fb97b48aa20ae4dba15780d9f8f276, type: 3}
+      value: {fileID: 1796705381, guid: 328a86d387d45d54ca34b8984315d7f6, type: 3}
     - time: 0.083333336
-      value: {fileID: 200531172, guid: 96fb97b48aa20ae4dba15780d9f8f276, type: 3}
+      value: {fileID: 1775889134, guid: 328a86d387d45d54ca34b8984315d7f6, type: 3}
     - time: 0.16666667
-      value: {fileID: 770208085, guid: 96fb97b48aa20ae4dba15780d9f8f276, type: 3}
+      value: {fileID: 72040367, guid: 328a86d387d45d54ca34b8984315d7f6, type: 3}
     - time: 0.25
-      value: {fileID: 1563657021, guid: 96fb97b48aa20ae4dba15780d9f8f276, type: 3}
+      value: {fileID: 830057797, guid: 328a86d387d45d54ca34b8984315d7f6, type: 3}
+    - time: 0.33333334
+      value: {fileID: 171667422, guid: 328a86d387d45d54ca34b8984315d7f6, type: 3}
+    - time: 0.41666666
+      value: {fileID: -264320080, guid: 328a86d387d45d54ca34b8984315d7f6, type: 3}
+    - time: 0.5
+      value: {fileID: 1813663345, guid: 328a86d387d45d54ca34b8984315d7f6, type: 3}
+    - time: 0.5833333
+      value: {fileID: 37009741, guid: 328a86d387d45d54ca34b8984315d7f6, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,16 +54,20 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -2018003249, guid: 96fb97b48aa20ae4dba15780d9f8f276, type: 3}
-    - {fileID: 200531172, guid: 96fb97b48aa20ae4dba15780d9f8f276, type: 3}
-    - {fileID: 770208085, guid: 96fb97b48aa20ae4dba15780d9f8f276, type: 3}
-    - {fileID: 1563657021, guid: 96fb97b48aa20ae4dba15780d9f8f276, type: 3}
+    - {fileID: 1796705381, guid: 328a86d387d45d54ca34b8984315d7f6, type: 3}
+    - {fileID: 1775889134, guid: 328a86d387d45d54ca34b8984315d7f6, type: 3}
+    - {fileID: 72040367, guid: 328a86d387d45d54ca34b8984315d7f6, type: 3}
+    - {fileID: 830057797, guid: 328a86d387d45d54ca34b8984315d7f6, type: 3}
+    - {fileID: 171667422, guid: 328a86d387d45d54ca34b8984315d7f6, type: 3}
+    - {fileID: -264320080, guid: 328a86d387d45d54ca34b8984315d7f6, type: 3}
+    - {fileID: 1813663345, guid: 328a86d387d45d54ca34b8984315d7f6, type: 3}
+    - {fileID: 37009741, guid: 328a86d387d45d54ca34b8984315d7f6, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.26666668
+    m_StopTime: 0.59999996
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -74,11 +86,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.26666668
-    functionName: DestroyThis
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

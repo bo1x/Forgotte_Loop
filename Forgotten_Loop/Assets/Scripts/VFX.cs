@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class VFX : MonoBehaviour
 {
-    public GameObject Beams;
+    public GameObject BulletEnemy;
    public void DestroyThis()
    {
        Destroy(this.gameObject);
    }
 
-   public void Beam()
+   public void Bullet()
    {
-        Instantiate(Beams, new Vector3(transform.position.x,transform.position.y,transform.position.z), transform.rotation);
+        Instantiate(BulletEnemy, transform.position, transform.rotation);
    }
 }
