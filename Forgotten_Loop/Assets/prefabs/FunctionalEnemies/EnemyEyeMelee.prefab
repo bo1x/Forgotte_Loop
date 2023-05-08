@@ -547,7 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af2fda68438dc84c85efda202b349fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetDetectionRange: 10
+  targetDetectionRange: 12
   obstaclesLayerMask:
     serializedVersion: 2
     m_Bits: 128
