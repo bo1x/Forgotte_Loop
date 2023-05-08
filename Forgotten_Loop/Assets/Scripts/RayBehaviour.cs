@@ -7,8 +7,6 @@ public class RayBehaviour : MonoBehaviour
 
     public GameObject Player;
 
-    
-
     void Start()
     {
         transform.parent = null;
@@ -20,14 +18,10 @@ public class RayBehaviour : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-
         if(collision.gameObject.name == "Walls")
         {
             ImpactoBala();
-        }
-
-        
+        }        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

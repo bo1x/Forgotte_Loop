@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6712532811328572700}
   - component: {fileID: 2804813873258657991}
   - component: {fileID: -128993223260762591}
-  - component: {fileID: 4292373024392702075}
   m_Layer: 8
   m_Name: PJBeam
   m_TagString: Bullet
@@ -115,7 +114,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 6.360248, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -135,29 +134,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VFX: {fileID: 5819671851927235648, guid: 8b8de68be17043449b305b7615c76eac, type: 3}
   "da\xF1o": 1
---- !u!61 &4292373024392702075
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2307831465911848639}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.0971615}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 6.29, y: 0.3570028}
-  m_EdgeRadius: 0
+  tiempoImnunidad: 2

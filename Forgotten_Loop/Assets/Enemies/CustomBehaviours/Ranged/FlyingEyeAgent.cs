@@ -27,6 +27,11 @@ public class FlyingEyeAgent : MonoBehaviour
         //El update actualiza el movimiento del enemigo
         agentMover.MovementInput = MovementInput;
 
+        if (GetComponent<EnemyHPAndFeedback>().VidaActual <= 0)
+        {
+            StopAllCoroutines();
+        }
+
     }
 
     //Metodo de ataque
