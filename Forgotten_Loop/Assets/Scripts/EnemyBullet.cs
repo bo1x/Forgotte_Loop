@@ -57,7 +57,7 @@ public class EnemyBullet : MonoBehaviour
         Player.GetComponent<VidaPj>().VidaActual--;
         Vector2 dir = (transform.position - Player.transform.position).normalized;
         collision.gameObject.GetComponent<Control>().enabled = false;
-        collision.gameObject.GetComponent<Rigidbody2D>().AddForce(-dir * 20, ForceMode2D.Impulse);
+        collision.gameObject.GetComponent<Rigidbody2D>().AddForce(-dir * 10, ForceMode2D.Impulse);
         yield return new WaitForSeconds(0.2f);
         collision.gameObject.GetComponent<Control>().enabled = true;
         Destroy(this.gameObject);
