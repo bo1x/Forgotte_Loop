@@ -10,6 +10,10 @@ public class MostrarMejorasCanvas : MonoBehaviour
     private float vidaMax;
     private float cadencia;
 
+    public GameObject dañoimagen;
+    public GameObject hpimagen;
+    public GameObject cadenciaimagen;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +35,7 @@ public class MostrarMejorasCanvas : MonoBehaviour
     {
         PlayerPrefs.SetFloat("daño", 2f);
         PlayerPrefs.Save();
+        dañoimagen.SetActive(true);
         MostrarMejoras();
     }
 
@@ -38,6 +43,7 @@ public class MostrarMejorasCanvas : MonoBehaviour
     {
         PlayerPrefs.SetFloat("cadencia", 2f);
         PlayerPrefs.Save();
+        cadenciaimagen.SetActive(true);
         MostrarMejoras();
 
     }
@@ -46,6 +52,7 @@ public class MostrarMejorasCanvas : MonoBehaviour
     {
         PlayerPrefs.SetFloat("vidaMax", 2f);
         PlayerPrefs.Save();
+        hpimagen.SetActive(true);
         MostrarMejoras();
 
     }
