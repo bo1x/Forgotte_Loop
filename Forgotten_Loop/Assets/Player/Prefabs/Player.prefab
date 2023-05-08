@@ -240,7 +240,7 @@ MonoBehaviour:
   audioarma2: {fileID: 8300000, guid: 3784af8b3d5bbc8449ceb083fc3ed644, type: 3}
   audioarma3: {fileID: 8300000, guid: 032365f34285d164a8c89ffe13f5a5d7, type: 3}
   meleeAttacksound: {fileID: 8300000, guid: df2b5a380325cdf4e9adf417f57c8ad8, type: 3}
-  Dashsound: {fileID: 8300000, guid: f85e4381d8839864e89946f838c8ba57, type: 3}
+  Dashsound: {fileID: 8300000, guid: da55c41663b4e7b45b3bbdb406b8ab50, type: 3}
 --- !u!114 &2535315531663628690
 MonoBehaviour:
   m_ObjectHideFlags: 0

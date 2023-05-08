@@ -12,15 +12,9 @@ public class BeamBehaviour : MonoBehaviour
         daño = daño * (int)PlayerPrefs.GetFloat("daño");
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject.name);
-
-        if (collision.gameObject.name == "Walls")
-        {
-            Instantiate(VFX, transform.position, transform.rotation);
-            Destroy(this.gameObject);
-        }
 
         if (collision.gameObject.tag == "Enemy")
         {
@@ -29,12 +23,14 @@ public class BeamBehaviour : MonoBehaviour
         }
     }
 
-    void ImpactoBala(Collision2D collider)
+    void ImpactoBala(Collider2D collider)
     {
         collider.gameObject.GetComponent<EnemyHPAndFeedback>().VidaActual -= daño;
         Vector2 dir = (transform.position - collider.transform.position).normalized;
         collider.gameObject.GetComponent<Rigidbody2D>().AddForce(-dir * 10, ForceMode2D.Impulse);
         Instantiate(VFX, transform.position, transform.rotation);
-        Destroy(this.gameObject);
+        
     }
+
+    
 }
