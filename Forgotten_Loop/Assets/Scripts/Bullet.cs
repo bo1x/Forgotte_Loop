@@ -47,6 +47,12 @@ public class Bullet : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        if (collision.gameObject.tag == "Obstacles")
+        {
+            Instantiate(VFX, transform.position, transform.rotation);
+            Destroy(this.gameObject);
+        }
+
         if (collision.gameObject.tag == "Enemy")
         {
             ImpactoBala(collision);
