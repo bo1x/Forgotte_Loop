@@ -69,7 +69,7 @@ public class VidaPj : MonoBehaviour
 
     public bool HPChecker()
     {
-        if (VidaActual != VidaAnterior)
+        if (VidaActual < VidaAnterior)
         {
             VidaAnterior = VidaActual;
             return true;
