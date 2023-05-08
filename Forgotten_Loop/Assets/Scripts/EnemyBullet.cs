@@ -29,6 +29,23 @@ public class EnemyBullet : MonoBehaviour
         {
             StartCoroutine(ImpactoBala(collision));
         }
+        if (collision.gameObject.name == "Walls")
+        {
+            Instantiate(VFX, transform.position, transform.rotation);
+            Destroy(this.gameObject);
+        }
+
+        if (collision.gameObject.name == "Collideable")
+        {
+            Instantiate(VFX, transform.position, transform.rotation);
+            Destroy(this.gameObject);
+        }
+
+        if (collision.gameObject.tag == "Obstacles")
+        {
+            Instantiate(VFX, transform.position, transform.rotation);
+            Destroy(this.gameObject);
+        }
     }
 
     public IEnumerator ImpactoBala(Collider2D collision)
