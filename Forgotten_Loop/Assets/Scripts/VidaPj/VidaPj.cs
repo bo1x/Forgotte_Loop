@@ -19,6 +19,9 @@ public class VidaPj : MonoBehaviour
     private Material Mater;
     private SpriteRenderer Render;
 
+    public AudioSource source;
+    public AudioClip audiomenosvida;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -81,10 +84,18 @@ public class VidaPj : MonoBehaviour
     {
         //Todos los efectos generales de feedback a jugador
         Render.color = Color.red;
+        sonidodanio();
         GameObject.Find("Weapon").GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(0.2f);
         Render.color = Color.white;
         GameObject.Find("Weapon").GetComponent<SpriteRenderer>().color = Color.white;
+    }
+
+    public void sonidodanio()
+    {
+        source.clip = audiomenosvida;
+        source.Play();
+        
     }
 }
 

@@ -55,6 +55,14 @@ public class Control : MonoBehaviour
     public Sprite Arma2;
     public Sprite Arma3;
 
+    public AudioSource source;
+    public AudioClip audioarma1;
+    public AudioClip audioarma2;
+    public AudioClip audioarma3;
+
+    public AudioClip meleeAttacksound;
+    public AudioClip Dashsound;
+
     //El start añade a las variables previamente mencionadas lo que necesita
     void Start()
     {
@@ -199,6 +207,10 @@ public class Control : MonoBehaviour
     {
         CanDash = false;
         IsDashing = true;
+        if (IsDashing==true)
+        {
+            sonidoDash();
+        }
         myrigi.AddForce(new Vector2(myrigi.velocity.x * dashspeed, myrigi.velocity.y * dashspeed));
         Colisiones.enabled = false;
         yield return new WaitForSeconds(DashTime);
@@ -274,6 +286,39 @@ public class Control : MonoBehaviour
             print("Mapa Disappear");
         }
     }
+    // sonido armas
+    public void sonidoArma1()
+    {
+        source.clip = audioarma1;
+        source.Play();
+        
+    }
+    public void sonidoArma2()
+    {
+        source.clip = audioarma2;
+        source.Play();
+
+    }
+    public void sonidoArma3()
+    {
+        source.clip = audioarma3;
+        source.Play();
+
+    }
+    public void sonidoArmaMelee()
+    {
+        source.clip = meleeAttacksound;
+        source.Play();
+
+    }
+    public void sonidoDash()
+    {
+        source.clip = Dashsound;
+        source.Play();
+
+    }
+   
+    
 
     public void RangeAttack(InputAction.CallbackContext context)
     {
@@ -290,6 +335,7 @@ public class Control : MonoBehaviour
                     {
                         nextShoot = Time.time + fireRate;
                         Instantiate(BlueBullet, shootingPoint.transform);
+                        sonidoArma1();
                     }
                     break;
                 case 2:
@@ -298,6 +344,7 @@ public class Control : MonoBehaviour
                     {
                         nextShoot = Time.time + fireRate;
                         Instantiate(Beam, shootingPoint.transform);
+                        sonidoArma2();
                     }
                     break;
                 case 3:
@@ -306,6 +353,7 @@ public class Control : MonoBehaviour
                     {
                         nextShoot = Time.time + fireRate;
                         Instantiate(bulletPrefab, shootingPoint.transform);
+                        sonidoArma3();
                     }
                     break;
 
@@ -322,6 +370,7 @@ public class Control : MonoBehaviour
                 Renderer.GetComponent<SpriteRenderer>().enabled = false;
                 IsAttacking = true;
                 myanim.Play("MeleeAttack");
+                sonidoArmaMelee();
                 MeleeCooldown = true;
                 StartCoroutine("DelayMelee");
             }
