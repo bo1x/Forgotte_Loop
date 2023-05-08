@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VidaActual: 0
-  VidaMax: 3
+  VidaMax: 5
   MaterFlash: {fileID: 2100000, guid: 9aa7f6dd4963a724ab7c22672e11abf4, type: 2}
   estoymuerto: 0
 --- !u!114 &1966569094875048198
