@@ -7,7 +7,7 @@ public class BeamBehaviour : MonoBehaviour
     public GameObject VFX;
     public int daño = 1;
 
-    public float tiempoImnunidad = 0.5f;
+    public float tiempoImnunidad;
     private float tiempoPasado;
     private bool DamageTime = true;
 
@@ -19,7 +19,7 @@ public class BeamBehaviour : MonoBehaviour
 
     private void Update()
     {
-        
+
         tiempoPasado = tiempoPasado + Time.deltaTime;
         if (tiempoPasado > tiempoImnunidad)
         {
@@ -27,25 +27,20 @@ public class BeamBehaviour : MonoBehaviour
             tiempoPasado = 0;
 
         }
-        Collider2D beam = Physics2D.OverlapBox(transform.position, new Vector2(6.099516f, 0.3582758f), transform.rotation.z);
-            if (beam.gameObject.tag == "Enemy")
-            {
-                if (DamageTime)
-                {
-                    DamageTime = false;
-                    ImpactoBala(beam);   
-                }
-            }
+
     }
 
-    private void OnDrawGizmos()
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        Gizmos.matrix = this.transform.localToWorldMatrix;
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(transform.position, new Vector2(6.099516f, 0.3582758f));
+        if (collision.gameObject.tag == "Enemy")
+        {
+            if (DamageTime)
+            {
+                DamageTime = false;
+                ImpactoBala(collision);
+            }
+        }
     }
-
-    
 
     void ImpactoBala(Collider2D collider)
     {

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6456e0af23f33af4686a69b4dda3955c
+guid: 1dc6f9527778f854d8e4f9892a7a83d8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -100,65 +100,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Juagdor_Idle_Diagonal_SinBrazo_0
+      name: AttackTacones 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 24
-        height: 50
+        width: 96
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,83 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7e3f330eb7ec1e4eb9cad539ef75814
-      internalID: -482661785
+      spriteID: 935229265ee7ec141a4246e9364cb034
+      internalID: -403247026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Juagdor_Idle_Diagonal_SinBrazo_1
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 0
-        width: 24
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 480270d043acb83429266cfbccb4eeac
-      internalID: 2085433894
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Juagdor_Idle_Diagonal_SinBrazo_2
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 24
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36b968bdafde879489f256e1fc44f148
-      internalID: -1566869246
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Juagdor_Idle_Diagonal_SinBrazo_3
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 24
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ccf4c25b553eaf448c2acb1c454bc49
-      internalID: -373481093
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Juagdor_Idle_Diagonal_SinBrazo_4
+      name: AttackTacones 1_1
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 24
-        height: 50
+        width: 96
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d6474251ca552945b83de73eaca278b
-      internalID: -897652420
+      spriteID: 8b1d353f932e8b94f92c76b40f2e42fe
+      internalID: -168840774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Juagdor_Idle_Diagonal_SinBrazo_5
+      name: AttackTacones 1_2
       rect:
         serializedVersion: 2
-        x: 120
+        x: 192
         y: 0
-        width: 24
-        height: 50
+        width: 96
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59f04270e252f5048aa192ec409901b3
-      internalID: -1265543461
+      spriteID: 9bb78e6b888868e4e90d80b95bba8f46
+      internalID: -1607129186
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Juagdor_Idle_Diagonal_SinBrazo_6
+      name: AttackTacones 1_3
       rect:
         serializedVersion: 2
-        x: 144
+        x: 288
         y: 0
-        width: 24
-        height: 50
+        width: 96
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a5d326666e38f341865b35b67e180a1
-      internalID: 681852544
+      spriteID: d75d86efbf2ca3a4ab1dd0c819a9f3f5
+      internalID: -879948911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Juagdor_Idle_Diagonal_SinBrazo_7
+      name: AttackTacones 1_4
       rect:
         serializedVersion: 2
-        x: 168
+        x: 384
         y: 0
-        width: 24
-        height: 50
+        width: 96
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,8 +202,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61d8db338c11071488e19a854729bf11
-      internalID: -1318781398
+      spriteID: 6564d371223687f4eaee45c18a1856c4
+      internalID: -1521228334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackTacones 1_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605cd399caf892244a69d150a933d379
+      internalID: -1262223652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackTacones 1_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451378eb691307144b098eafb7ce3762
+      internalID: -197021187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackTacones 1_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 96
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76cc7a5d094dd8045ae82c8b38a7e4b4
+      internalID: -85965823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackTacones 1_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 96
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d9e29c8bee91d14ca7c4a4ad921fefc
+      internalID: 1840872815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackTacones 1_9
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 96
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb1eb1546aac7d546aad1055abe68eb4
+      internalID: 1771978365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackTacones 1_10
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 96
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc152495b6e412a428200e29533ef503
+      internalID: 489828992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackTacones 1_11
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 0
+        width: 96
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa8744bd7c17844e997172a140c402f
+      internalID: 797782689
       vertices: []
       indices: 
       edges: []
@@ -330,14 +366,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Juagdor_Idle_Diagonal_SinBrazo_1: 2085433894
-      Juagdor_Idle_Diagonal_SinBrazo_7: -1318781398
-      Juagdor_Idle_Diagonal_SinBrazo_2: -1566869246
-      Juagdor_Idle_Diagonal_SinBrazo_3: -373481093
-      Juagdor_Idle_Diagonal_SinBrazo_6: 681852544
-      Juagdor_Idle_Diagonal_SinBrazo_0: -482661785
-      Juagdor_Idle_Diagonal_SinBrazo_5: -1265543461
-      Juagdor_Idle_Diagonal_SinBrazo_4: -897652420
+      AttackTacones 1_5: -1262223652
+      AttackTacones 1_7: -85965823
+      AttackTacones 1_2: -1607129186
+      AttackTacones 1_9: 1771978365
+      AttackTacones 1_10: 489828992
+      AttackTacones 1_8: 1840872815
+      AttackTacones 1_0: -403247026
+      AttackTacones 1_4: -1521228334
+      AttackTacones 1_6: -197021187
+      AttackTacones 1_11: 797782689
+      AttackTacones 1_3: -879948911
+      AttackTacones 1_1: -168840774
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1048167352785737275}
   - component: {fileID: 3159273924546656239}
   - component: {fileID: 5380477994910010199}
-  - component: {fileID: 2368756462855653763}
+  - component: {fileID: 6528886398733056723}
   - component: {fileID: 2415341678469547214}
   - component: {fileID: 4462934212740272849}
   - component: {fileID: 1587879497912154363}
@@ -84,12 +84,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -551624735, guid: 54e52d87e8f66c546aa2ad187f4104e5, type: 3}
+  m_Sprite: {fileID: 832940451, guid: 2475c7d7c0922f0489975f5647cead86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 2, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -148,7 +148,7 @@ MonoBehaviour:
   VidaMax: 2
   MaterFlash: {fileID: 2100000, guid: 9aa7f6dd4963a724ab7c22672e11abf4, type: 2}
   estoymuerto: 0
---- !u!114 &2368756462855653763
+--- !u!114 &6528886398733056723
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1048167352785737273}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7431d9e1208fdbb419965319df6dd15e, type: 3}
+  m_Script: {fileID: 11500000, guid: 963760b6c99d8384196b5137f8b532c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2415341678469547214
@@ -198,12 +198,12 @@ MonoBehaviour:
   detectionDelay: 0.05
   aiUpdateDelay: 0.06
   attackDelay: 1
-  attackDistance: 0.5
+  attackDistance: 1
   OnAttackPressed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2368756462855653763}
-        m_TargetAssemblyTypeName: Agent, Assembly-CSharp
+      - m_Target: {fileID: 6528886398733056723}
+        m_TargetAssemblyTypeName: TaconesAgent, Assembly-CSharp
         m_MethodName: attack
         m_Mode: 1
         m_Arguments:
@@ -217,8 +217,8 @@ MonoBehaviour:
   OnMovementInput:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2368756462855653763}
-        m_TargetAssemblyTypeName: Agent, Assembly-CSharp
+      - m_Target: {fileID: 6528886398733056723}
+        m_TargetAssemblyTypeName: TaconesAgent, Assembly-CSharp
         m_MethodName: set_MovementInput
         m_Mode: 0
         m_Arguments:
@@ -232,8 +232,8 @@ MonoBehaviour:
   OnPointerInput:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2368756462855653763}
-        m_TargetAssemblyTypeName: Agent, Assembly-CSharp
+      - m_Target: {fileID: 6528886398733056723}
+        m_TargetAssemblyTypeName: TaconesAgent, Assembly-CSharp
         m_MethodName: set_PointerInput
         m_Mode: 0
         m_Arguments:
@@ -626,13 +626,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6599710324307890251}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05194497, y: -0.68155926}
+  m_Offset: {x: -0.0016545057, y: -0.06381512}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -643,5 +643,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8783231, y: 1.0290025}
+  m_Size: {x: 3.9402225, y: 3.6286774}
   m_EdgeRadius: 0

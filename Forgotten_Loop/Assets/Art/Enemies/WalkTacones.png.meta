@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9f35d06b95c7dd943ab9edcbcf3171d0
+guid: 2475c7d7c0922f0489975f5647cead86
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AttackTacones_0
+      name: WalkTacones_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 48
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d6b49e311f181d44ad6cc1f6bd6ffab
+      internalID: 832940451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkTacones_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 72
+        width: 48
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dec4f224d9979644b3c1bbc776cc8d2
+      internalID: 2100494793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkTacones_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 72
+        width: 48
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d213625834fe041aebbb14c37124dc
+      internalID: 1727267064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkTacones_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 72
+        width: 48
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d42044481c64e24fa1f235ae316a9a6
+      internalID: -1277427651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkTacones_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 72
+        width: 48
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d365ead1de34b489481053e99e511a
+      internalID: -1506392196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkTacones_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 72
+        width: 48
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e2d86d8548c53458f11c00b4f2a51c
+      internalID: -576071071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkTacones_6
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +244,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 049de535c3e903c4b82ef7b1d5c85a3a
-      internalID: 520383686
+      spriteID: 83222877fe34bce4fb326c8709468435
+      internalID: 32061940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AttackTacones_1
+      name: WalkTacones_7
       rect:
         serializedVersion: 2
         x: 48
@@ -139,14 +265,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87c594fd9c17ab54f9ca0d8801e472f1
-      internalID: -1663172982
+      spriteID: 48c896962f69eb34383ea9df8e21f734
+      internalID: -331480127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AttackTacones_2
+      name: WalkTacones_8
       rect:
         serializedVersion: 2
         x: 96
@@ -160,14 +286,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 225f0d3fb7c10994fb1d0c200ad5ed57
-      internalID: 561584618
+      spriteID: be7e0d9a3166a924c9ddbe5726d1f3e2
+      internalID: -524890126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AttackTacones_3
+      name: WalkTacones_9
       rect:
         serializedVersion: 2
         x: 144
@@ -181,14 +307,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aed6d8a575950548b6212adaa4dc8fe
-      internalID: 1736241791
+      spriteID: 50d0e4bae36066c4793b5006b384e15d
+      internalID: -1135125585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AttackTacones_4
+      name: WalkTacones_10
       rect:
         serializedVersion: 2
         x: 192
@@ -202,14 +328,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a821cded5828f7548b04df198faeda7d
-      internalID: 713532927
+      spriteID: e1fd1f357864d9844b8a88ac3e3535ed
+      internalID: 704393094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AttackTacones_5
+      name: WalkTacones_11
       rect:
         serializedVersion: 2
         x: 240
@@ -223,29 +349,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6246cf2bc83a6a44eb7f395049602bb7
-      internalID: 454152928
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AttackTacones_6
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 48
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3987d6a5d2b00a14f8753955944fdacc
-      internalID: 1053012016
+      spriteID: 677aa92f468616b4f95c9fa38cb2fd38
+      internalID: 1374264993
       vertices: []
       indices: 
       edges: []
@@ -261,13 +366,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      AttackTacones_6: 1053012016
-      AttackTacones_0: 520383686
-      AttackTacones_2: 561584618
-      AttackTacones_1: -1663172982
-      AttackTacones_5: 454152928
-      AttackTacones_3: 1736241791
-      AttackTacones_4: 713532927
+      WalkTacones_9: -1135125585
+      WalkTacones_10: 704393094
+      WalkTacones_11: 1374264993
+      WalkTacones_6: 32061940
+      WalkTacones_1: 2100494793
+      WalkTacones_3: -1277427651
+      WalkTacones_0: 832940451
+      WalkTacones_5: -576071071
+      WalkTacones_8: -524890126
+      WalkTacones_2: 1727267064
+      WalkTacones_7: -331480127
+      WalkTacones_4: -1506392196
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

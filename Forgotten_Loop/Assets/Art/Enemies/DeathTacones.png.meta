@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 696d36bdb63480a47841b8dd77eaf495
+guid: e4fc2c8deb925014b880f896fb068ce8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AttackPlayer_0
+      name: DeathTacones_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 125
-        height: 125
+        width: 48
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8aeeaa5ce2dea64398082249a60906d
-      internalID: 2122436462
+      spriteID: a945d709c3bc9de4591f8d5f094e8488
+      internalID: -364617033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AttackPlayer_1
+      name: DeathTacones_1
       rect:
         serializedVersion: 2
-        x: 125
+        x: 48
         y: 0
-        width: 125
-        height: 125
+        width: 48
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84501b78f129b9f4cb06ff966304b4da
-      internalID: -278877763
+      spriteID: a8e2e7bd781688549a9e00d36c4dcedc
+      internalID: -479495922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AttackPlayer_2
+      name: DeathTacones_2
       rect:
         serializedVersion: 2
-        x: 250
+        x: 96
         y: 0
-        width: 125
-        height: 125
+        width: 48
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67f64ec194628a343bd7f524f9fd9fc1
-      internalID: 1047613063
+      spriteID: 947117abbe4b2ce43906c41ac77a42d8
+      internalID: 1499688237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AttackPlayer_3
+      name: DeathTacones_3
       rect:
         serializedVersion: 2
-        x: 375
+        x: 144
         y: 0
-        width: 125
-        height: 125
+        width: 48
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4cadccad3a050b47a958ab5264a634b
-      internalID: 705320175
+      spriteID: 66f9900dfc9295342bd162181b0d25ae
+      internalID: 1824577762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AttackPlayer_4
+      name: DeathTacones_4
       rect:
         serializedVersion: 2
-        x: 500
+        x: 192
         y: 0
-        width: 125
-        height: 125
+        width: 48
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4c8af5f036444f45b17eead5d7e90e2
-      internalID: 1036408101
+      spriteID: 7e546773d41c5f743a8664e6cb691180
+      internalID: -306382203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AttackPlayer_5
+      name: DeathTacones_5
       rect:
         serializedVersion: 2
-        x: 625
+        x: 240
         y: 0
-        width: 125
-        height: 125
+        width: 48
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18aca614cf39d9742b8bcccc4b91690f
-      internalID: 2119706871
+      spriteID: a1d290b76794574469e5dc21e1dc101d
+      internalID: -179548604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AttackPlayer_6
+      name: DeathTacones_6
       rect:
         serializedVersion: 2
-        x: 750
+        x: 288
         y: 0
-        width: 125
-        height: 125
+        width: 48
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 551dcae27c5c89243b0a64ca05282129
-      internalID: 781586713
+      spriteID: db54bbb294f093644a29ba95560e49f0
+      internalID: 210624065
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AttackPlayer_7
+      name: DeathTacones_7
       rect:
         serializedVersion: 2
-        x: 875
+        x: 336
         y: 0
-        width: 125
-        height: 125
+        width: 48
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,8 +265,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf431a978b0142347a68efdd0ab4e0d5
-      internalID: 1965024583
+      spriteID: 84f0f6bdacaa5cb45b932fa209b77f3a
+      internalID: -249003245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathTacones_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 48
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8504c1971f8920c48b2e1bf639713c41
+      internalID: 1561173114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathTacones_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 48
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036491dc982c841409d5a0bfd62979b8
+      internalID: 2086543324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathTacones_10
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 48
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a202bfd4fb8f19c41959fa69661cb2f0
+      internalID: -1603407442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathTacones_11
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 48
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f27b5d7b44ed7bb49972bb7d72d981dd
+      internalID: 1370713821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathTacones_12
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 48
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd6f04881be7044495d6823d0fbf67e
+      internalID: 540129365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathTacones_13
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 48
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03fc63bc9ee91f4a952d6ee92e91275
+      internalID: 1770806341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathTacones_14
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 48
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e50550cc37259439f7694654b91ba4
+      internalID: 1475744866
       vertices: []
       indices: 
       edges: []
@@ -282,14 +429,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      AttackPlayer_3: 705320175
-      AttackPlayer_0: 2122436462
-      AttackPlayer_6: 781586713
-      AttackPlayer_5: 2119706871
-      AttackPlayer_1: -278877763
-      AttackPlayer_7: 1965024583
-      AttackPlayer_2: 1047613063
-      AttackPlayer_4: 1036408101
+      DeathTacones_4: -306382203
+      DeathTacones_1: -479495922
+      DeathTacones_14: 1475744866
+      DeathTacones_10: -1603407442
+      DeathTacones_2: 1499688237
+      DeathTacones_0: -364617033
+      DeathTacones_3: 1824577762
+      DeathTacones_9: 2086543324
+      DeathTacones_7: -249003245
+      DeathTacones_13: 1770806341
+      DeathTacones_5: -179548604
+      DeathTacones_12: 540129365
+      DeathTacones_11: 1370713821
+      DeathTacones_8: 1561173114
+      DeathTacones_6: 210624065
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -30,7 +30,10 @@ public class AgentMeleeEye : MonoBehaviour
         //El update actualiza el movimiento del enemigo
         agentMover.MovementInput = MovementInput;
         dir = (GameObject.Find("Player").transform.position - this.transform.position).normalized;
-        
+        if (GetComponent<EnemyHPAndFeedback>().VidaActual <= 0)
+        {
+            StopAllCoroutines();
+        }
     }
 
     //Metodo de ataque

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 54e52d87e8f66c546aa2ad187f4104e5
+guid: 0d25f1249ce86b84fbc25b2ccdd00377
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WALKING_Ground_Mele_0
+      name: Juagdor_aarea_1-Sheet_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 77
-        width: 32
-        height: 62
+        x: 0
+        y: 0
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3da73cc4a8a1f754f92b22eef2a8bfe4
-      internalID: -551624735
+      spriteID: 8a4a6a9cd369cae4981ae3b6b2b8c94a
+      internalID: -1552108813
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WALKING_Ground_Mele_1
+      name: Juagdor_aarea_1-Sheet_1
       rect:
         serializedVersion: 2
-        x: 58
-        y: 76
-        width: 29
-        height: 62
+        x: 125
+        y: 0
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db8f2be3012038c45be0407ecceca99b
-      internalID: 1634178956
+      spriteID: 2a2659b8b0c602e4dba984de9b4a92a0
+      internalID: -1961344519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WALKING_Ground_Mele_2
+      name: Juagdor_aarea_1-Sheet_2
       rect:
         serializedVersion: 2
-        x: 104
-        y: 77
-        width: 32
-        height: 62
+        x: 250
+        y: 0
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64220f8e4f0b73148912862b761c486e
-      internalID: -923141947
+      spriteID: d2f8e2704038e6143bb9716a3c316b8c
+      internalID: -1428789935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WALKING_Ground_Mele_3
+      name: Juagdor_aarea_1-Sheet_3
       rect:
         serializedVersion: 2
-        x: 153
-        y: 76
-        width: 29
-        height: 62
+        x: 375
+        y: 0
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0c25343b9c9bd14fb7956caeb3f230a
-      internalID: 242116672
+      spriteID: 0a64ecbc8388cdf49ba66eb1ec5d8191
+      internalID: 1618055363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WALKING_Ground_Mele_4
+      name: Juagdor_aarea_1-Sheet_4
       rect:
         serializedVersion: 2
-        x: 8
-        y: 5
-        width: 32
-        height: 62
+        x: 500
+        y: 0
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a10986bb93228847b5624cb60526b13
-      internalID: 744387758
+      spriteID: b901360ae261c7341a3ab197f24bea39
+      internalID: 1164047299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WALKING_Ground_Mele_5
+      name: Juagdor_aarea_1-Sheet_5
       rect:
         serializedVersion: 2
-        x: 58
-        y: 4
-        width: 29
-        height: 62
+        x: 625
+        y: 0
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7022f78f7cfd67646804df53c3d5a505
-      internalID: 2134667742
+      spriteID: b4619201498ee4b439af6160c9bc0396
+      internalID: -981021184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WALKING_Ground_Mele_6
+      name: Juagdor_aarea_1-Sheet_6
       rect:
         serializedVersion: 2
-        x: 104
-        y: 5
-        width: 32
-        height: 62
+        x: 750
+        y: 0
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38a1b6df38b6faa4bb0ce0b24394b1bd
-      internalID: 1549875095
+      spriteID: bb92c3a4473ed7a46a1ff3ea0ddc5fc8
+      internalID: 851806533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WALKING_Ground_Mele_7
+      name: Juagdor_aarea_1-Sheet_7
       rect:
         serializedVersion: 2
-        x: 153
-        y: 4
-        width: 29
-        height: 62
+        x: 875
+        y: 0
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c53100891a4bbf2448a69e2827243ce2
-      internalID: -111474373
+      spriteID: 4bfa215cf7371f045be04ab0a67ed06d
+      internalID: -1162689336
       vertices: []
       indices: 
       edges: []
@@ -282,14 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WALKING_Ground_Mele_6: 1549875095
-      WALKING_Ground_Mele_3: 242116672
-      WALKING_Ground_Mele_7: -111474373
-      WALKING_Ground_Mele_5: 2134667742
-      WALKING_Ground_Mele_4: 744387758
-      WALKING_Ground_Mele_2: -923141947
-      WALKING_Ground_Mele_0: -551624735
-      WALKING_Ground_Mele_1: 1634178956
+      Juagdor_aarea_1-Sheet_5: -981021184
+      Juagdor_aarea_1-Sheet_6: 851806533
+      Juagdor_aarea_1-Sheet_2: -1428789935
+      Juagdor_aarea_1-Sheet_4: 1164047299
+      Juagdor_aarea_1-Sheet_7: -1162689336
+      Juagdor_aarea_1-Sheet_3: 1618055363
+      Juagdor_aarea_1-Sheet_1: -1961344519
+      Juagdor_aarea_1-Sheet_0: -1552108813
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
