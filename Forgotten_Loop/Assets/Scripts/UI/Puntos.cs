@@ -11,7 +11,7 @@ public class Puntos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Almas = (int)PlayerPrefs.GetFloat("almas");
     }
 
     // Update is called once per frame

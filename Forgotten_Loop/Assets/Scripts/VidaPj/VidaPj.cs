@@ -48,6 +48,8 @@ public class VidaPj : MonoBehaviour
 
         if (VidaActual <= 0)
         {
+            PlayerPrefs.SetFloat("almas", canvasitofachero.GetComponent<Puntos>().Almas);
+            PlayerPrefs.Save();
             SceneManager.LoadScene(1);
         }
     }

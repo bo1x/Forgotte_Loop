@@ -6,14 +6,14 @@ public class MejorarPersonaje : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    private GameObject almasPlayer;
+    public GameObject almasPlayer;
     public int Almas;
     public int precioDaño = 30;
     public int precioVida = 20;
     public int precioCadencia = 10;
     void Start()
     {
-        almasPlayer = GameObject.Find("Player");
+        almasPlayer = GameObject.Find("Canvas");
         Almas = almasPlayer.GetComponent<Puntos>().Almas;
         
     }
@@ -27,6 +27,9 @@ public class MejorarPersonaje : MonoBehaviour
     void mejoraDaño()
     {
         Almas = almasPlayer.GetComponent<Puntos>().Almas;
+
+
+
         if (Almas>=precioDaño &&  1 == PlayerPrefs.GetFloat("daño"))
         {
             PlayerPrefs.SetFloat("daño", 2f);
