@@ -10,6 +10,7 @@ public class IniciarMejorasNivel0 : MonoBehaviour
         PlayerPrefs.SetFloat("daño", 1f);
         PlayerPrefs.SetFloat("vidaMax", 1f);
         PlayerPrefs.SetFloat("cadencia", 1f);
+        PlayerPrefs.SetFloat("almas", 0f);
         PlayerPrefs.Save();
     }
 
