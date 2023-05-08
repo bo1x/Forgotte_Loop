@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DungeonPruebas.unity
     guid: fc57ac199f1ec2443be2ca1a45addb7b
+  - enabled: 1
+    path: Assets/Scenes/Dungeon2.unity
+    guid: 220aee0ed845d394d9f6086196688dc2
   m_configObjects: {}

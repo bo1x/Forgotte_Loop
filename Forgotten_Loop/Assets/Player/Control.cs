@@ -68,6 +68,7 @@ public class Control : MonoBehaviour
     {
         myanim = GetComponent<Animator>();
         myrigi = GetComponent<Rigidbody2D>();
+        
         mirilla = GameObject.Find("Pointer");
         weaponParent = GetComponentInChildren<WeaponParent>();
     }
@@ -330,7 +331,14 @@ public class Control : MonoBehaviour
                     print("No Weapon");
                     break;
                 case 1:
-                    fireRate = 0.15f;
+                    if (2==PlayerPrefs.GetFloat("cadencia"))
+                    {
+                        fireRate = 0.10f;
+                    }
+                    else
+                    {
+                        fireRate = 0.15f;
+                    }
                     if (Time.time > nextShoot)
                     {
                         nextShoot = Time.time + fireRate;
@@ -339,7 +347,14 @@ public class Control : MonoBehaviour
                     }
                     break;
                 case 2:
-                    fireRate = 1f;
+                    if (2 == PlayerPrefs.GetFloat("cadencia"))
+                    {
+                        fireRate = 0.50f;
+                    }
+                    else
+                    {
+                        fireRate = 1f;
+                    }
                     if (Time.time > nextShoot)
                     {
                         nextShoot = Time.time + fireRate;
@@ -348,7 +363,14 @@ public class Control : MonoBehaviour
                     }
                     break;
                 case 3:
-                    fireRate = 0.2f;
+                    if (2 == PlayerPrefs.GetFloat("cadencia"))
+                    {
+                        fireRate = 0.10f;
+                    }
+                    else
+                    {
+                        fireRate = 0.2f;
+                    }
                     if (Time.time > nextShoot)
                     {
                         nextShoot = Time.time + fireRate;
