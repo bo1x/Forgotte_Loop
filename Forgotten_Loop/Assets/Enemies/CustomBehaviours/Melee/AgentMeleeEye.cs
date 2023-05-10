@@ -31,10 +31,8 @@ public class AgentMeleeEye : MonoBehaviour
         //El update actualiza el movimiento del enemigo
         agentMover.MovementInput = MovementInput;
         dir = (GameObject.Find("Player").transform.position - this.transform.position).normalized;
-        if (GetComponent<EnemyHPAndFeedback>().VidaActual <= 0)
-        {
-            StopAllCoroutines();
-        }
+
+       
     }
 
     //Metodo de ataque
@@ -62,8 +60,7 @@ public class AgentMeleeEye : MonoBehaviour
         GetComponent<AIData>().enabled = false;
         transform.up = -dir;
         GetComponent<Rigidbody2D>().AddForce(dir * 1000);
-        yield return new WaitForSeconds(3f);
-        GetComponent<Rigidbody2D>().AddForce(new Vector2(dir.x * -1, dir.y * -1) * 1000);
+        yield return new WaitForSeconds(2f);
         GetComponent<AgentMover>().enabled = true;
         GetComponent<AIData>().enabled = true;
         myanim.Play("AttackFinish");
@@ -115,15 +112,13 @@ public class AgentMeleeEye : MonoBehaviour
         Vector2 Knockdir = (transform.position - GameObject.Find("Player").transform.position).normalized;
         collision.gameObject.GetComponent<Control>().enabled = false;
         collision.gameObject.GetComponent<Rigidbody2D>().AddForce(-Knockdir * 5, ForceMode2D.Impulse);
-       
-        
 
     }
     public void ActiveMove()
     {
         GameObject.Find("Player").GetComponent<Control>().enabled = true;
     }
-        public void BackIdle()
+    public void BackIdle()
     {
         myanim.Play("IdleMove");
     }
