@@ -7,6 +7,11 @@ public class EnemyHPAndFeedback : MonoBehaviour
     public int VidaMax = 0;
     private int VidaAnterior;
 
+    public int NumeroMinimoAlmas = 0;
+    public int NumeroMaximoAlmas = 10;
+    private int numeroAleatorio;
+    public GameObject alma;
+
     public Material MaterFlash;
     private Material Mater;
     private SpriteRenderer Render;
@@ -29,7 +34,14 @@ public class EnemyHPAndFeedback : MonoBehaviour
         if (VidaActual <= 0 && estoymuerto == false)
         {
             estoymuerto = true;
-            GameObject.Find("Canvas").GetComponent<Puntos>().Almas++;
+            //GameObject.Find("Canvas").GetComponent<Puntos>().Almas++;
+
+            numeroAleatorio = Random.Range(NumeroMinimoAlmas, NumeroMaximoAlmas+1);
+
+            for (int i = 0; i < numeroAleatorio; i++)
+            {
+                Instantiate(alma, new Vector3(transform.position.x+Random.Range(-2f,2f),transform.position.y+Random.Range(-2f,2f),0), transform.rotation);
+            }
 
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             GetComponent<AgentMover>().enabled = false;
