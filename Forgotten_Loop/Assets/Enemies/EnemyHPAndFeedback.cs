@@ -63,11 +63,9 @@ public class EnemyHPAndFeedback : MonoBehaviour
         Render.material = Mater;
         if (VidaActual > 0)
         {
-           GetComponent<AgentMover>().enabled = true;
-           GetComponent<EnemyAI>().enabled = true;
+                GetComponent<AgentMover>().enabled = true;
+                GetComponent<EnemyAI>().enabled = true;
         }
-        
-        
     }
 
     public bool HPChecker()

@@ -69,6 +69,18 @@ public class VidaPj : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "EnemyAttack")
+        {
+            if (tiempoPasado > tiempoImnunidad)
+            {
+                VidaActual = VidaActual - 1;
+                tiempoPasado = 0;                     
+            }
+        }
+    }
+
     public bool HPChecker()
     {
         if (VidaActual < VidaAnterior)

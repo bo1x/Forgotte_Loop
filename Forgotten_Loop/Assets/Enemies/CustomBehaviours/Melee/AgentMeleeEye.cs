@@ -60,20 +60,23 @@ public class AgentMeleeEye : MonoBehaviour
         GetComponent<AIData>().enabled = false;
         transform.up = -dir;
         GetComponent<Rigidbody2D>().AddForce(dir * 1000);
+        GetComponent<EnemyHPAndFeedback>().enabled = false;
         yield return new WaitForSeconds(2f);
+        GetComponent<EnemyHPAndFeedback>().enabled = true;
         GetComponent<AgentMover>().enabled = true;
         GetComponent<AIData>().enabled = true;
         myanim.Play("AttackFinish");
         HasAttackFinished = true;
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (!HasAttackFinished)
         {
             if (collision.gameObject.name == "Walls")
             {
                 StopAllCoroutines();
+                GetComponent<EnemyHPAndFeedback>().enabled = true;
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(dir.x * -1, dir.y * -1) * 1000);
                 GetComponent<AgentMover>().enabled = true;
                 GetComponent<AIData>().enabled = true;
@@ -82,9 +85,11 @@ public class AgentMeleeEye : MonoBehaviour
                 myanim.Play("AttackFinish");
             }
 
+
             if (collision.gameObject.name == "Collideable")
             {
                 StopAllCoroutines();
+                GetComponent<EnemyHPAndFeedback>().enabled = true;
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(dir.x * -1, dir.y * -1) * 1000);
                 GetComponent<AgentMover>().enabled = true;
                 GetComponent<AIData>().enabled = true;
@@ -96,6 +101,7 @@ public class AgentMeleeEye : MonoBehaviour
             if (collision.gameObject.tag == "Player")
             {
                 StopAllCoroutines();
+                GetComponent<EnemyHPAndFeedback>().enabled = true;
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(dir.x * -1, dir.y * -1) * 1000);
                 GetComponent<AgentMover>().enabled = true;
                 GetComponent<AIData>().enabled = true;
@@ -107,17 +113,19 @@ public class AgentMeleeEye : MonoBehaviour
         }
     }
 
-    public void Impacto(Collision2D collision)
+    public void Impacto(Collider2D collision)
     {
         Vector2 Knockdir = (transform.position - GameObject.Find("Player").transform.position).normalized;
         collision.gameObject.GetComponent<Control>().enabled = false;
         collision.gameObject.GetComponent<Rigidbody2D>().AddForce(-Knockdir * 5, ForceMode2D.Impulse);
 
     }
+
     public void ActiveMove()
     {
         GameObject.Find("Player").GetComponent<Control>().enabled = true;
     }
+    
     public void BackIdle()
     {
         myanim.Play("IdleMove");
