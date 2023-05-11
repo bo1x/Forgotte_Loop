@@ -498,50 +498,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 676927753, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2231174504895745978, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: VidaActual
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2535315531663628689, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2535315531663628700, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: Armas
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2535315531663628701, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2535315531663628701, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 1927617086, guid: b954d773421bfc64cb238f1e2d05ac80, type: 3}
-    - target: {fileID: 2535315531663628701, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2535315531663628701, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2535315531663628701, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2535315531663628701, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2535315531663628701, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 2535315531663628702, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -588,15 +548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3518295006714763813, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
       propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3518295006714763813, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: m_TagString
-      value: Bullet
-      objectReference: {fileID: 0}
-    - target: {fileID: 4516525967769469154, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: m_Enabled
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}

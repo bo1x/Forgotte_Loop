@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f5d0226d38f2174c95fa06d4dac1477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VidaActual: 0
+  VidaActual: 3
   VidaMaxima: 5
   VidaAnterior: 0
   tiempoImnunidad: 1
@@ -521,9 +521,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1279666097908807182}
   - component: {fileID: 1692219951199275884}
-  m_Layer: 7
+  - component: {fileID: 3349142424606287799}
+  m_Layer: 0
   m_Name: AttackCollider
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -556,6 +557,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.38089, y: 3.2919888, z: 1}
   m_Center: {x: 0.00000047683716, y: -0.6527817, z: 0}
+--- !u!114 &3349142424606287799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3518295006714763813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4b02aac0038d740851b85abaf3815c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6610759970650796893
 GameObject:
   m_ObjectHideFlags: 0

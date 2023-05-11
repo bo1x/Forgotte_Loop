@@ -18,6 +18,7 @@ public class VidaPj : MonoBehaviour
     public Material MaterFlash;
     public Material Mater;
     private SpriteRenderer Render;
+    private SpriteRenderer WeaponRender;
 
     public AudioSource source;
     public AudioClip audiomenosvida;
@@ -31,6 +32,7 @@ public class VidaPj : MonoBehaviour
         canvasitofachero = GameObject.Find("Canvas");
 
         Render = GetComponent<SpriteRenderer>();
+        WeaponRender = GameObject.Find("Weapon").GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -98,27 +100,30 @@ public class VidaPj : MonoBehaviour
         //Todos los efectos generales de feedback a jugador
         Render.material = MaterFlash;
         sonidodanio();
-        GameObject.Find("Weapon").GetComponent<SpriteRenderer>().material = MaterFlash;
+        WeaponRender.material = MaterFlash;
         yield return new WaitForSeconds(0.2f);
         Render.material = Mater;
-        GameObject.Find("Weapon").GetComponent<SpriteRenderer>().material = Mater;
+        WeaponRender.material = Mater;
         StartCoroutine(Parpadeo());
     }
 
     public IEnumerator Parpadeo()
     {
-        Render.color = new Color(Render.color.r, Render.color.g, Render.color.b, 0);
-        yield return new WaitForSeconds(tiempoImnunidad / 5);
-        Render.color = new Color(Render.color.r, Render.color.g, Render.color.b, 1);
-        yield return new WaitForSeconds(tiempoImnunidad / 5);
-        Render.color = new Color(Render.color.r, Render.color.g, Render.color.b, 0);
-        yield return new WaitForSeconds(tiempoImnunidad / 5);
-        Render.color = new Color(Render.color.r, Render.color.g, Render.color.b, 1);
-        yield return new WaitForSeconds(tiempoImnunidad / 5);
-        Render.color = new Color(Render.color.r, Render.color.g, Render.color.b, 0);
-        yield return new WaitForSeconds(tiempoImnunidad / 5);
-        Render.color = new Color(Render.color.r, Render.color.g, Render.color.b, 1);
         
+        Render.color = new Color(Render.color.r, Render.color.g, Render.color.b, 0);
+        WeaponRender.color = new Color(Render.color.r, Render.color.g, Render.color.b, 0);
+        yield return new WaitForSeconds(tiempoImnunidad / 5);
+        Render.color = new Color(Render.color.r, Render.color.g, Render.color.b, 1);
+        WeaponRender.color = new Color(Render.color.r, Render.color.g, Render.color.b, 1);
+        yield return new WaitForSeconds(tiempoImnunidad / 5); 
+        Render.color = new Color(Render.color.r, Render.color.g, Render.color.b, 0);
+        WeaponRender.color = new Color(Render.color.r, Render.color.g, Render.color.b, 0);
+        yield return new WaitForSeconds(tiempoImnunidad / 5); 
+        Render.color = new Color(Render.color.r, Render.color.g, Render.color.b, 1);
+        WeaponRender.color = new Color(Render.color.r, Render.color.g, Render.color.b, 1);
+        
+
+
     }
 
     public void sonidodanio()
