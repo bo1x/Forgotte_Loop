@@ -28,9 +28,15 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         rb.velocity = transform.right * speed;
-        //Debug.Log("Daño = " + daño);
+        Physics2D.OverlapCircle(transform.position, 0.75f);
     }
 
+    void OnDrawGizmosSelected()
+    {
+        // Draw a yellow sphere at the transform's position
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(transform.position, 0.75f);
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log(collision.gameObject.tag);
