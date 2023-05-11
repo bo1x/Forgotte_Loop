@@ -21,10 +21,6 @@ public class RayBehaviour : MonoBehaviour
         {
             this.transform.position = PuntoDisparo.transform.position;
         }
-        else
-        {
-            Destroy(this.gameObject);
-        }
         
     }
 
