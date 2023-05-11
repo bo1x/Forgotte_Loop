@@ -28,11 +28,11 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         rb.velocity = transform.right * speed;
-        Collider2D Aim = Physics2D.OverlapCircle(transform.position, 200f);
+        /*Collider2D Aim = Physics2D.OverlapCircle(transform.position, 200f);
         if (Aim.tag == "Enemy")
         {
             transform.position = Vector2.MoveTowards(transform.position, Aim.transform.position, speed*500);
-        }
+        }*/
         
     }
 

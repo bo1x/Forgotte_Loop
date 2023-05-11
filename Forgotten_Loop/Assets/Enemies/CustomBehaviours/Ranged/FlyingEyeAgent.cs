@@ -24,6 +24,8 @@ public class FlyingEyeAgent : MonoBehaviour
 
     public GameObject BeamParent;
 
+    private GameObject Obj;
+
     private void Start()
     {
         agentMover = GetComponent<AgentMover>();
@@ -36,6 +38,7 @@ public class FlyingEyeAgent : MonoBehaviour
 
         if (GetComponent<EnemyHPAndFeedback>().VidaActual <= 0)
         {
+            Destroy(Obj);
             StopAllCoroutines();
         }
 
@@ -60,7 +63,7 @@ public class FlyingEyeAgent : MonoBehaviour
         GetComponent<AgentMover>().enabled = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
-        GameObject Obj = Instantiate(Beam, BeamPoint);
+        Obj = Instantiate(Beam, BeamPoint);
         Obj.GetComponent<RayBehaviour>().PuntoDisparo = BeamPoint.gameObject;
 
 
