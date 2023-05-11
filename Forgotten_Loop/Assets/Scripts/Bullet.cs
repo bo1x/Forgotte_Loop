@@ -28,14 +28,19 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         rb.velocity = transform.right * speed;
-        Physics2D.OverlapCircle(transform.position, 0.75f);
+        Collider2D Aim = Physics2D.OverlapCircle(transform.position, 200f);
+        if (Aim.tag == "Enemy")
+        {
+            transform.position = Vector2.MoveTowards(transform.position, Aim.transform.position, speed*500);
+        }
+        
     }
 
     void OnDrawGizmosSelected()
     {
-        // Draw a yellow sphere at the transform's position
+       
         Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(transform.position, 0.75f);
+        Gizmos.DrawWireSphere(transform.position, 200f);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

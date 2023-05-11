@@ -182,6 +182,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3160728050480781234, guid: 3a2ca07dc51872d4d95d8d511d59ff4b, type: 3}
+      propertyPath: VidaMax
+      value: 1017
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153206280155663616, guid: 3a2ca07dc51872d4d95d8d511d59ff4b, type: 3}
+      propertyPath: playerLayerMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a2ca07dc51872d4d95d8d511d59ff4b, type: 3}
 --- !u!1 &765142130
