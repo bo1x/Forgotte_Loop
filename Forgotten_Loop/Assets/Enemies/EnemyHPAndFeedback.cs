@@ -49,6 +49,7 @@ public class EnemyHPAndFeedback : MonoBehaviour
             GetComponent<EnemyAI>().enabled = false;
 
             GetComponent<Animator>().Play("Death");
+            Destroy(this.gameObject, 1f);
         }
     }
 
