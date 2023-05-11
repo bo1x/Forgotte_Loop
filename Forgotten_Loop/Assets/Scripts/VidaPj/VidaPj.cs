@@ -16,7 +16,7 @@ public class VidaPj : MonoBehaviour
     private GameObject canvasitofachero;
 
     public Material MaterFlash;
-    private Material Mater;
+    public Material Mater;
     private SpriteRenderer Render;
 
     public AudioSource source;
@@ -31,7 +31,6 @@ public class VidaPj : MonoBehaviour
         canvasitofachero = GameObject.Find("Canvas");
 
         Render = GetComponent<SpriteRenderer>();
-        Mater = Render.material;
     }
 
     // Update is called once per frame
@@ -97,12 +96,12 @@ public class VidaPj : MonoBehaviour
     public IEnumerator Feedback()
     {
         //Todos los efectos generales de feedback a jugador
-        Render.color = Color.red;
+        Render.material = MaterFlash;
         sonidodanio();
-        GameObject.Find("Weapon").GetComponent<SpriteRenderer>().color = Color.red;
+        GameObject.Find("Weapon").GetComponent<SpriteRenderer>().material = MaterFlash;
         yield return new WaitForSeconds(0.2f);
-        Render.color = Color.white;
-        GameObject.Find("Weapon").GetComponent<SpriteRenderer>().color = Color.white;
+        Render.material = Mater;
+        GameObject.Find("Weapon").GetComponent<SpriteRenderer>().material = Mater;
     }
 
     public void sonidodanio()

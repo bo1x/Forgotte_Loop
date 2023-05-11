@@ -199,7 +199,8 @@ MonoBehaviour:
   VidaMaxima: 5
   VidaAnterior: 0
   tiempoImnunidad: 1
-  MaterFlash: {fileID: 0}
+  MaterFlash: {fileID: 2100000, guid: 8bd6ae9974ef01e4baf470ba1a59f759, type: 2}
+  Mater: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   source: {fileID: 3893347117836488094}
   audiomenosvida: {fileID: 8300000, guid: 5aa347fb17b379245a94669a286320a1, type: 3}
 --- !u!114 &2535315531663628700
