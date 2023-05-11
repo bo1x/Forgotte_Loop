@@ -370,7 +370,7 @@ Transform:
   m_GameObject: {fileID: 1169909913}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.8139412, y: 0.95101595, z: -19.974499}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.55, y: 2.9046874, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 765142133}
@@ -778,6 +778,18 @@ PrefabInstance:
     - target: {fileID: 2387389670173621470, guid: 3a2ca07dc51872d4d95d8d511d59ff4b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3160728050480781234, guid: 3a2ca07dc51872d4d95d8d511d59ff4b, type: 3}
+      propertyPath: VidaMax
+      value: 562
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244498677251883301, guid: 3a2ca07dc51872d4d95d8d511d59ff4b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244498677251883301, guid: 3a2ca07dc51872d4d95d8d511d59ff4b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.9583333
       objectReference: {fileID: 0}
     - target: {fileID: 3720372602742995845, guid: 3a2ca07dc51872d4d95d8d511d59ff4b, type: 3}
       propertyPath: m_Enabled

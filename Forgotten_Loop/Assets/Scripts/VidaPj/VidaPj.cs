@@ -121,9 +121,6 @@ public class VidaPj : MonoBehaviour
         yield return new WaitForSeconds(tiempoImnunidad / 5); 
         Render.color = new Color(Render.color.r, Render.color.g, Render.color.b, 1);
         WeaponRender.color = new Color(Render.color.r, Render.color.g, Render.color.b, 1);
-        
-
-
     }
 
     public void sonidodanio()
