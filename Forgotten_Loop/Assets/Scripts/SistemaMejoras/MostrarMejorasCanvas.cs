@@ -48,7 +48,7 @@ public class MostrarMejorasCanvas : MonoBehaviour
         {
             PlayerPrefs.SetFloat("daño", 2f);
             PlayerPrefs.Save();
-            almasPlayer.GetComponent<parseAlmas>().restaAlmas = precioDaño;
+            almasPlayer.GetComponent<parseAlmas>().restaAlmas += precioDaño;
             dañoimagen.SetActive(true);
             MostrarMejoras();
         }
@@ -66,7 +66,7 @@ public class MostrarMejorasCanvas : MonoBehaviour
         {
             PlayerPrefs.SetFloat("cadencia", 2f);
             PlayerPrefs.Save();
-            almasPlayer.GetComponent<parseAlmas>().restaAlmas = precioCadencia;
+            almasPlayer.GetComponent<parseAlmas>().restaAlmas += precioCadencia;
             cadenciaimagen.SetActive(true);
             MostrarMejoras();
         }
@@ -81,7 +81,7 @@ public class MostrarMejorasCanvas : MonoBehaviour
         {
             PlayerPrefs.SetFloat("vidaMax", 2f);
             PlayerPrefs.Save();
-            almasPlayer.GetComponent<parseAlmas>().restaAlmas = precioVida;
+            almasPlayer.GetComponent<parseAlmas>().restaAlmas += precioVida;
             hpimagen.SetActive(true);
             MostrarMejoras();
         }
