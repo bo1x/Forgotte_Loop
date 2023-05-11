@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         rb.velocity = transform.right * speed;
-        Debug.Log("Daño = " + daño);
+        //Debug.Log("Daño = " + daño);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

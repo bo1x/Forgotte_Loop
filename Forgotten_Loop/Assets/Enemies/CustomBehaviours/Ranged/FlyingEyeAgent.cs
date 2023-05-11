@@ -22,6 +22,13 @@ public class FlyingEyeAgent : MonoBehaviour
 
     public Transform BeamPoint;
 
+    public GameObject BeamParent;
+
+    private void Start()
+    {
+        agentMover = GetComponent<AgentMover>();
+        BeamParent = this.transform.Find("BeamPoint").gameObject;
+    }
     private void Update()
     {
         //El update actualiza el movimiento del enemigo
@@ -45,17 +52,20 @@ public class FlyingEyeAgent : MonoBehaviour
     }
 
     //En el start recibe los componentes necesarios
-    private void Start()
-    {
-        agentMover = GetComponent<AgentMover>();
-    }
+  
 
     public IEnumerator Cue()
     {
         GetComponent<EnemyAI>().enabled = false;
         GetComponent<AgentMover>().enabled = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        Instantiate(Beam, BeamPoint);
+
+        GameObject Obj = Instantiate(Beam, BeamPoint);
+        Obj.GetComponent<RayBehaviour>().PuntoDisparo = BeamPoint.gameObject;
+
+
+        //public static Object Instantiate(Object original, Vector3 position, Quaternion rotation, Transform parent);
+        //Instantiate(Beam, BeamPoint.position, Quaternion.identity, this.gameObject.transform);
         yield return new WaitForSeconds(0.2f);
         GetComponent<EnemyAI>().enabled = true;
         GetComponent<AgentMover>().enabled = true;

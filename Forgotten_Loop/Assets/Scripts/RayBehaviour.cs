@@ -6,7 +6,7 @@ public class RayBehaviour : MonoBehaviour
 {
 
     public GameObject Player;
-
+    public GameObject PuntoDisparo;
     void Start()
     {
         transform.parent = null;
@@ -15,8 +15,15 @@ public class RayBehaviour : MonoBehaviour
         Destroy(gameObject, 5);
     }
 
+    private void Update()
+    {
+        if (PuntoDisparo)
+        {
+            this.transform.position = PuntoDisparo.transform.position;
+        }
+        
+    }
 
-    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
