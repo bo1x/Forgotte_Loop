@@ -102,6 +102,23 @@ public class VidaPj : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         Render.material = Mater;
         GameObject.Find("Weapon").GetComponent<SpriteRenderer>().material = Mater;
+        StartCoroutine(Parpadeo());
+    }
+
+    public IEnumerator Parpadeo()
+    {
+        Render.color = new Color(Render.color.r, Render.color.g, Render.color.b, 0);
+        yield return new WaitForSeconds(tiempoImnunidad / 5);
+        Render.color = new Color(Render.color.r, Render.color.g, Render.color.b, 1);
+        yield return new WaitForSeconds(tiempoImnunidad / 5);
+        Render.color = new Color(Render.color.r, Render.color.g, Render.color.b, 0);
+        yield return new WaitForSeconds(tiempoImnunidad / 5);
+        Render.color = new Color(Render.color.r, Render.color.g, Render.color.b, 1);
+        yield return new WaitForSeconds(tiempoImnunidad / 5);
+        Render.color = new Color(Render.color.r, Render.color.g, Render.color.b, 0);
+        yield return new WaitForSeconds(tiempoImnunidad / 5);
+        Render.color = new Color(Render.color.r, Render.color.g, Render.color.b, 1);
+        
     }
 
     public void sonidodanio()
