@@ -31,6 +31,7 @@ public class RayBehaviour : MonoBehaviour
         {
             StartCoroutine(ImpactoBala(collision));
         }
+
     }
 
     public IEnumerator ImpactoBala(Collider2D collision)

@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a86218bc6b74245ade35a070866eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Beams: {fileID: 0}
+  BulletEnemy: {fileID: 0}
 --- !u!95 &6712532811328572700
 Animator:
   serializedVersion: 4
@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+  PuntoDisparo: {fileID: 0}
 --- !u!61 &1267231475950288379
 BoxCollider2D:
   m_ObjectHideFlags: 0
