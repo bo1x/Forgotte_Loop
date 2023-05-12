@@ -13,6 +13,8 @@ public class Bullet : MonoBehaviour
 
     public GameObject VFX;
 
+    private Vector2 Orientation;
+
     public int daño = 1;
     void Start()
     {
@@ -22,17 +24,18 @@ public class Bullet : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         position = Player.GetComponent<Control>().PositionMouse();
         transform.right = (position - (Vector2)transform.position).normalized;
+        Orientation = new Vector2(speed, speed);
         Destroy(gameObject, 5);
     }
 
     private void Update()
     {
-        rb.velocity = transform.right * speed;
-        /*Collider2D Aim = Physics2D.OverlapCircle(transform.position, 200f);
+        rb.velocity = transform.right * Orientation;
+        Collider2D Aim = Physics2D.OverlapCircle(transform.position, 2);
         if (Aim.tag == "Enemy")
         {
-            transform.position = Vector2.MoveTowards(transform.position, Aim.transform.position, speed*500);
-        }*/
+            Orientation = new Vector2(Aim.transform.position.x, Aim.transform.position.y);
+        }
         
     }
 
@@ -40,8 +43,9 @@ public class Bullet : MonoBehaviour
     {
        
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, 200f);
+        Gizmos.DrawWireSphere(transform.position, 2);
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log(collision.gameObject.tag);
