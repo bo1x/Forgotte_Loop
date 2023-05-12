@@ -4,21 +4,38 @@ using UnityEngine;
 
 public class TrapsFeedback : MonoBehaviour
 {
+    public Animator myanim;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            StartCoroutine(ImpactoPlayer(collision));
+            StartCoroutine(Impacto(collision));
         }
+        if (collision.gameObject.tag == "Enemy")
+        {
+            StartCoroutine(Impacto(collision));
+        }
+
     }
 
-    public IEnumerator ImpactoPlayer(Collider2D collision)
+    public IEnumerator Impacto(Collider2D collision)
     {
         collision.gameObject.GetComponent<VidaPj>().VidaActual--;
-        Vector2 dir = (transform.position - GameObject.Find("Player").transform.position).normalized;
+        Vector2 dir = (transform.position - collision.transform.position).normalized;
         collision.gameObject.GetComponent<Control>().enabled = false;
-        collision.gameObject.GetComponent<Rigidbody2D>().AddForce(-dir * 20, ForceMode2D.Impulse);
+        collision.gameObject.GetComponent<Rigidbody2D>().AddForce(-dir * 50, ForceMode2D.Impulse);
         yield return new WaitForSeconds(1f);
         collision.gameObject.GetComponent<Control>().enabled = true;
+    }
+
+    void Inactive()
+    {
+        myanim.Play("Inactive");
+    }
+
+    void Active()
+    {
+        myanim.Play("Active");
     }
 }

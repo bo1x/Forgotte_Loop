@@ -34,7 +34,7 @@ public class Bullet : MonoBehaviour
         Collider2D Aim = Physics2D.OverlapCircle(transform.position, 2);
         if (Aim.tag == "Enemy")
         {
-            Orientation = new Vector2(Aim.transform.position.x, Aim.transform.position.y);
+            Debug.Log("Matame");
         }
         
     }

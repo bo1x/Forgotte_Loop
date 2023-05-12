@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8577377596022789616}
   - component: {fileID: -2467537785863780719}
   - component: {fileID: -1876992453254473624}
-  - component: {fileID: 6638586947309985166}
   m_Layer: 0
   m_Name: FlameTrap
   m_TagString: Untagged
@@ -168,16 +167,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94e90b0671c703643a81de330378bfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6638586947309985166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5859824554770914247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66e7a5fd10d0ba6428a75f4a5250873e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myanim: {fileID: 0}
+  myanim: {fileID: -6151149879212413239}
