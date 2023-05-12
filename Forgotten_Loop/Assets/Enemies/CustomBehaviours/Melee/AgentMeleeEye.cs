@@ -32,13 +32,17 @@ public class AgentMeleeEye : MonoBehaviour
         agentMover.MovementInput = MovementInput;
         dir = (GameObject.Find("Player").transform.position - this.transform.position).normalized;
 
-       
+        if (GetComponent<EnemyHPAndFeedback>().VidaActual <= 0)
+        {
+            GetComponent<EnemyHPAndFeedback>().enabled = true;
+            StopAllCoroutines();
+        }
     }
 
     //Metodo de ataque
     public void attack()
     {
-        if (HasAttackFinished)
+        if (HasAttackFinished && GetComponent<EnemyHPAndFeedback>().VidaActual > 0)
         {
             myanim.Play("AttackStart");
         }
