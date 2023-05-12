@@ -46,7 +46,7 @@ public class EnseñarIconoInteractuar : MonoBehaviour
         {
             icono.SetActive(false);
             canvasMejoras.SetActive(false);
-            canvasUI.SetActive(true);
+           // canvasUI.SetActive(true);
 
         }
 

@@ -260,7 +260,7 @@ public class Control : MonoBehaviour
     {
         if (context.performed)
         {
-            print("ItemHasDied");
+            
         }
     }
 
