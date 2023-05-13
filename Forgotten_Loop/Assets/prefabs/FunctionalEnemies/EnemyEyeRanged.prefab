@@ -461,7 +461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VidaActual: 0
-  VidaMax: 5
+  VidaMax: 3
   NumeroMinimoAlmas: 1
   NumeroMaximoAlmas: 4
   alma: {fileID: 7078847513194234939, guid: 52ff8c4726118a54b92e4d62aad0df7f, type: 3}
@@ -481,6 +481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Beam: {fileID: 2307831465911848639, guid: 40b2177e0a76da545a5626e8af528624, type: 3}
   BeamPoint: {fileID: 4251813065248604147}
+  BeamParent: {fileID: 0}
 --- !u!114 &3866314209041482974
 MonoBehaviour:
   m_ObjectHideFlags: 0

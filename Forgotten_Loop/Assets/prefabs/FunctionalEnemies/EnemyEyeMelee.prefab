@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VidaActual: 0
-  VidaMax: 8
+  VidaMax: 4
   NumeroMinimoAlmas: 2
   NumeroMaximoAlmas: 6
   alma: {fileID: 7078847513194234939, guid: 52ff8c4726118a54b92e4d62aad0df7f, type: 3}
