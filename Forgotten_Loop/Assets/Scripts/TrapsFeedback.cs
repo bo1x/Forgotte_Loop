@@ -14,7 +14,7 @@ public class TrapsFeedback : MonoBehaviour
         }
         if (collision.gameObject.tag == "Enemy")
         {
-            StartCoroutine(Impacto(collision));
+            StartCoroutine(ImpactoEnemy(collision));
         }
 
     }
@@ -29,6 +29,17 @@ public class TrapsFeedback : MonoBehaviour
         collision.gameObject.GetComponent<Control>().enabled = true;
     }
 
+    public IEnumerator ImpactoEnemy(Collider2D collision)
+    {
+        collision.gameObject.GetComponent<VidaPj>().VidaActual--;
+        Vector2 dir = (transform.position - collision.transform.position).normalized;
+        collision.gameObject.GetComponent<AgentMover>().enabled = false;
+        collision.gameObject.GetComponent<EnemyAI>().enabled = false;
+        collision.gameObject.GetComponent<Rigidbody2D>().AddForce(-dir * 50, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(1f);
+        collision.gameObject.GetComponent<Control>().enabled = true;
+        collision.gameObject.GetComponent<EnemyAI>().enabled = true;
+    }
     void Inactive()
     {
         myanim.Play("Inactive");

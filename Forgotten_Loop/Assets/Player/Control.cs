@@ -55,6 +55,7 @@ public class Control : MonoBehaviour
     public Sprite Arma2;
     public Sprite Arma3;
 
+    //Variableas Sound
     public AudioSource source;
     public AudioClip audioarma1;
     public AudioClip audioarma2;
@@ -62,6 +63,9 @@ public class Control : MonoBehaviour
 
     public AudioClip meleeAttacksound;
     public AudioClip Dashsound;
+
+    //Variables WeaponChange
+    public int WeaponsUnlocked = 1;
 
     //El start añade a las variables previamente mencionadas lo que necesita
     void Start()
@@ -92,13 +96,13 @@ public class Control : MonoBehaviour
                     myanim.Play("Idle");
                     break;
                 case 1:
-                    myanim.Play("Idle2");
+                    myanim.Play("Idle1");
                     break;
                 case 2:
                     myanim.Play("Idle2");
                     break;
                 case 3:
-                    myanim.Play("Idle1");
+                    myanim.Play("Idle2");
                     break;
             }
         }
@@ -113,13 +117,13 @@ public class Control : MonoBehaviour
                     myanim.Play("RunSideToSide");
                     break;
                 case 1:
-                    myanim.Play("RunSideToSide2");
+                    myanim.Play("RunSideToSide1");
                     break;
                 case 2:
                     myanim.Play("RunSideToSide2");
                     break;
                 case 3:
-                    myanim.Play("RunSideToSide1");
+                    myanim.Play("RunSideToSide2");
                     break;
             }
         }
@@ -230,30 +234,7 @@ public class Control : MonoBehaviour
     //Metodos para mecanicas varias por InputActions
     public void Interact(InputAction.CallbackContext context)
     {
-        if (context.performed)
-        {
-            if (Armas > 3)
-            {
-                Armas = 1;
-            }
-            else
-            {
-                if (Armas ==3)
-                {
-                    Armas = 1;
-                }
-                else
-                {
-                    Armas++;
-                }
-                
-            }
-
-            if (Armas == 0)
-            {
-                Armas = 1;
-            }
-        }
+        
     }
 
     public void ItemUse(InputAction.CallbackContext context)
@@ -331,7 +312,23 @@ public class Control : MonoBehaviour
                     print("No Weapon");
                     break;
                 case 1:
-                    if (2==PlayerPrefs.GetFloat("cadencia"))
+                    if (2 == PlayerPrefs.GetFloat("cadencia"))
+                    {
+                        fireRate = 0.10f;
+                    }
+                    else
+                    {
+                        fireRate = 0.2f;
+                    }
+                    if (Time.time > nextShoot)
+                    {
+                        nextShoot = Time.time + fireRate;
+                        Instantiate(bulletPrefab, shootingPoint.transform);
+                        sonidoArma3();
+                    }
+                    break;
+                case 2:
+                    if (2 == PlayerPrefs.GetFloat("cadencia"))
                     {
                         fireRate = 0.10f;
                     }
@@ -346,7 +343,7 @@ public class Control : MonoBehaviour
                         sonidoArma1();
                     }
                     break;
-                case 2:
+                case 3:
                     if (2 == PlayerPrefs.GetFloat("cadencia"))
                     {
                         fireRate = 0.50f;
@@ -360,22 +357,6 @@ public class Control : MonoBehaviour
                         nextShoot = Time.time + fireRate;
                         Instantiate(Beam, shootingPoint.transform);
                         sonidoArma2();
-                    }
-                    break;
-                case 3:
-                    if (2 == PlayerPrefs.GetFloat("cadencia"))
-                    {
-                        fireRate = 0.10f;
-                    }
-                    else
-                    {
-                        fireRate = 0.2f;
-                    }
-                    if (Time.time > nextShoot)
-                    {
-                        nextShoot = Time.time + fireRate;
-                        Instantiate(bulletPrefab, shootingPoint.transform);
-                        sonidoArma3();
                     }
                     break;
 
@@ -399,6 +380,39 @@ public class Control : MonoBehaviour
             }
         }
     }
+
+    public void WeaponChange1(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if (WeaponsUnlocked > 0)
+            {
+                Armas = 1;
+            }
+        }
+    }
+
+    public void WeaponChange2(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if (WeaponsUnlocked > 1)
+            {
+                Armas = 2;
+            }
+        }
+    }
+    public void WeaponChange3(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if (WeaponsUnlocked > 2)
+            {
+                Armas = 3;
+            }
+        }
+    }
+
 
     public IEnumerator DelayMelee()
     {

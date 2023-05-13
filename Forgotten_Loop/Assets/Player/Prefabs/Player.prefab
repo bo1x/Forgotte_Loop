@@ -244,6 +244,7 @@ MonoBehaviour:
   audioarma3: {fileID: 8300000, guid: 032365f34285d164a8c89ffe13f5a5d7, type: 3}
   meleeAttacksound: {fileID: 8300000, guid: df2b5a380325cdf4e9adf417f57c8ad8, type: 3}
   Dashsound: {fileID: 8300000, guid: da55c41663b4e7b45b3bbdb406b8ab50, type: 3}
+  WeaponsUnlocked: 1
 --- !u!114 &2535315531663628690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,6 +414,54 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: e489152b-4fd6-4eb0-8d33-f401af6e0aeb
     m_ActionName: Player/AttackRange[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2535315531663628700}
+        m_TargetAssemblyTypeName: Control, Assembly-CSharp
+        m_MethodName: WeaponChange1
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 05d976ea-878b-479b-adaf-702aa95f1eb0
+    m_ActionName: Player/Weapon1[/Keyboard/1]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2535315531663628700}
+        m_TargetAssemblyTypeName: Control, Assembly-CSharp
+        m_MethodName: WeaponChange2
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7f487c88-be1c-4939-9179-fee2f061f5ae
+    m_ActionName: Player/Weapon2[/Keyboard/2]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2535315531663628700}
+        m_TargetAssemblyTypeName: Control, Assembly-CSharp
+        m_MethodName: WeaponChange3
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 87b9563b-bf3a-4233-a0cd-9528b5f52315
+    m_ActionName: Player/Weapon3[/Keyboard/3]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
