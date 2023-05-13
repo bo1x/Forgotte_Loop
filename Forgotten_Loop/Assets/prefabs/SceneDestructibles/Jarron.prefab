@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 493303792335223172}
   - component: {fileID: 5354041664186327762}
   - component: {fileID: 5923640347982905334}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Jarron
   m_TagString: Obstacles
   m_Icon: {fileID: 0}

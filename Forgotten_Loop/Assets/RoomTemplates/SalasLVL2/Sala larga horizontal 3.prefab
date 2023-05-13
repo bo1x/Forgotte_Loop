@@ -71,7 +71,7 @@ MonoBehaviour:
   ManualDoorModeData:
     DoorsList: []
   SimpleDoorModeData:
-    DistanceFromCorners: 10
+    DistanceFromCorners: 6
     DoorLength: 2
     Mode: 0
     VerticalDoors:
