@@ -6,7 +6,7 @@ public class BossAI : MonoBehaviour
 {
     //State Machine
     public enum Estado { Attack, Wait, Exposed, Death }
-    public Estado Enemy = Estado.Attack;
+    public Estado Enemy = Estado.Wait;
 
     //Projectile Amounts
     public int amountProjectiles = 10;
@@ -23,14 +23,14 @@ public class BossAI : MonoBehaviour
 
     private Animator myanim;
 
-    public WaitForSeconds DelayWait = new WaitForSeconds(0f);
+    public bool IsCoroutineStarted = false, HasAttacked = false, Attack = true, Exposed = false, WeakPointNotExposed = true;
 
-    public bool IsCoroutineStarted = false, HasAttacked = false;
-
-    public int Pattern = 1;
+    public int Pattern;
     private void Start()
     {
         myanim = GetComponent<Animator>();
+        Pattern = Random.Range(1, 4);
+        Debug.Log(Pattern);
     }
 
     void Update()
@@ -38,7 +38,8 @@ public class BossAI : MonoBehaviour
         switch (Enemy)
         {
             case Estado.Attack:
-
+                
+                myanim.Play("Attack");
                 switch (Pattern)
                 {
                     case 1:
@@ -46,13 +47,17 @@ public class BossAI : MonoBehaviour
                         break;
 
                     case 2:
-                        if (!IsCoroutineStarted)
+                        if (!IsCoroutineStarted && !HasAttacked)
                         {
                             StartCoroutine(Fire2());
                         }
                         break;
 
                     case 3:
+                        if (!IsCoroutineStarted && !HasAttacked)
+                        {
+                            StartCoroutine(Fire3());
+                        }
                         break;
 
 
@@ -63,6 +68,8 @@ public class BossAI : MonoBehaviour
 
                 if (HasAttacked)
                 {
+                    Attack = true;
+                    IsCoroutineStarted = false;
                     Enemy = Estado.Exposed;
                 }
           
@@ -84,6 +91,10 @@ public class BossAI : MonoBehaviour
 
             case Estado.Exposed:
                 
+                if (WeakPointNotExposed)
+                {
+                    myanim.Play("OpenExpose");
+                }
 
                 if (GetComponent<BossHPAndFeedback>().estoymuerto)
                 {
@@ -103,38 +114,64 @@ public class BossAI : MonoBehaviour
 
     public IEnumerator WaitDelay()
     {
-        yield return DelayWait;
+        yield return new WaitForSeconds(2f);
+        if (Attack)
+        {
+            HasAttacked = false;
+            Attack = false;
+            Enemy = Estado.Exposed;
+        }
+        if (Exposed)
+        {
+            Pattern = Random.Range(1, 4);
+            Exposed = false;
+            Enemy = Estado.Attack;
+        }
     }
+
+    
 
     private void Fire1()
     {
+        startAngle = 0;
+        endAngle = 720;
         float angleStep = (endAngle - startAngle) / amountProjectiles;
         float angle = startAngle;
 
-        for (int i = 0; i < amountProjectiles; i++)
+        for (int e = 0; e < 3; e++)
         {
-            float pDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI)/180);
-            float pDirY = transform.position.y + Mathf.Cos((angle * Mathf.PI)/180);
+            for (int i = 0; i < amountProjectiles; i++)
+            {
+                float pDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
+                float pDirY = transform.position.y + Mathf.Cos((angle * Mathf.PI) / 180f);
 
-            Vector3 vectorMove = new Vector3(pDirX, pDirY, 0f);
-            Vector2 pDir = (vectorMove - transform.position).normalized;
+                Vector3 vectorMove = new Vector3(pDirX, pDirY, 0f);
+                Vector2 pDir = (vectorMove - transform.position).normalized;
 
-            GameObject projectile = Pooling.PoolInstantiation.InstantiateBullets();
+                GameObject projectile = Pooling.PoolInstantiation.InstantiateBullets();
 
-            projectile.transform.position = transform.position;
-            projectile.transform.rotation = transform.rotation;
-            projectile.SetActive(true);
-            projectile.GetComponent<BossBullet>().ChangeDirection(pDir);
-            projectile.GetComponent<BossBullet>().Speed = 15;
+                projectile.transform.position = transform.position;
+                projectile.transform.rotation = transform.rotation;
+                projectile.SetActive(true);
+                projectile.GetComponent<BossBullet>().ChangeDirection(pDir);
+                projectile.GetComponent<BossBullet>().Speed = 15;
 
-            angle += angleStep;
+                angle += angleStep;
+            }
         }
+        
         HasAttacked = true;
     } 
+
+   
 
     private IEnumerator Fire2()
     {
         IsCoroutineStarted = true;
+
+        startAngle = 90;
+        endAngle = 270;
+
         for (int i = 0; i < 36; i++)
         {
             float pDirX = transform.position.x + Mathf.Sin((SpiralAngle * Mathf.PI) / 180);
@@ -149,23 +186,73 @@ public class BossAI : MonoBehaviour
             projectile.transform.rotation = transform.rotation;
             projectile.SetActive(true);
             projectile.GetComponent<BossBullet>().ChangeDirection(pDir);
-            projectile.GetComponent<BossBullet>().Speed = 15;
+            projectile.GetComponent<BossBullet>().Speed = 20;
 
             SpiralAngle += 10;
+
+            if (SpiralAngle >=360f)
+            {
+                SpiralAngle = 0f;
+            }
             yield return new WaitForSeconds(0.1f);
         }
-        StopCoroutine(Fire2());   
-            
+        HasAttacked = true;
+
+    }
+    private IEnumerator Fire3()
+    {
+        IsCoroutineStarted = true;
+
+        startAngle = 90;
+        endAngle = 270;
+
+        for (int i = 0; i < 36; i++)
+        {
+            float pDirX = transform.position.x + Mathf.Sin(((SpiralAngle + 180f * i) * Mathf.PI) / 180f);
+            float pDirY = transform.position.y + Mathf.Cos(((SpiralAngle + 180f * i) * Mathf.PI) / 180f);
+
+            Vector3 vectorMove = new Vector3(pDirX, pDirY, 0f);
+            Vector2 pDir = (vectorMove - transform.position).normalized;
+
+            GameObject projectile = Pooling.PoolInstantiation.InstantiateBullets();
+
+            projectile.transform.position = transform.position;
+            projectile.transform.rotation = transform.rotation;
+            projectile.SetActive(true);
+            projectile.GetComponent<BossBullet>().ChangeDirection(pDir);
+            projectile.GetComponent<BossBullet>().Speed = 20;
+
+            SpiralAngle += 10;
+
+            if (SpiralAngle >= 360f)
+            {
+                SpiralAngle = 0f;
+            }
+            yield return new WaitForSeconds(0.1f);
+        }
+        HasAttacked = true;
+
     }
 
-    public void Exposed()
+    public IEnumerator WindowForAttack()
+    {
+        yield return new WaitForSeconds(2);
+        myanim.Play("CloseExpose");
+        Exposed = true;
+    }
+
+    public void WaitTime()
+    {
+        WeakPointNotExposed = true;
+        Enemy = Estado.Wait;
+        
+    }
+    public void ExposedAnim()
     {
         myanim.Play("Exposed");
-    }
-
-    public void FinishWeakPoint()
-    {
-
+        WeakPointNotExposed = false;
+        Debug.Log(1);
+        StartCoroutine(WindowForAttack());
     }
 }
     
