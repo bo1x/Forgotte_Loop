@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Control : MonoBehaviour
 {
@@ -68,6 +69,8 @@ public class Control : MonoBehaviour
     public bool Gun = true;
     public bool Laser = false;
     public bool Blue = false;
+
+   
 
     //El start añade a las variables previamente mencionadas lo que necesita
     void Start()
@@ -390,6 +393,7 @@ public class Control : MonoBehaviour
             if (Gun)
             {
                 Armas = 1;
+               
             }
         }
     }
@@ -401,6 +405,7 @@ public class Control : MonoBehaviour
             if (Blue)
             {
                 Armas = 2;
+            
             }
         }
     }
@@ -411,11 +416,10 @@ public class Control : MonoBehaviour
             if (Laser)
             {
                 Armas = 3;
+             
             }
         }
     }
-
-
     public IEnumerator DelayMelee()
     {
         yield return new WaitForSeconds(10f);

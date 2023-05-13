@@ -244,7 +244,12 @@ MonoBehaviour:
   audioarma3: {fileID: 8300000, guid: 032365f34285d164a8c89ffe13f5a5d7, type: 3}
   meleeAttacksound: {fileID: 8300000, guid: df2b5a380325cdf4e9adf417f57c8ad8, type: 3}
   Dashsound: {fileID: 8300000, guid: da55c41663b4e7b45b3bbdb406b8ab50, type: 3}
-  WeaponsUnlocked: 4
+  Gun: 1
+  Laser: 0
+  Blue: 0
+  armaActiva1UI: {fileID: 6074699896982857038, guid: c79d29da5ce68e24680c9d22280e8c86, type: 3}
+  armaActiva2UI: {fileID: 2817609129494453249, guid: 29d51da36d4beb24aa56adc61fc77071, type: 3}
+  armaActiva3UI: {fileID: 4706359456282653593, guid: 843719502c815c3488a38f819414c983, type: 3}
 --- !u!114 &2535315531663628690
 MonoBehaviour:
   m_ObjectHideFlags: 0
