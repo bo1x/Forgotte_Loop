@@ -498,37 +498,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 676927751, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2231174504895745978, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: VidaMaxima
-      value: 177
-      objectReference: {fileID: 0}
     - target: {fileID: 2535315531663628689, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2535315531663628700, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: Arma1
-      value: 
-      objectReference: {fileID: 21300000, guid: 664c737a763272f4980d47444ad4cdc0, type: 3}
-    - target: {fileID: 2535315531663628700, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: Arma2
-      value: 
-      objectReference: {fileID: 21300000, guid: 414b0f41825fc46488b64e4c84affb84, type: 3}
-    - target: {fileID: 2535315531663628700, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: Arma3
-      value: 
-      objectReference: {fileID: 21300000, guid: beef0c173022a36439c6996fb8edc564, type: 3}
-    - target: {fileID: 2535315531663628700, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2535315531663628700, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: WeaponsUnlocked
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2535315531663628702, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
       propertyPath: m_RootOrder
@@ -573,10 +545,6 @@ PrefabInstance:
     - target: {fileID: 2535315531663628702, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3518295006714763813, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: m_Layer
-      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}

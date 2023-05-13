@@ -65,7 +65,9 @@ public class Control : MonoBehaviour
     public AudioClip Dashsound;
 
     //Variables WeaponChange
-    public int WeaponsUnlocked = 1;
+    public bool Gun = true;
+    public bool Laser = false;
+    public bool Blue = false;
 
     //El start añade a las variables previamente mencionadas lo que necesita
     void Start()
@@ -385,7 +387,7 @@ public class Control : MonoBehaviour
     {
         if (context.performed)
         {
-            if (WeaponsUnlocked > 0)
+            if (Gun)
             {
                 Armas = 1;
             }
@@ -396,7 +398,7 @@ public class Control : MonoBehaviour
     {
         if (context.performed)
         {
-            if (WeaponsUnlocked > 1)
+            if (Blue)
             {
                 Armas = 2;
             }
@@ -406,7 +408,7 @@ public class Control : MonoBehaviour
     {
         if (context.performed)
         {
-            if (WeaponsUnlocked > 2)
+            if (Laser)
             {
                 Armas = 3;
             }

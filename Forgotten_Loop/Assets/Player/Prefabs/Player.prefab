@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 676927753}
   m_Layer: 7
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f5d0226d38f2174c95fa06d4dac1477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VidaActual: 3
+  VidaActual: 0
   VidaMaxima: 5
   VidaAnterior: 0
   tiempoImnunidad: 1
@@ -235,16 +235,16 @@ MonoBehaviour:
   fireRate: 0.5
   Armas: 1
   Renderer: {fileID: 7187323052227225841}
-  Arma1: {fileID: 21300000, guid: 414b0f41825fc46488b64e4c84affb84, type: 3}
-  Arma2: {fileID: 21300000, guid: beef0c173022a36439c6996fb8edc564, type: 3}
-  Arma3: {fileID: 21300000, guid: 664c737a763272f4980d47444ad4cdc0, type: 3}
+  Arma1: {fileID: 21300000, guid: 664c737a763272f4980d47444ad4cdc0, type: 3}
+  Arma2: {fileID: 21300000, guid: 414b0f41825fc46488b64e4c84affb84, type: 3}
+  Arma3: {fileID: 21300000, guid: beef0c173022a36439c6996fb8edc564, type: 3}
   source: {fileID: 3893347117836488094}
   audioarma1: {fileID: 8300000, guid: c6db96f237481ea4b94ea094f0974b83, type: 3}
   audioarma2: {fileID: 8300000, guid: 98060ff9c480034458675651007305bb, type: 3}
   audioarma3: {fileID: 8300000, guid: 032365f34285d164a8c89ffe13f5a5d7, type: 3}
   meleeAttacksound: {fileID: 8300000, guid: df2b5a380325cdf4e9adf417f57c8ad8, type: 3}
   Dashsound: {fileID: 8300000, guid: da55c41663b4e7b45b3bbdb406b8ab50, type: 3}
-  WeaponsUnlocked: 1
+  WeaponsUnlocked: 4
 --- !u!114 &2535315531663628690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,7 +588,7 @@ GameObject:
   - component: {fileID: 1279666097908807182}
   - component: {fileID: 1692219951199275884}
   - component: {fileID: 3349142424606287799}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AttackCollider
   m_TagString: Bullet
   m_Icon: {fileID: 0}
