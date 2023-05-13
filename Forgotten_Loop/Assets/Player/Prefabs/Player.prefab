@@ -223,7 +223,7 @@ MonoBehaviour:
   CanDash: 1
   IsAttacking: 0
   MeleeCooldown: 0
-  movespeed: 10
+  movespeed: 9
   dashspeed: 50
   Colisiones: {fileID: 4516525967769469154}
   ModoDisparo: 0
@@ -247,9 +247,6 @@ MonoBehaviour:
   Gun: 1
   Laser: 0
   Blue: 0
-  armaActiva1UI: {fileID: 6074699896982857038, guid: c79d29da5ce68e24680c9d22280e8c86, type: 3}
-  armaActiva2UI: {fileID: 2817609129494453249, guid: 29d51da36d4beb24aa56adc61fc77071, type: 3}
-  armaActiva3UI: {fileID: 4706359456282653593, guid: 843719502c815c3488a38f819414c983, type: 3}
 --- !u!114 &2535315531663628690
 MonoBehaviour:
   m_ObjectHideFlags: 0

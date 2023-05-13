@@ -7,6 +7,10 @@ public class ArmaActiva : MonoBehaviour
     public GameObject armaActiva1UI;
     public GameObject armaActiva2UI;
     public GameObject armaActiva3UI;
+
+    public GameObject armaLaser;
+    public GameObject armaRifle;
+
     public int armasActivasNum;
     
     public bool Gun;
