@@ -463,6 +463,9 @@ MonoBehaviour:
   startAngle: 90
   endAngle: 270
   RateOfFire: 0
+  IsCoroutineStarted: 0
+  HasAttacked: 0
+  Pattern: 1
 --- !u!212 &1222078713
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -559,7 +562,7 @@ Animator:
   m_GameObject: {fileID: 1222078711}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: afb5fd6cf90557f49a37585b6b4b4f57, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

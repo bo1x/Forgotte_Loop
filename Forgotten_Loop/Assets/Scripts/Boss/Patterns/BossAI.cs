@@ -23,6 +23,11 @@ public class BossAI : MonoBehaviour
 
     private Animator myanim;
 
+    public WaitForSeconds DelayWait = new WaitForSeconds(0f);
+
+    public bool IsCoroutineStarted = false, HasAttacked = false;
+
+    public int Pattern = 1;
     private void Start()
     {
         myanim = GetComponent<Animator>();
@@ -33,44 +38,76 @@ public class BossAI : MonoBehaviour
         switch (Enemy)
         {
             case Estado.Attack:
-                Fire1();
+
+                switch (Pattern)
+                {
+                    case 1:
+                        Fire1();
+                        break;
+
+                    case 2:
+                        if (!IsCoroutineStarted)
+                        {
+                            StartCoroutine(Fire2());
+                        }
+                        break;
+
+                    case 3:
+                        break;
+
+
+                    default:
+                        Debug.Log("No pattern found");
+                        break;
+                }
+
+                if (HasAttacked)
+                {
+                    Enemy = Estado.Exposed;
+                }
+          
                 if (GetComponent<BossHPAndFeedback>().estoymuerto)
                 {
                     Enemy = Estado.Death;
                 }
                 break;
+
             case Estado.Wait:
+                myanim.Play("Idle");
+                StartCoroutine(WaitDelay());
 
                 if (GetComponent<BossHPAndFeedback>().estoymuerto)
                 {
                     Enemy = Estado.Death;
                 }
                 break;
+
             case Estado.Exposed:
+                
 
                 if (GetComponent<BossHPAndFeedback>().estoymuerto)
                 {
                     Enemy = Estado.Death;
                 }
                 break;
+
             case Estado.Death:
-                Debug.Log("MachineState NotWorking");
+                Debug.Log("Dead");
                 break;
+
             default:
                 Debug.Log("MachineState NotWorking");
                 break;
         }
     }
 
-
+    public IEnumerator WaitDelay()
+    {
+        yield return DelayWait;
+    }
 
     private void Fire1()
     {
-        if (!IsRoFSet)
-        {
-            RateOfFire = 1f;
-            IsRoFSet = true;
-        }
         float angleStep = (endAngle - startAngle) / amountProjectiles;
         float angle = startAngle;
 
@@ -92,17 +129,15 @@ public class BossAI : MonoBehaviour
 
             angle += angleStep;
         }
-        Enemy = Estado.Death;
+        HasAttacked = true;
     } 
 
-    private void Fire2()
+    private IEnumerator Fire2()
     {
-        if (!IsRoFSet)
+        IsCoroutineStarted = true;
+        for (int i = 0; i < 36; i++)
         {
-            RateOfFire = 0.1f;
-            IsRoFSet = true;
-        }
-        float pDirX = transform.position.x + Mathf.Sin((SpiralAngle * Mathf.PI) / 180);
+            float pDirX = transform.position.x + Mathf.Sin((SpiralAngle * Mathf.PI) / 180);
             float pDirY = transform.position.y + Mathf.Cos((SpiralAngle * Mathf.PI) / 180);
 
             Vector3 vectorMove = new Vector3(pDirX, pDirY, 0f);
@@ -117,6 +152,20 @@ public class BossAI : MonoBehaviour
             projectile.GetComponent<BossBullet>().Speed = 15;
 
             SpiralAngle += 10;
+            yield return new WaitForSeconds(0.1f);
+        }
+        StopCoroutine(Fire2());   
+            
+    }
+
+    public void Exposed()
+    {
+        myanim.Play("Exposed");
+    }
+
+    public void FinishWeakPoint()
+    {
+
     }
 }
     
