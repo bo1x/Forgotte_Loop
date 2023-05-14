@@ -577,10 +577,16 @@ MonoBehaviour:
   DistanceFromCorners: 1
   DoorLength: 1
   DoorsList: []
-  SelectedMode: 0
+  SelectedMode: 2
   HybridDoorModeData:
-    DefaultLength: 1
-    DoorLines: []
+    DefaultLength: 3
+    DoorLines:
+    - From: {x: 3, y: -13, z: 0}
+      To: {x: 3, y: -7, z: 0}
+      Length: 3
+    - From: {x: -22, y: 9, z: 0}
+      To: {x: -16, y: 9, z: 0}
+      Length: 3
   ManualDoorModeData:
     DoorsList: []
   SimpleDoorModeData:

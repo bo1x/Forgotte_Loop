@@ -1336,7 +1336,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1391,10 +1391,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 249316833, guid: 93c32d5cc6fc25e4dbae8dfc078661d4, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 249316833, guid: 93c32d5cc6fc25e4dbae8dfc078661d4, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 1867759528, guid: 93c32d5cc6fc25e4dbae8dfc078661d4, type: 3}
   - m_RefCount: 3
@@ -3180,13 +3180,13 @@ MonoBehaviour:
     Mode: 1
     VerticalDoors:
       Length: 3
-      Margin1: 4
-      Margin2: 4
+      Margin1: 3
+      Margin2: 3
       Enabled: 1
     HorizontalDoors:
       Length: 3
-      Margin1: 4
-      Margin2: 4
+      Margin1: 3
+      Margin2: 3
       Enabled: 1
 --- !u!1001 &192703519287428724
 PrefabInstance:

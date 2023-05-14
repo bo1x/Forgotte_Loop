@@ -3414,13 +3414,13 @@ MonoBehaviour:
     Mode: 1
     VerticalDoors:
       Length: 3
-      Margin1: 4
-      Margin2: 4
+      Margin1: 3
+      Margin2: 3
       Enabled: 1
     HorizontalDoors:
       Length: 3
-      Margin1: 4
-      Margin2: 4
+      Margin1: 3
+      Margin2: 3
       Enabled: 1
 --- !u!1001 &413036231459151264
 PrefabInstance:

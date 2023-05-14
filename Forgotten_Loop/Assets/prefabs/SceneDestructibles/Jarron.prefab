@@ -276,3 +276,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   src: {fileID: 7228733960057298723}
   romperJarron: {fileID: 8300000, guid: 6a6f49e0245f9254f96ab3176f3e7ef0, type: 3}
+  alma: {fileID: 7078847513194234939, guid: 52ff8c4726118a54b92e4d62aad0df7f, type: 3}

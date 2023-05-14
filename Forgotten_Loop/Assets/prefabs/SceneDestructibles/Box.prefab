@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   src: {fileID: 9132013805536481173}
   romperJarron: {fileID: 8300000, guid: 884af526e7e56884f84e44ab2ba57898, type: 3}
+  alma: {fileID: 7078847513194234939, guid: 52ff8c4726118a54b92e4d62aad0df7f, type: 3}
 --- !u!61 &4935907009955009159
 BoxCollider2D:
   m_ObjectHideFlags: 0
