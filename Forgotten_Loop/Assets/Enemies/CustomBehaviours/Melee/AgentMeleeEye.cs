@@ -102,6 +102,18 @@ public class AgentMeleeEye : MonoBehaviour
                 myanim.Play("AttackFinish");
             }
 
+            if (collision.gameObject.tag == "Obstacles")
+            {
+                StopAllCoroutines();
+                GetComponent<EnemyHPAndFeedback>().enabled = true;
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(dir.x * -1, dir.y * -1) * 1000);
+                GetComponent<AgentMover>().enabled = true;
+                GetComponent<AIData>().enabled = true;
+                HasAttackFinished = true;
+                GetComponent<EnemyHPAndFeedback>().StartCoroutine("Feedback");
+                myanim.Play("AttackFinish");
+            }
+
             if (collision.gameObject.tag == "Player")
             {
                 StopAllCoroutines();
