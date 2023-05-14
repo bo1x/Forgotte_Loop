@@ -5,7 +5,7 @@ using UnityEngine;
 public class BeamBehaviour : MonoBehaviour
 {
     public GameObject VFX;
-    public int daño = 1;
+    public float daño = 0.5f;
 
     public float tiempoImnunidad;
     private float tiempoPasado;
@@ -13,7 +13,7 @@ public class BeamBehaviour : MonoBehaviour
 
     void Start()
     {
-        daño = daño * (int)PlayerPrefs.GetFloat("daño");
+        daño = daño * PlayerPrefs.GetFloat("daño");
 
     }
 

@@ -15,17 +15,18 @@ public class BossAI : MonoBehaviour
     [SerializeField]
     private float SpiralAngle, startAngle, endAngle, RateOfFire;
 
-    private Vector2 projectilesDirection;
-
-    private bool IsRoFSet = false;
-
     //Animator
-
     private Animator myanim;
 
+    //Bools
     public bool IsCoroutineStarted = false, HasAttacked = false, Attack = true, Exposed = false, WeakPointNotExposed = true;
 
-    public int Pattern;
+    //Random Pattern Selection
+    private int Pattern;
+
+    //PatternPoint
+    public Transform PatternPoint;
+
     private void Start()
     {
         myanim = GetComponent<Animator>();
@@ -35,6 +36,7 @@ public class BossAI : MonoBehaviour
 
     void Update()
     {
+        
         switch (Enemy)
         {
             case Estado.Attack:
@@ -43,7 +45,10 @@ public class BossAI : MonoBehaviour
                 switch (Pattern)
                 {
                     case 1:
-                        Fire1();
+                        if (!IsCoroutineStarted && !HasAttacked)
+                        {
+                            StartCoroutine(Fire1());
+                        }
                         break;
 
                     case 2:
@@ -110,6 +115,7 @@ public class BossAI : MonoBehaviour
                 Debug.Log("MachineState NotWorking");
                 break;
         }
+        
     }
 
     public IEnumerator WaitDelay()
@@ -131,10 +137,13 @@ public class BossAI : MonoBehaviour
 
     
 
-    private void Fire1()
+    private IEnumerator Fire1()
     {
+        IsCoroutineStarted = true;
+
         startAngle = 0;
         endAngle = 720;
+
         float angleStep = (endAngle - startAngle) / amountProjectiles;
         float angle = startAngle;
 
@@ -150,7 +159,7 @@ public class BossAI : MonoBehaviour
 
                 GameObject projectile = Pooling.PoolInstantiation.InstantiateBullets();
 
-                projectile.transform.position = transform.position;
+                projectile.transform.position = PatternPoint.position;
                 projectile.transform.rotation = transform.rotation;
                 projectile.SetActive(true);
                 projectile.GetComponent<BossBullet>().ChangeDirection(pDir);
@@ -158,6 +167,7 @@ public class BossAI : MonoBehaviour
 
                 angle += angleStep;
             }
+            yield return new WaitForSeconds(1f);
         }
         
         HasAttacked = true;
@@ -182,7 +192,7 @@ public class BossAI : MonoBehaviour
 
             GameObject projectile = Pooling.PoolInstantiation.InstantiateBullets();
 
-            projectile.transform.position = transform.position;
+            projectile.transform.position = PatternPoint.position;
             projectile.transform.rotation = transform.rotation;
             projectile.SetActive(true);
             projectile.GetComponent<BossBullet>().ChangeDirection(pDir);
@@ -216,7 +226,7 @@ public class BossAI : MonoBehaviour
 
             GameObject projectile = Pooling.PoolInstantiation.InstantiateBullets();
 
-            projectile.transform.position = transform.position;
+            projectile.transform.position = PatternPoint.position;
             projectile.transform.rotation = transform.rotation;
             projectile.SetActive(true);
             projectile.GetComponent<BossBullet>().ChangeDirection(pDir);

@@ -15,6 +15,8 @@ public class BossBullet : MonoBehaviour
     public void OnEnable()
     {
         Invoke("SetOff", 3f);
+        GetComponent<SpriteRenderer>().enabled = true;
+        GetComponent<Collider2D>().enabled = true;
     }
 
     void Start()
