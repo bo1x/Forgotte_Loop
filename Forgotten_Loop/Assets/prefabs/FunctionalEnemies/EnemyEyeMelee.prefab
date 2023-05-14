@@ -213,7 +213,7 @@ MonoBehaviour:
   aiData: {fileID: 4153206279960777235}
   detectionDelay: 0.05
   aiUpdateDelay: 0.06
-  attackDelay: 2
+  attackDelay: 1.5
   attackDistance: 6
   OnAttackPressed:
     m_PersistentCalls:
@@ -645,7 +645,7 @@ BoxCollider2D:
   m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.01541847, y: -0.25252688}

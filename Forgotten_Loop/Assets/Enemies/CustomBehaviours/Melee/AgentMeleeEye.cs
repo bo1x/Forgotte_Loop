@@ -73,7 +73,7 @@ public class AgentMeleeEye : MonoBehaviour
         HasAttackFinished = true;
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if (!HasAttackFinished)
         {
@@ -117,7 +117,7 @@ public class AgentMeleeEye : MonoBehaviour
         }
     }
 
-    public void Impacto(Collider2D collision)
+    public void Impacto(Collision2D collision)
     {
         Vector2 Knockdir = (transform.position - GameObject.Find("Player").transform.position).normalized;
         collision.gameObject.GetComponent<Control>().enabled = false;
