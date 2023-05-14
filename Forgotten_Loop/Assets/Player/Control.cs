@@ -152,6 +152,7 @@ public class Control : MonoBehaviour
         }
 
         //Usa un metodo para mover la mirilla en tiempo real  dandole la posicion
+        mirilla = GameObject.Find("Pointer");
         mirilla.transform.position = PositionMouse();
 
         //El arma apunta tambien a la mirlilla, mediante este codigo se le pasa al script del arma la susodicha posicion
