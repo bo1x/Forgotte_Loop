@@ -3,9 +3,9 @@ using System.Collections;
 
 public class EnemyHPAndFeedback : MonoBehaviour
 {
-    public int VidaActual = 0;
-    public int VidaMax = 0;
-    private int VidaAnterior;
+    public float VidaActual = 0;
+    public float VidaMax = 0;
+    private float VidaAnterior;
 
     public int NumeroMinimoAlmas = 0;
     public int NumeroMaximoAlmas = 10;

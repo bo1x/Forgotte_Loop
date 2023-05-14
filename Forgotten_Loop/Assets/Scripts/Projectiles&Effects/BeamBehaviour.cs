@@ -48,8 +48,14 @@ public class BeamBehaviour : MonoBehaviour
         Vector2 dir = (transform.position - collider.transform.position).normalized;
         collider.gameObject.GetComponent<Rigidbody2D>().AddForce(-dir * 10, ForceMode2D.Impulse);
         Instantiate(VFX, transform.position, transform.rotation);
-        
     }
 
-    
+    public void reducirVelocidad()
+    {
+        GameObject.Find("Player").GetComponent<Control>().movespeed = GameObject.Find("Player").GetComponent<Control>().movespeed / 2;
+    }
+    public void VelocidadNormal()
+    {
+        GameObject.Find("Player").GetComponent<Control>().movespeed = 10;
+    }
 }

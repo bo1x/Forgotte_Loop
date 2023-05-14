@@ -17,11 +17,9 @@ public class reducirVel : MonoBehaviour
     public void reducirVelocidad()
     {
         GameObject.Find("Player").GetComponent<Control>().movespeed = GameObject.Find("Player").GetComponent<Control>().movespeed / 2;
-        
     }
     public void VelocidadNormal()
     {
-        vel = GameObject.Find("Player").GetComponent<Control>().movespeed = 10;
-        
+        GameObject.Find("Player").GetComponent<Control>().movespeed = 10;
     }
 }

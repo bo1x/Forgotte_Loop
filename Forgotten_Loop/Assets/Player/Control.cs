@@ -273,6 +273,7 @@ public class Control : MonoBehaviour
             print("Mapa Disappear");
         }
     }
+
     // sonido armas
     public void sonidoArma1()
     {
@@ -431,5 +432,4 @@ public class Control : MonoBehaviour
         Renderer.GetComponent<SpriteRenderer>().enabled = true;
         IsAttacking = false;
     }
-
 }
