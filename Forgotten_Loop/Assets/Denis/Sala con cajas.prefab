@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 5779477786638094727}
   - component: {fileID: 3209460357894698568}
   - component: {fileID: 2297892135895016939}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collideable
   m_TagString: Obstacles
   m_Icon: {fileID: 0}
@@ -3455,7 +3455,7 @@ GameObject:
   - component: {fileID: 3760409695655734492}
   - component: {fileID: 5282410042055617041}
   - component: {fileID: 7713862237378014500}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}

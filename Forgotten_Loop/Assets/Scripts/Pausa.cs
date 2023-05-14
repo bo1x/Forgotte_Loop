@@ -12,7 +12,7 @@ public class Pausa : MonoBehaviour
    void Start()
     {
        menuPausa = GameObject.Find("MenuPausa");
-        menuPausa.SetActive(false);
+       menuPausa.SetActive(false);
        canvasHud = GameObject.Find("Canvas");
     }
     
