@@ -19,9 +19,17 @@ public class Vida : MonoBehaviour
    
     void Update()
     {
-        VidaActual =  pj.GetComponent<VidaPj>().VidaActual;
-        VidaMax = pj.GetComponent<VidaPj>().VidaMaxima;
+        if (pj !=null )
+        {
+            VidaActual = pj.GetComponent<VidaPj>().VidaActual;
+            VidaMax = pj.GetComponent<VidaPj>().VidaMaxima;
+        }
 
-        texto.SetText(VidaActual + "/" + VidaMax);
+        if (texto != null)
+        {
+            texto.SetText(VidaActual + "/" + VidaMax);
+        }
+
+        
     }
 }

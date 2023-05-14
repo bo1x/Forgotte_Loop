@@ -7,7 +7,7 @@ public class targetCamera : MonoBehaviour
     [SerializeField] Camera camInfo;
     private bool camEncontrada = false;
     [SerializeField] Transform player;
-    private bool playerEncontrado = false   ;
+    private bool playerEncontrado = false;
     [SerializeField] float threshold;
 
 
@@ -15,9 +15,26 @@ public class targetCamera : MonoBehaviour
     //El threshold limita la distancia maxima entre estos
     //Se usa para limitar el movimiento de la camara 
     /*Util https://www.youtube.com/watch?v=LFe017d-S58 */
-
+    void Start()
+    {
+        
+    }
     void Update()
     {
+
+        if (camInfo == null)
+        {
+            camInfo = Camera.main;
+            camEncontrada = true;
+        }
+       if ( player == null)
+        {
+            player = GameObject.Find("Player").transform;
+            playerEncontrado = true;
+        }
+
+        
+
         if (camEncontrada && playerEncontrado)
         {
             Vector3 mousePos = camInfo.ScreenToWorldPoint(Input.mousePosition);
@@ -31,23 +48,7 @@ public class targetCamera : MonoBehaviour
           //  Debug.Log("Mouse pos " + mousePos.ToString());
         }
         
-        if(camEncontrada == false)
-        {
-            if(Camera.main != null)
-            {
-                camInfo = Camera.main;
-                camEncontrada = true;
-            }
-        }
-
-        if(playerEncontrado == false)
-        {
-            if(GameObject.Find("Player") != null)
-            {
-                player = GameObject.Find("Player").transform;
-                playerEncontrado = true;
-            }
-        }
+        
 
     }
 }

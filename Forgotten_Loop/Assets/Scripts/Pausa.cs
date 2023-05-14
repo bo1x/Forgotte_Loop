@@ -13,12 +13,24 @@ public class Pausa : MonoBehaviour
    void Start()
     {
        menuPausa = GameObject.Find("MenuPausa");
-       menuPausa.SetActive(false);
-       canvasHud = GameObject.Find("Canvas");
+        menuPausa.SetActive(false);
+        canvasHud = GameObject.Find("Canvas");
     }
     
     void Update()
     {
+        if (menuPausa != null && canvasHud != null )
+        {
+
+        }
+        else
+        {
+            Debug.Log("NO REFS");
+            menuPausa = GameObject.Find("MenuPausa");
+            menuPausa.SetActive(false);
+            canvasHud = GameObject.Find("Canvas");
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Debug.Log("CambioCanvas");

@@ -18,7 +18,7 @@ public class parseAlmas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canvas.activeSelf)
+        if (canvas !=null)
         {
             almas = canvas.GetComponent<Puntos>().Almas;
 

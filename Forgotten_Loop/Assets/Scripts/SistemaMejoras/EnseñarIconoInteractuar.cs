@@ -13,6 +13,7 @@ public class EnseñarIconoInteractuar : MonoBehaviour
     void Start()
     {
         canvasUI = GameObject.Find("Canvas");
+        Debug.Log("CANVAS ENCONTRADO" + canvasUI);
         player = GameObject.Find("Player");
         icono = this.transform.Find("Icono").gameObject;
         canvasMejoras = this.transform.Find("canvasHijo").gameObject;
@@ -22,8 +23,19 @@ public class EnseñarIconoInteractuar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
+        if (canvasUI != null && player != null && icono != null && canvasMejoras != null)
+        {
+           
+        }
+        else
+        {
+            Debug.Log("NO REFS");
+            canvasUI = GameObject.Find("Canvas");
+            player = GameObject.Find("Player");
+            icono = this.transform.Find("Icono").gameObject;
+            canvasMejoras = this.transform.Find("canvasHijo").gameObject;
+        }
         if (detectarPlayer(rangoDetecion))
         {
             icono.SetActive(true);
@@ -49,11 +61,15 @@ public class EnseñarIconoInteractuar : MonoBehaviour
            // canvasUI.SetActive(true);
 
         }
-
+        
     }
 
     bool detectarPlayer(float rangoD)
     {
+        if (player == null)
+        {
+            player = GameObject.Find("Player");
+        }
         if (Vector3.Distance(player.transform.position, transform.position) < rangoD)
         {
             return true; 
