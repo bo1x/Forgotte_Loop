@@ -8,6 +8,7 @@ public class Pausa : MonoBehaviour
     public GameObject menuPausa;
     public GameObject canvasHud;
     public bool EstoyEnMenuPausa = false;
+  
 
    void Start()
     {
@@ -40,13 +41,13 @@ public class Pausa : MonoBehaviour
         menuPausa.SetActive(true);
         EstoyEnMenuPausa = true;
         Time.timeScale = 0;
+
     }
 
     public void Resume()
     {
         Time.timeScale = 1;
         Debug.Log(menuPausa.ToString());
-
         menuPausa.SetActive(false);
         canvasHud.SetActive(true);
         Debug.Log("CanvasHUD " + canvasHud);
@@ -56,7 +57,9 @@ public class Pausa : MonoBehaviour
 
     public void AMenuPrincipal()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("MenuInicio");
+       
     }
     public void exit()
     {

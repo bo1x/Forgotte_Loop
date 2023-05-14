@@ -24,11 +24,13 @@ public class AlmasDrops : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, VelocidadAlma * Time.deltaTime);
 
+
             if (Vector2.Distance(transform.position,player.transform.position) < Coger)
             {
                 GameObject.Find("Canvas").GetComponent<Puntos>().Almas++;
                 Destroy(this.gameObject);
             }
+           
         }
     }
 }

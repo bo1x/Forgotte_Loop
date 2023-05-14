@@ -432,4 +432,5 @@ public class Control : MonoBehaviour
         Renderer.GetComponent<SpriteRenderer>().enabled = true;
         IsAttacking = false;
     }
+    
 }
