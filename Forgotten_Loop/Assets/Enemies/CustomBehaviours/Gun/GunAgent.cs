@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class GunAgent : MonoBehaviour
 {
+    public AudioSource src;
+    public AudioClip enemybulletSound;
 
     //El script que mueve al personaje
     private AgentMover agentMover;
@@ -42,6 +44,8 @@ public class GunAgent : MonoBehaviour
         //Lo mismo para el delay de ataque
 
         Instantiate(Cue, transform.position, transform.rotation);
+        enemyattacklila();
+
 
     }
 
@@ -50,5 +54,10 @@ public class GunAgent : MonoBehaviour
     {
         agentMover = GetComponent<AgentMover>();
     }
-
+    public void enemyattacklila()
+    {
+        src.clip = enemybulletSound;
+        src.Play();
+        
+    }
 }
