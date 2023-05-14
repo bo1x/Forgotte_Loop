@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 3334821167085024547}
   - component: {fileID: 8282142238535548047}
   - component: {fileID: 2895452952451348565}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1528,7 +1528,7 @@ GameObject:
   - component: {fileID: 3806052689089535800}
   - component: {fileID: 5158009543297177011}
   - component: {fileID: 5341274258267087104}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collideable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4669,6 +4669,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1671093742, guid: 93c32d5cc6fc25e4dbae8dfc078661d4, type: 3}
+    - target: {fileID: 1734880980272738778, guid: 158bce1a9046a274fb0c148577c59e5d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1786925931905695993, guid: 158bce1a9046a274fb0c148577c59e5d, type: 3}
       propertyPath: m_RootOrder
       value: 1

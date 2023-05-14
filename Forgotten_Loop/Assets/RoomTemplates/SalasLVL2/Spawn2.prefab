@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1519179773011843381}
   - component: {fileID: 6498917964929046745}
   - component: {fileID: 7495728351204166908}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collideable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 8712422540271472665}
   - component: {fileID: 1311523896653406241}
   - component: {fileID: 4274724642823715841}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}

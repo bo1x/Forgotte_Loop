@@ -604,7 +604,7 @@ GameObject:
   - component: {fileID: 323993219762907270}
   - component: {fileID: 2748910626039833067}
   - component: {fileID: 1483167641576001872}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -639,7 +639,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 11
       m_TileObjectToInstantiateIndex: 65535
@@ -919,7 +919,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 9
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 11
       m_TileObjectToInstantiateIndex: 65535
@@ -1819,7 +1819,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 11
       m_TileObjectToInstantiateIndex: 65535
@@ -2012,24 +2012,24 @@ Tilemap:
     m_Data: {fileID: -1366830152, guid: 5e434c9d22daed4479a43999b08d1874, type: 3}
   - m_RefCount: 25
     m_Data: {fileID: -68692201, guid: 5e434c9d22daed4479a43999b08d1874, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -789278065, guid: 5e434c9d22daed4479a43999b08d1874, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -2122598320, guid: 5e434c9d22daed4479a43999b08d1874, type: 3}
   - m_RefCount: 1
+    m_Data: {fileID: -789278065, guid: 5e434c9d22daed4479a43999b08d1874, type: 3}
+  - m_RefCount: 1
     m_Data: {fileID: -1140329167, guid: 5e434c9d22daed4479a43999b08d1874, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 27
     m_Data: {fileID: -1383554773, guid: 5e434c9d22daed4479a43999b08d1874, type: 3}
   - m_RefCount: 25
@@ -2310,7 +2310,7 @@ GameObject:
   - component: {fileID: 7217170653736177186}
   - component: {fileID: 6308805047491343962}
   - component: {fileID: 4950190420823195103}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collideable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
