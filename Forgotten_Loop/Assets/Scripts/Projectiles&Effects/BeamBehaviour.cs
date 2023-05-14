@@ -40,8 +40,23 @@ public class BeamBehaviour : MonoBehaviour
                 ImpactoBala(collision);
             }
         }
+
+        if (collision.gameObject.tag == "BossEnemy")
+        {
+            if (DamageTime)
+            {
+                DamageTime = false;
+                ImpactoBalaBoss(collision);
+            }
+        }
     }
 
+    void ImpactoBalaBoss(Collider2D collider)
+    {
+        collider.gameObject.GetComponent<BossHPAndFeedback>().VidaActual -= daño;
+        Instantiate(VFX, transform.position, transform.rotation);
+        Destroy(this.gameObject);
+    }
     void ImpactoBala(Collider2D collider)
     {
         collider.gameObject.GetComponent<EnemyHPAndFeedback>().VidaActual -= daño;

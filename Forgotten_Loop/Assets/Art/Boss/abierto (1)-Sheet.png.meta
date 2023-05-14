@@ -118,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b2a81b5948ca2d47a95e64c6cc4f411
-      internalID: 124154209
+      spriteID: 1398a443bcc45074b91ff55a50d1956b
+      internalID: -840883612
       vertices: []
       indices: 
       edges: []
@@ -139,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f30b5ddb8cd98c149a6b024c17efd6cc
-      internalID: 420487279
+      spriteID: e9bcf598fbdfd7e438d1975fcceb27ea
+      internalID: 1901599458
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f732a205271c7cf40af2180f456c3705
-      internalID: 401910557
+      spriteID: 31b7aad049b214a468f85a6f9dabcfd8
+      internalID: 1127671508
       vertices: []
       indices: 
       edges: []
@@ -181,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c952f0f83806a9f458b712987a7f2162
-      internalID: -854417975
+      spriteID: f46b0e0c0d09aa94697c000c7f3cf2a2
+      internalID: 1558148570
       vertices: []
       indices: 
       edges: []
@@ -202,8 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe703ee1b4e07be4bb4ccaee1ea0c76d
-      internalID: -1253065034
+      spriteID: 924b8433c48eb7246a4beb998b57cf51
+      internalID: -1400090369
       vertices: []
       indices: 
       edges: []
@@ -223,8 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86066cb6b1edab44dbd4ea0c2916db20
-      internalID: -1915849712
+      spriteID: 3e8affff9f07c9348ba7fed947ada805
+      internalID: 1366870706
       vertices: []
       indices: 
       edges: []
@@ -240,12 +240,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      abierto (1)-Sheet_3: -854417975
-      abierto (1)-Sheet_5: -1915849712
-      abierto (1)-Sheet_1: 420487279
-      abierto (1)-Sheet_0: 124154209
-      abierto (1)-Sheet_2: 401910557
-      abierto (1)-Sheet_4: -1253065034
+      abierto (1)-Sheet_3: 1558148570
+      abierto (1)-Sheet_5: 1366870706
+      abierto (1)-Sheet_1: 1901599458
+      abierto (1)-Sheet_0: -840883612
+      abierto (1)-Sheet_2: 1127671508
+      abierto (1)-Sheet_4: -1400090369
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

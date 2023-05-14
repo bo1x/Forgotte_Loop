@@ -31,11 +31,11 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         rb.velocity = transform.right * Orientation;
-        Collider2D Aim = Physics2D.OverlapCircle(transform.position, 2);
+        /*Collider2D Aim = Physics2D.OverlapCircle(transform.position, 2);
         if (Aim.tag == "Enemy")
         {
             Debug.Log("Matame");
-        }
+        }*/
         
     }
 
@@ -72,6 +72,11 @@ public class Bullet : MonoBehaviour
         {
             ImpactoBala(collision);
         }
+
+        if (collision.gameObject.tag == "BossEnemy")
+        {
+            ImpactoBalaBoss(collision);
+        }
     }
 
     void ImpactoBala(Collision2D collider)
@@ -83,4 +88,10 @@ public class Bullet : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    void ImpactoBalaBoss(Collision2D collider)
+    {
+        collider.gameObject.GetComponent<BossHPAndFeedback>().VidaActual -= daño;
+        Instantiate(VFX, transform.position, transform.rotation);
+        Destroy(this.gameObject);
+    }
 }

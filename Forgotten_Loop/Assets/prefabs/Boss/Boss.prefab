@@ -44,9 +44,10 @@ GameObject:
   - component: {fileID: 3912637502758535426}
   - component: {fileID: 3912637502758535425}
   - component: {fileID: 3912637502758535429}
-  m_Layer: 3
+  - component: {fileID: 7309036036580048570}
+  m_Layer: 10
   m_Name: Boss
-  m_TagString: Enemy
+  m_TagString: BossEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,7 +115,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4.1666665, y: 5.5833335}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -183,6 +184,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &7309036036580048570
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3912637502758535438}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.06376588, y: -1.1706364}
+  m_Size: {x: 1.743561, y: 2.2218056}
+  m_Direction: 0
 --- !u!1 &3912637503621108041
 GameObject:
   m_ObjectHideFlags: 0
