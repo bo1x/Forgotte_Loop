@@ -5,6 +5,8 @@ using UnityEngine;
 public class RomperAldisparar : MonoBehaviour
 {
     private Animator anim;
+    public AudioSource src;
+    public AudioClip romperJarron;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class RomperAldisparar : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             anim.Play("destruccion");
+            sonidoJarronRompido();
             GetComponent<Collider2D>().enabled = false;
         }
     }
@@ -33,11 +36,18 @@ public class RomperAldisparar : MonoBehaviour
         {
             anim.Play("destruccion");
             GetComponent<Collider2D>().enabled = false;
+            sonidoJarronRompido();
         }
     }
 
     void pasarAroto()
     {
         anim.Play("roto");
+    }
+    public void sonidoJarronRompido()
+    {
+        src.clip = romperJarron;
+        src.Play();
+
     }
 }
