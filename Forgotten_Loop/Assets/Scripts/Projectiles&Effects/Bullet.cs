@@ -15,10 +15,10 @@ public class Bullet : MonoBehaviour
 
     private Vector2 Orientation;
 
-    public int daño = 1;
+    public float daño = 1;
     void Start()
     {
-        daño = daño * (int)PlayerPrefs.GetFloat("daño");
+        daño = daño * PlayerPrefs.GetFloat("daño");
         transform.parent = null;
         Player = GameObject.Find("Player");
         rb = GetComponent<Rigidbody2D>();
@@ -31,12 +31,6 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         rb.velocity = transform.right * Orientation;
-        /*Collider2D Aim = Physics2D.OverlapCircle(transform.position, 2);
-        if (Aim.tag == "Enemy")
-        {
-            Debug.Log("Matame");
-        }*/
-        
     }
 
     void OnDrawGizmosSelected()

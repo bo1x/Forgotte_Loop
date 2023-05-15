@@ -80,15 +80,20 @@ public class Control : MonoBehaviour
         
         mirilla = GameObject.Find("Pointer");
         weaponParent = GetComponentInChildren<WeaponParent>();
+
+        
     }
 
     void Update()
     {
+
         //Comprueba si esta o no en dash, sino lo esta es movimiento normal
         if (!IsDashing && !IsAttacking)
         {
             myrigi.velocity = new Vector2(InputX * movespeed, InputY * movespeed);
         }
+
+       
 
         if (myrigi.velocity == Vector2.zero && !IsAttacking)
         {
@@ -191,6 +196,7 @@ public class Control : MonoBehaviour
         {
             PointX = context.ReadValue<Vector2>().x;
             PointY = context.ReadValue<Vector2>().y;
+            
         }
             
     }
@@ -198,9 +204,8 @@ public class Control : MonoBehaviour
     //Detecta la posicion del raton en pantalla y lo guarda en un vector3
     public Vector3 PositionMouse()
     {
-
-       Vector3 MouseP = new Vector3(Camera.main.ScreenToWorldPoint(new Vector3(PointX, PointY)).x, Camera.main.ScreenToWorldPoint(new Vector3(PointX, PointY)).y, 0);
-        return MouseP;
+            Vector3 MouseP = new Vector3(Camera.main.ScreenToWorldPoint(new Vector3(PointX, PointY)).x, Camera.main.ScreenToWorldPoint(new Vector3(PointX, PointY)).y, 0);
+            return MouseP;
     }
 
     //Inicia la corrutina de dash si puede realizarlos
