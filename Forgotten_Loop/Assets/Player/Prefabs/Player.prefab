@@ -65,7 +65,6 @@ GameObject:
   - component: {fileID: 2535315531663628690}
   - component: {fileID: 3218302146784065099}
   - component: {fileID: 2641678772754996673}
-  - component: {fileID: 5055789825983499365}
   - component: {fileID: 71730907577514750}
   m_Layer: 7
   m_Name: Player
@@ -503,21 +502,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombreEscena: 
   sonido: {fileID: 7535402696981786349}
---- !u!114 &5055789825983499365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2535315531663628689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dab20b2c490867458e2cae3f8fd04c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
-  almas: 0
-  restaAlmas: 0
 --- !u!114 &71730907577514750
 MonoBehaviour:
   m_ObjectHideFlags: 0

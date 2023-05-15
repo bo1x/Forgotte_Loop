@@ -8,14 +8,12 @@ public class controlBarraVida : MonoBehaviour
     public int vidaMax;
     public Image barraHP;
     // Start is called before the first frame update
-    void Start()
-    {
-        vidaMax = GameObject.Find("Player").GetComponent<VidaPj>().VidaMaxima;
-    }
+  
 
     // Update is called once per frame
     void Update()
     {
+        vidaMax = GameObject.Find("Player").GetComponent<VidaPj>().VidaMaxima;
         vidaActual = GameObject.Find("Player").GetComponent<VidaPj>().VidaActual;
         
        barraHP.fillAmount = (float)vidaActual / (float)vidaMax;

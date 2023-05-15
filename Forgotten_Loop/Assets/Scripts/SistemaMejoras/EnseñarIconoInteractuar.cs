@@ -5,61 +5,46 @@ using UnityEngine;
 public class EnseñarIconoInteractuar : MonoBehaviour
 {
     float rangoDetecion = 2.5f;
-    GameObject canvasUI;
+    
     GameObject player;
     GameObject icono;
-    GameObject canvasMejoras;
+
+    public bool enseñoIcono;
+
+    public GameObject canvas;
+    
     // Start is called before the first frame update
     void Start()
     {
-        canvasUI = GameObject.Find("Canvas");
-        Debug.Log("CANVAS ENCONTRADO" + canvasUI);
-        player = GameObject.Find("Player");
-        icono = this.transform.Find("Icono").gameObject;
-        canvasMejoras = this.transform.Find("canvasHijo").gameObject;
-        canvasMejoras.SetActive(false);
+        canvas = GameObject.Find("Canvas");
+        icono = transform.Find("Icono").gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (canvasUI != null && player != null && icono != null && canvasMejoras != null)
-        {
-           
-        }
-        else
-        {
-            Debug.Log("NO REFS");
-            canvasUI = GameObject.Find("Canvas");
-            player = GameObject.Find("Player");
-            icono = this.transform.Find("Icono").gameObject;
-            canvasMejoras = this.transform.Find("canvasHijo").gameObject;
-        }
+        canvas = GameObject.Find("Canvas");
+        icono = transform.Find("Icono").gameObject;
+        
         if (detectarPlayer(rangoDetecion))
         {
             icono.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.T) && !canvasMejoras.activeInHierarchy)
-            {
-                Debug.Log("ACTIVO");
-                canvasUI.SetActive(false);
-                canvasMejoras.SetActive(true);
-            }
-            else if (Input.GetKeyDown(KeyCode.T) && canvasMejoras.activeInHierarchy)
-            {
-                Debug.Log("DESACTIVO");
-                canvasMejoras.SetActive(false);
-                canvasUI.SetActive(true);
-
-            }
-
+            enseñoIcono = true;
         }
         else
         {
             icono.SetActive(false);
-            canvasMejoras.SetActive(false);
-           // canvasUI.SetActive(true);
+            enseñoIcono = false;
+        }
 
+        if (Input.GetKeyDown(KeyCode.T) && enseñoIcono == true && canvas.GetComponent<GestorCanvas>().AbroTienda == false)
+        {
+            canvas.GetComponent<GestorCanvas>().AbroTienda = true;
+        }
+        else if(Input.GetKeyDown(KeyCode.T) && canvas.GetComponent<GestorCanvas>().AbroTienda == true || enseñoIcono == false)
+        {
+            
+            canvas.GetComponent<GestorCanvas>().AbroTienda = false;
         }
         
     }

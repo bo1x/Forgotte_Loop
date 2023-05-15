@@ -5,80 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class Pausa : MonoBehaviour
 {
-    public GameObject menuPausa;
-    public GameObject canvasHud;
-    public bool EstoyEnMenuPausa = false;
-  
+
+    public GameObject canvas;
 
    void Start()
     {
-       menuPausa = GameObject.Find("MenuPausa");
-        menuPausa.SetActive(false);
-        canvasHud = GameObject.Find("Canvas");
+        canvas = GameObject.Find("Canvas");
     }
     
     void Update()
     {
-        if (menuPausa != null && canvasHud != null )
-        {
-
-        }
-        else
-        {
-            Debug.Log("NO REFS");
-            menuPausa = GameObject.Find("MenuPausa");
-            menuPausa.SetActive(false);
-            canvasHud = GameObject.Find("Canvas");
-        }
+       
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("CambioCanvas");
-            if (EstoyEnMenuPausa==true)
+            if (canvas.GetComponent<GestorCanvas>().AbroPausa == true)
             {
-                Debug.Log("sALGO MENU");
-                Resume();
+                canvas.GetComponent<GestorCanvas>().AbroPausa = false;
             }
             else
             {
-                Debug.Log("ENTRO MENU");
-                pausa();
+                canvas.GetComponent<GestorCanvas>().AbroPausa = true;
             }
          }
     }
    
-    public void pausa()
-    {
-        canvasHud.SetActive(false);
-        menuPausa.SetActive(true);
-        EstoyEnMenuPausa = true;
-        Time.timeScale = 0;
-
-    }
-
-    public void Resume()
-    {
-        Time.timeScale = 1;
-        Debug.Log(menuPausa.ToString());
-        menuPausa.SetActive(false);
-        canvasHud.SetActive(true);
-        Debug.Log("CanvasHUD " + canvasHud);
-        EstoyEnMenuPausa = false;
-       
-    }
-
-    public void AMenuPrincipal()
-    {
-        Time.timeScale = 1;
-        SceneManager.LoadScene("MenuInicio");
-       
-    }
-    public void exit()
-    {
-        Application.Quit();
-    }
-    public void Esc()
-    {
-        Input.GetKeyDown(KeyCode.Escape);
-    }
+    
 }
