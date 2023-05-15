@@ -13,6 +13,7 @@ public class PuertaCambioEscena : MonoBehaviour
         Debug.Log(col.gameObject.tag);
         if(col.gameObject.tag == "Player")
         {
+            PlayerPrefs.SetFloat("almas", GameObject.Find("Canvas").GetComponent<Puntos>().Almas);
             Debug.Log("Hit");
             SceneManager.LoadScene(escenaCargar);
         }

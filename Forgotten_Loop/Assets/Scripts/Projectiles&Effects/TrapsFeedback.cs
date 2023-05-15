@@ -31,13 +31,13 @@ public class TrapsFeedback : MonoBehaviour
 
     public IEnumerator ImpactoEnemy(Collider2D collision)
     {
-        collision.gameObject.GetComponent<VidaPj>().VidaActual--;
+      //  collision.gameObject.GetComponent<VidaPj>().VidaActual--;
         Vector2 dir = (transform.position - collision.transform.position).normalized;
         collision.gameObject.GetComponent<AgentMover>().enabled = false;
         collision.gameObject.GetComponent<EnemyAI>().enabled = false;
         collision.gameObject.GetComponent<Rigidbody2D>().AddForce(-dir * 50, ForceMode2D.Impulse);
         yield return new WaitForSeconds(1f);
-        collision.gameObject.GetComponent<Control>().enabled = true;
+        collision.gameObject.GetComponent<AgentMover>().enabled = true;
         collision.gameObject.GetComponent<EnemyAI>().enabled = true;
     }
     void Inactive()

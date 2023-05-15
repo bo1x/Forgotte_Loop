@@ -24,11 +24,11 @@ public class MejorarPersonaje : MonoBehaviour
         
     }
 
-    void mejoraDaño()
+    public void mejoraDaño()
     {
         Almas = almasPlayer.GetComponent<Puntos>().Almas;
 
-
+        Debug.Log("ComproDaño");
 
         if (Almas>=precioDaño &&  1 == PlayerPrefs.GetFloat("daño"))
         {
@@ -37,9 +37,13 @@ public class MejorarPersonaje : MonoBehaviour
             almasPlayer.GetComponent<Puntos>().Almas = Almas - precioDaño;
         }
     }
-    void mejoraVida()
+    public void mejoraVida()
     {
         Almas = almasPlayer.GetComponent<Puntos>().Almas;
+
+        Debug.Log("CompraVida");
+
+
         if (Almas >= precioVida && 1 == PlayerPrefs.GetFloat("vidaMax"))
         {
             PlayerPrefs.SetFloat("vidaMax", 2f);
@@ -47,11 +51,12 @@ public class MejorarPersonaje : MonoBehaviour
             almasPlayer.GetComponent<Puntos>().Almas = Almas - precioVida;
         }
     }
-    void mejoraCadencia()
+    public void mejoraCadencia()
     {
+        Debug.Log("ComproCadencia");
 
         Almas = almasPlayer.GetComponent<Puntos>().Almas;
-        if (Almas >= precioVida && 1 == PlayerPrefs.GetFloat("cadencia"))
+        if (Almas >= precioCadencia && 1 == PlayerPrefs.GetFloat("cadencia"))
         {
             PlayerPrefs.SetFloat("cadencia", 2f);
             PlayerPrefs.Save();

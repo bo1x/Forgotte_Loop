@@ -18,7 +18,7 @@ public class CargarAlmas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        canvas = GameObject.Find("Canvas");
+        
         textoAlmas = GetComponent<TextMeshProUGUI>();
         num = canvas.GetComponent<Puntos>().Almas;
         textoAlmas.text = num.ToString();
