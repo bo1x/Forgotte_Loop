@@ -157,7 +157,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.015714675, y: -0.023137689}
@@ -244,8 +244,8 @@ MonoBehaviour:
   meleeAttacksound: {fileID: 8300000, guid: df2b5a380325cdf4e9adf417f57c8ad8, type: 3}
   Dashsound: {fileID: 8300000, guid: da55c41663b4e7b45b3bbdb406b8ab50, type: 3}
   Gun: 1
-  Laser: 1
-  Blue: 1
+  Laser: 0
+  Blue: 0
 --- !u!114 &2535315531663628690
 MonoBehaviour:
   m_ObjectHideFlags: 0

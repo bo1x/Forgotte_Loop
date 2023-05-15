@@ -16,11 +16,8 @@ public class BossHPAndFeedback : MonoBehaviour
     private Material Mater;
     private SpriteRenderer Render;
     public bool estoymuerto = false;
-    public AudioSource src;
-    public AudioClip sonidoMuerte;
-    public AudioClip sonidoMeHacenDaño;
 
-
+    public GameObject portal;
     private void Start()
     {
         VidaActual = VidaMax;
@@ -36,7 +33,8 @@ public class BossHPAndFeedback : MonoBehaviour
         }
         if (VidaActual <= 0 && estoymuerto == false)
         {
-            EstoyMuertoSonido();
+            portal.SetActive(true);
+            portal.transform.parent = null;
             estoymuerto = true;
 
 
@@ -65,7 +63,6 @@ public class BossHPAndFeedback : MonoBehaviour
     {
         if (VidaActual != VidaAnterior)
         {
-            MePegan();
             VidaAnterior = VidaActual;
             return true;
         }
@@ -79,15 +76,4 @@ public class BossHPAndFeedback : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
-    public void EstoyMuertoSonido()
-    {
-            src.clip = sonidoMuerte;
-            src.Play();
-    }
-    public void MePegan()
-    {
-        src.clip = sonidoMeHacenDaño;
-        src.Play();
-    }
-    
 }
