@@ -146,4 +146,12 @@ public class AgentMeleeEye : MonoBehaviour
     {
         myanim.Play("IdleMove");
     }
+
+    public void OnDeath() 
+    {
+        GetComponent<AgentMover>().enabled = false;
+        GetComponent<EnemyAI>().enabled = false;
+        GetComponent<AIData>().enabled = false;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+    }
 }
