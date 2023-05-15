@@ -8,8 +8,10 @@ public class sonidoconfigmute : MonoBehaviour
     public string nombreEscena;
     private Scene Escena;
     public GameObject sonido;
+    public GameObject sonidoboss;
+    public GameObject sonidojuego;
 
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,15 @@ public class sonidoconfigmute : MonoBehaviour
         if (nombreEscena == "HubPrincipal")
         {
             sonido.SetActive(false);
+            sonidoboss.SetActive(false);
         }
+        if (nombreEscena == "BossFinal")
+        {
+            sonido.SetActive(false);
+            sonidoboss.SetActive(true);
+           
+        }
+
     }
 
     // Update is called once per frame
