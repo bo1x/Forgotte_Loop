@@ -8,7 +8,7 @@ public class Vida : MonoBehaviour
 
     private TextMeshProUGUI texto;
     private GameObject pj;
-    private int VidaActual, VidaMax;
+    private float VidaActual, VidaMax;
     
     void Start()
     {

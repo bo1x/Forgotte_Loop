@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5950321178179015952}
   - component: {fileID: 5866078263507438881}
   - component: {fileID: -1867728053912673125}
-  - component: {fileID: -7014110339419314061}
   - component: {fileID: 7004527542292113180}
   m_Layer: 0
   m_Name: BladesTrap
@@ -134,27 +133,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8325982, y: 1.804273}
   m_EdgeRadius: 0
---- !u!50 &-7014110339419314061
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257532919207900100}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &7004527542292113180
 MonoBehaviour:
   m_ObjectHideFlags: 0

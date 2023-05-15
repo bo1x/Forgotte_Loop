@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class controlBarraVida : MonoBehaviour
 {
-    public int vidaActual;
-    public int vidaMax;
+    public float vidaActual;
+    public float vidaMax;
     public Image barraHP;
     // Start is called before the first frame update
   
@@ -16,6 +16,6 @@ public class controlBarraVida : MonoBehaviour
         vidaMax = GameObject.Find("Player").GetComponent<VidaPj>().VidaMaxima;
         vidaActual = GameObject.Find("Player").GetComponent<VidaPj>().VidaActual;
         
-       barraHP.fillAmount = (float)vidaActual / (float)vidaMax;
+       barraHP.fillAmount = vidaActual / vidaMax;
     }
 }

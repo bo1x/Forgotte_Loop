@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class VidaPj : MonoBehaviour
 {
 
-    public int VidaActual;
-    public int VidaMaxima;
-    public int VidaAnterior;
+    public float VidaActual;
+    public float VidaMaxima;
+    public float VidaAnterior;
 
     public float tiempoImnunidad;
     private float tiempoPasado;
@@ -26,7 +26,7 @@ public class VidaPj : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        VidaMaxima = VidaMaxima * (int)PlayerPrefs.GetFloat("vidaMax");
+        VidaMaxima = VidaMaxima * PlayerPrefs.GetFloat("vidaMax");
         VidaActual = VidaMaxima;
         VidaAnterior = VidaMaxima;
         canvasitofachero = GameObject.Find("Canvas");

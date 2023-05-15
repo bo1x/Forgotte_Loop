@@ -5,6 +5,12 @@ using UnityEngine;
 public class RayBehaviour : MonoBehaviour
 {
 
+    public float tiempoImnunidad = 0.5f;
+    private float tiempoPasado;
+    private bool DamageTime = true;
+
+    public float dmg;
+
     public GameObject Player;
     public GameObject PuntoDisparo;
     void Start()
@@ -17,6 +23,13 @@ public class RayBehaviour : MonoBehaviour
 
     private void Update()
     {
+        if (tiempoPasado > tiempoImnunidad)
+        {
+            DamageTime = true;
+            tiempoPasado = 0;
+
+        }
+
         if (PuntoDisparo)
         {
             this.transform.position = PuntoDisparo.transform.position;
@@ -25,19 +38,24 @@ public class RayBehaviour : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            StartCoroutine(ImpactoBala(collision));
+            if (DamageTime)
+            {
+                DamageTime = false;
+                StartCoroutine(ImpactoBala(collision));
+            }
         }
 
+        
     }
 
     public IEnumerator ImpactoBala(Collider2D collision)
     {
         //Instanciar Humo o particulas
-        Player.GetComponent<VidaPj>().VidaActual--;
+        Player.GetComponent<VidaPj>().VidaActual = Player.GetComponent<VidaPj>().VidaActual - dmg;
         Vector2 dir = (transform.position - Player.transform.position).normalized;
         collision.gameObject.GetComponent<Control>().enabled = false;
         collision.gameObject.GetComponent<Rigidbody2D>().AddForce(-dir * 10, ForceMode2D.Impulse);
