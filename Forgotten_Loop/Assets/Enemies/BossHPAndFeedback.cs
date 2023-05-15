@@ -18,6 +18,10 @@ public class BossHPAndFeedback : MonoBehaviour
     public bool estoymuerto = false;
 
     public GameObject portal;
+
+    public AudioSource src;
+    
+    public AudioClip estoysiendodanado;
     private void Start()
     {
         VidaActual = VidaMax;
@@ -33,10 +37,11 @@ public class BossHPAndFeedback : MonoBehaviour
         }
         if (VidaActual <= 0 && estoymuerto == false)
         {
+            estoymuerto = true;
             portal.SetActive(true);
             portal.transform.parent = null;
-            estoymuerto = true;
-
+            
+            
 
             numeroAleatorio = Random.Range(NumeroMinimoAlmas, NumeroMaximoAlmas + 1);
 
@@ -46,7 +51,7 @@ public class BossHPAndFeedback : MonoBehaviour
             }
 
             GetComponent<Animator>().Play("Death");
-            Destroy(this.gameObject, 1f);
+            //Destroy(this.gameObject, 1);
         }
     }
 
@@ -63,6 +68,8 @@ public class BossHPAndFeedback : MonoBehaviour
     {
         if (VidaActual != VidaAnterior)
         {
+            SonidoDaño();
+            Debug.Log("dañoboss");
             VidaAnterior = VidaActual;
             return true;
         }
@@ -74,6 +81,16 @@ public class BossHPAndFeedback : MonoBehaviour
 
     public void Destroy()
     {
+        
         Destroy(this.gameObject);
     }
+
+    public void SonidoDaño()
+    {
+        src.clip = estoysiendodanado;
+        src.Play();
+    }
+
+   
+    
 }

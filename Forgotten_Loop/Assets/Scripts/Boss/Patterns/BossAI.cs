@@ -80,6 +80,7 @@ public class BossAI : MonoBehaviour
           
                 if (GetComponent<BossHPAndFeedback>().estoymuerto)
                 {
+                    StopAllCoroutines();
                     Enemy = Estado.Death;
                 }
                 break;
@@ -90,6 +91,7 @@ public class BossAI : MonoBehaviour
 
                 if (GetComponent<BossHPAndFeedback>().estoymuerto)
                 {
+                    StopAllCoroutines();
                     Enemy = Estado.Death;
                 }
                 break;
@@ -103,12 +105,15 @@ public class BossAI : MonoBehaviour
 
                 if (GetComponent<BossHPAndFeedback>().estoymuerto)
                 {
+                    StopAllCoroutines();
                     Enemy = Estado.Death;
+
                 }
                 break;
 
             case Estado.Death:
                 Debug.Log("Dead");
+                StopAllCoroutines();
                 break;
 
             default:
