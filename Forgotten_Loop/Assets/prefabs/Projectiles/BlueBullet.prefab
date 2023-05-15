@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 15
   m_Sprite: {fileID: 393055399, guid: 6064fa90713c0414b8c4aacc35ea3fb7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -125,6 +125,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   position: {x: 0, y: 0}
   VFX: {fileID: 6790080824839827081, guid: 0478f46ca9ef0124fae122090aed6634, type: 3}
+  "da\xF1o": 1
 --- !u!95 &6099399969503171767
 Animator:
   serializedVersion: 4
