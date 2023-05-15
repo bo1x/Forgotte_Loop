@@ -238,10 +238,6 @@ public class Control : MonoBehaviour
     }
 
     //Metodos para mecanicas varias por InputActions
-    public void Interact(InputAction.CallbackContext context)
-    {
-        
-    }
 
     public void ItemUse(InputAction.CallbackContext context)
     {
@@ -249,14 +245,6 @@ public class Control : MonoBehaviour
         {
             
         }
-    }
-
-    public void PauseMenu(InputAction.CallbackContext context)
-    {   
-            if(context.performed)
-            {
-              print("PauseMenu");
-            }
     }
 
     public void Map(InputAction.CallbackContext context)

@@ -12,13 +12,8 @@ public class GestorCanvas : MonoBehaviour
     public GameObject HUD;
     public GameObject PAUSA;
     public GameObject TIENDA;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+ 
     void Update()
     {
         Debug.Log("TIENDA" + AbroTienda);

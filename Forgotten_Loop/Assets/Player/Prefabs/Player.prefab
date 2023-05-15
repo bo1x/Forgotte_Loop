@@ -305,8 +305,8 @@ MonoBehaviour:
     m_ActionName: Player/Point[/Mouse/delta]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2535315531663628700}
-        m_TargetAssemblyTypeName: Control, Assembly-CSharp
+      - m_Target: {fileID: 71730907577514750}
+        m_TargetAssemblyTypeName: Pausa, Assembly-CSharp
         m_MethodName: PauseMenu
         m_Mode: 0
         m_Arguments:

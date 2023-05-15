@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class EnseñarIconoInteractuar : MonoBehaviour
 {
@@ -11,16 +12,14 @@ public class EnseñarIconoInteractuar : MonoBehaviour
 
     public bool enseñoIcono;
 
+
     public GameObject canvas;
     
-    // Start is called before the first frame update
     void Start()
     {
         canvas = GameObject.Find("Canvas");
         icono = transform.Find("Icono").gameObject;
     }
-
-    // Update is called once per frame
     void Update()
     {
         canvas = GameObject.Find("Canvas");
@@ -36,17 +35,6 @@ public class EnseñarIconoInteractuar : MonoBehaviour
             icono.SetActive(false);
             enseñoIcono = false;
         }
-
-        if (Input.GetKeyDown(KeyCode.T) && enseñoIcono == true && canvas.GetComponent<GestorCanvas>().AbroTienda == false)
-        {
-            canvas.GetComponent<GestorCanvas>().AbroTienda = true;
-        }
-        else if(Input.GetKeyDown(KeyCode.T) && canvas.GetComponent<GestorCanvas>().AbroTienda == true || enseñoIcono == false)
-        {
-            
-            canvas.GetComponent<GestorCanvas>().AbroTienda = false;
-        }
-        
     }
 
     bool detectarPlayer(float rangoD)
@@ -65,4 +53,16 @@ public class EnseñarIconoInteractuar : MonoBehaviour
         }
     }
 
+    public void Interact(InputAction.CallbackContext context)
+    {
+        if (context.performed && enseñoIcono == true && canvas.GetComponent<GestorCanvas>().AbroTienda == false)
+        {
+            canvas.GetComponent<GestorCanvas>().AbroTienda = true;
+        }
+        else if (context.performed && canvas.GetComponent<GestorCanvas>().AbroTienda == true || enseñoIcono == false)
+        {
+
+            canvas.GetComponent<GestorCanvas>().AbroTienda = false;
+        }
+    }
 }
