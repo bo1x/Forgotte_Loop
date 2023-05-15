@@ -160,13 +160,13 @@ MonoBehaviour:
   GeneratorConfig:
     RootGameObject: {fileID: 0}
     Timeout: 10000
-    RepeatModeOverride: 0
+    RepeatModeOverride: 2
     MinimumRoomDistance: 1
   PostProcessConfig:
     InitializeSharedTilemaps: 1
-    TilemapLayersStructure: 0
+    TilemapLayersStructure: 1
     TilemapLayersHandler: {fileID: 0}
-    TilemapLayersExample: {fileID: 0}
+    TilemapLayersExample: {fileID: 9211746197011051505, guid: 4bd2d163138ca044ea86453340a10ac3, type: 3}
     TilemapMaterial: {fileID: 0}
     CopyTilesToSharedTilemaps: 1
     CenterGrid: 1
