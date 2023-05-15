@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BossFinal.unity
     guid: 250db7d27ee8fff4d8ecdced767f8374
+  - enabled: 1
+    path: Assets/Scenes/Cinem_Final.unity
+    guid: 0feab90730d46234f90d002061fcd59e
   m_configObjects: {}
