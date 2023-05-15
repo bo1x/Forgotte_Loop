@@ -28,6 +28,18 @@ public class sonidoconfigmute : MonoBehaviour
             sonidoboss.SetActive(true);
            
         }
+        if (nombreEscena == "DungeonPruebas")
+        {
+            sonido.SetActive(true);
+            sonidoboss.SetActive(false);
+
+        }
+        if (nombreEscena == "Dungeon2")
+        {
+            sonido.SetActive(true);
+            sonidoboss.SetActive(false);
+
+        }
 
     }
 
