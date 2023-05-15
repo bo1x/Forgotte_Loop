@@ -136,15 +136,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VidaActual: 0
-  VidaMax: 1
-  NumeroMinimoAlmas: 0
-  NumeroMaximoAlmas: 10
+  VidaMax: 20
+  NumeroMinimoAlmas: 20
+  NumeroMaximoAlmas: 50
   alma: {fileID: 7078847513194234939, guid: 52ff8c4726118a54b92e4d62aad0df7f, type: 3}
   MaterFlash: {fileID: 2100000, guid: 9aa7f6dd4963a724ab7c22672e11abf4, type: 2}
   estoymuerto: 0
   portal: {fileID: 7638859817232620194}
   src: {fileID: 2419441528348418278}
-  estoymuriendoSonido: {fileID: 8300000, guid: 263a2c2824ac7c84bae20ade561b6d46, type: 3}
   estoysiendodanado: {fileID: 8300000, guid: d17f5d6eb5439d348b3048314438d1bf, type: 3}
 --- !u!114 &3912637502758535425
 MonoBehaviour:
@@ -396,7 +395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2235127883084159587, guid: 23fe7d65238ed4740892ca535ad7a387, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7280396829380264744, guid: 23fe7d65238ed4740892ca535ad7a387, type: 3}
       propertyPath: m_RootOrder
