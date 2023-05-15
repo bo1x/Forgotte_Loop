@@ -75,6 +75,16 @@ public class Control : MonoBehaviour
     //El start añade a las variables previamente mencionadas lo que necesita
     void Start()
     {
+
+        if (PlayerPrefs.GetInt("ArmaAzul") == 1)
+        {
+            Blue = true;
+        }
+        if (PlayerPrefs.GetInt("ArmaLaser") == 1)
+        {
+            Laser = true;
+        }
+
         myanim = GetComponent<Animator>();
         myrigi = GetComponent<Rigidbody2D>();
         

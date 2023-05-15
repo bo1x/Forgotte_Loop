@@ -49,6 +49,14 @@ public class VidaPj : MonoBehaviour
 
         if (VidaActual <= 0)
         {
+            if (GameObject.Find("Player").GetComponent<Control>().Laser)
+            {
+                PlayerPrefs.SetInt("ArmaLaser", 1);
+            }
+            if (GameObject.Find("Player").GetComponent<Control>().Blue)
+            {
+                PlayerPrefs.SetInt("ArmaAzul", 1);
+            }
             PlayerPrefs.SetFloat("almas", canvasitofachero.GetComponent<Puntos>().Almas);
             PlayerPrefs.Save();
             SceneManager.LoadScene(1);

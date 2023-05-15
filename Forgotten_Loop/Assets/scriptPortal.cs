@@ -32,7 +32,18 @@ public class scriptPortal : MonoBehaviour
         Debug.Log(col.gameObject.tag);
         if (col.gameObject.tag == "Player")
         {
+
+            if (GameObject.Find("Player").GetComponent<Control>().Laser)
+            {
+                PlayerPrefs.SetInt("ArmaLaser", 1);
+            }
+            if (GameObject.Find("Player").GetComponent<Control>().Blue)
+            {
+                PlayerPrefs.SetInt("ArmaAzul", 1);
+            }
+
             PlayerPrefs.SetFloat("almas", GameObject.Find("Canvas").GetComponent<Puntos>().Almas);
+            PlayerPrefs.Save();
             Debug.Log("Hit");
             SceneManager.LoadScene(escenaCargar);
         }
