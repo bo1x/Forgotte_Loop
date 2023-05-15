@@ -17,7 +17,7 @@ public class BossHPAndFeedback : MonoBehaviour
     private SpriteRenderer Render;
     public bool estoymuerto = false;
 
-
+    public GameObject portal;
     private void Start()
     {
         VidaActual = VidaMax;
@@ -33,7 +33,8 @@ public class BossHPAndFeedback : MonoBehaviour
         }
         if (VidaActual <= 0 && estoymuerto == false)
         {
-
+            portal.SetActive(true);
+            portal.transform.parent = null;
             estoymuerto = true;
 
 
