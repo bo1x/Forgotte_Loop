@@ -64,4 +64,5 @@ public class EnseñarIconoInteractuar : MonoBehaviour
             return false;
         }
     }
+
 }

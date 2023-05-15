@@ -157,7 +157,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.015714675, y: -0.023137689}
@@ -244,8 +244,8 @@ MonoBehaviour:
   meleeAttacksound: {fileID: 8300000, guid: df2b5a380325cdf4e9adf417f57c8ad8, type: 3}
   Dashsound: {fileID: 8300000, guid: da55c41663b4e7b45b3bbdb406b8ab50, type: 3}
   Gun: 1
-  Laser: 0
-  Blue: 0
+  Laser: 1
+  Blue: 1
 --- !u!114 &2535315531663628690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,9 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 957752537e3aa344eb166e5306dd79e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuPausa: {fileID: 0}
-  canvasHud: {fileID: 0}
-  EstoyEnMenuPausa: 0
+  canvas: {fileID: 0}
 --- !u!1 &2765738300238468558
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,8 +570,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1279666097908807182}
-  - component: {fileID: 1692219951199275884}
   - component: {fileID: 3349142424606287799}
+  - component: {fileID: 1849403099}
   m_Layer: 7
   m_Name: AttackCollider
   m_TagString: Bullet
@@ -596,19 +594,6 @@ Transform:
   m_Father: {fileID: 2535315531663628702}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1692219951199275884
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3518295006714763813}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 5.38089, y: 3.2919888, z: 1}
-  m_Center: {x: 0.00000047683716, y: -0.6527817, z: 0}
 --- !u!114 &3349142424606287799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,6 +606,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b4b02aac0038d740851b85abaf3815c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1849403099
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3518295006714763813}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.016816616, y: -0.7062998}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.002363, y: 3.4215984}
+  m_EdgeRadius: 0
 --- !u!1 &6610759970650796893
 GameObject:
   m_ObjectHideFlags: 0

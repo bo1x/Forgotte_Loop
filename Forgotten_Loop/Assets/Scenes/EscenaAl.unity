@@ -559,14 +559,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2535315531663628700, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: Blue
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2535315531663628700, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: Laser
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2535315531663628702, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -609,10 +601,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2535315531663628702, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4516525967769469154, guid: d451e90314ee8de449f0392ee0ae92cb, type: 3}
-      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
