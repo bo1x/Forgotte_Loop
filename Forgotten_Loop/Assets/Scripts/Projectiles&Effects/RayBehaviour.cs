@@ -9,12 +9,13 @@ public class RayBehaviour : MonoBehaviour
     private float tiempoPasado;
     private bool DamageTime = true;
 
-    public float dmg;
+    public float dmg = 0.2f;
 
     public GameObject Player;
     public GameObject PuntoDisparo;
     void Start()
     {
+        dmg = 0.2f;
         transform.parent = null;
         Player = GameObject.Find("Player");
         transform.right = ((Vector2)Player.transform.position - (Vector2)transform.position).normalized;
@@ -23,6 +24,7 @@ public class RayBehaviour : MonoBehaviour
 
     private void Update()
     {
+        tiempoPasado = tiempoPasado + Time.deltaTime;
         if (tiempoPasado > tiempoImnunidad)
         {
             DamageTime = true;
@@ -57,10 +59,10 @@ public class RayBehaviour : MonoBehaviour
         //Instanciar Humo o particulas
         Player.GetComponent<VidaPj>().VidaActual = Player.GetComponent<VidaPj>().VidaActual - dmg;
         Vector2 dir = (transform.position - Player.transform.position).normalized;
-        collision.gameObject.GetComponent<Control>().enabled = false;
-        collision.gameObject.GetComponent<Rigidbody2D>().AddForce(-dir * 10, ForceMode2D.Impulse);
+        Player.GetComponent<Control>().enabled = false;
+        Player.GetComponent<Rigidbody2D>().AddForce(-dir * 10, ForceMode2D.Impulse);
         yield return new WaitForSeconds(0.2f);
-        collision.gameObject.GetComponent<Control>().enabled = true;
+        Player.GetComponent<Control>().enabled = true;
     }
 
 }
