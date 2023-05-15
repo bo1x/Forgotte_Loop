@@ -23,6 +23,7 @@ public class KnockbackMeleeAttack : MonoBehaviour
 
     public IEnumerator ImpactoBala(Collision2D collision)
     {
+        collision.gameObject.GetComponent<EnemyHPAndFeedback>().VidaActual -= 10f;
         Vector2 dir = (transform.position - collision.transform.position).normalized;
         collision.gameObject.GetComponent<AgentMover>().enabled = false;
         collision.gameObject.GetComponent<Rigidbody2D>().AddForce(-dir * 5, ForceMode2D.Impulse);
