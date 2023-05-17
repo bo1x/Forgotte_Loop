@@ -17,6 +17,6 @@ public class Puntos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TextoPuntos.text = ": " + Almas;
+        TextoPuntos.text = Almas.ToString();
     }
 }
