@@ -26,13 +26,15 @@ public class Mejoras : MonoBehaviour
 
             if (col.gameObject.GetComponent<Control>().Blue == false)
             {
-                Instantiate(ArmaBlue, new Vector3(transform.position.x + Random.Range(-2f, 2f), transform.position.y + Random.Range(-2f, 2f), 0), transform.rotation);
                 sonidoCofreWapardo();
+                Instantiate(ArmaBlue, new Vector3(transform.position.x + Random.Range(-2f, 2f), transform.position.y + Random.Range(-2f, 2f), 0), transform.rotation);
+                
             }
             else if(col.gameObject.GetComponent<Control>().Laser == false)
             {
-                Instantiate(ArmaLaser, new Vector3(transform.position.x + Random.Range(-2f, 2f), transform.position.y + Random.Range(-2f, 2f), 0), transform.rotation);
                 sonidoCofreWapardo();
+                Instantiate(ArmaLaser, new Vector3(transform.position.x + Random.Range(-2f, 2f), transform.position.y + Random.Range(-2f, 2f), 0), transform.rotation);
+                
             }
             else
             {
