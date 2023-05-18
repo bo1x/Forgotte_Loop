@@ -33,7 +33,7 @@ public class EnemyHPAndFeedback : MonoBehaviour
         }
         if (VidaActual <= 0 && estoymuerto == false)
         {
-
+            GetComponent<Collider2D>().enabled = false;
             estoymuerto = true;
             
 
@@ -43,6 +43,8 @@ public class EnemyHPAndFeedback : MonoBehaviour
             {
                 Instantiate(alma, new Vector3(transform.position.x+Random.Range(-2f,2f),transform.position.y+Random.Range(-2f,2f),0), transform.rotation);
             }
+
+
 
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             GetComponent<AgentMover>().enabled = false;
