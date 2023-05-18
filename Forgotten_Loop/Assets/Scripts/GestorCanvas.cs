@@ -28,6 +28,8 @@ public class GestorCanvas : MonoBehaviour
             HUD.SetActive(true);
             PAUSA.SetActive(false);
             TIENDA.SetActive(false);
+
+            Cursor.visible = false;
         }
         if (AbroTienda == true && AbroPausa == false)
         {
@@ -38,6 +40,8 @@ public class GestorCanvas : MonoBehaviour
             HUD.SetActive(false);
             PAUSA.SetActive(false);
             TIENDA.SetActive(true);
+
+            Cursor.visible = true;
         }
         if (AbroTienda == true && AbroPausa == true)
         {
@@ -48,6 +52,8 @@ public class GestorCanvas : MonoBehaviour
             HUD.SetActive(false);
             PAUSA.SetActive(true);
             TIENDA.SetActive(false);
+
+            Cursor.visible = true;
         }
         if (AbroTienda == false && AbroPausa == true)
         {
@@ -58,6 +64,8 @@ public class GestorCanvas : MonoBehaviour
             HUD.SetActive(false);
             PAUSA.SetActive(true);
             TIENDA.SetActive(false);
+
+            Cursor.visible = true;
         }
     }
 

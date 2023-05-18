@@ -85,6 +85,8 @@ public class Control : MonoBehaviour
             Laser = true;
         }
 
+        Cursor.visible = false;
+
         myanim = GetComponent<Animator>();
         myrigi = GetComponent<Rigidbody2D>();
         
