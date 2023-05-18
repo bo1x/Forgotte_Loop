@@ -49,6 +49,7 @@ public class VidaPj : MonoBehaviour
 
         if (VidaActual <= 0)
         {
+            Cursor.visible = true;
             if (GameObject.Find("Player").GetComponent<Control>().Laser)
             {
                 PlayerPrefs.SetInt("ArmaLaser", 1);

@@ -6,6 +6,11 @@ public class sonidomenu : MonoBehaviour
 {
     public AudioSource source;
     public AudioClip audio1;
+
+    private void Start()
+    {
+        Cursor.visible = true;
+    }
     public void button1()
     {
         source.clip = audio1;
