@@ -1,5 +1,7 @@
 # Forgotten Loop
 
+ ![Logo](https://img.itch.zone/aW1nLzEyMjAzMjM3LnBuZw==/original/uewPj3.png)
+
 Proyecto de la asignatura Proyecto_2 de la carrera de videojuegos y experiencias interactivas de florida universitaria. <br>
 Url para descargar una versión ejecutable del juego: https://bo1x.itch.io/forgotten-loop <br>
 Realizado por: <br>
